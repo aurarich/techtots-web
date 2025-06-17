@@ -1,0 +1,14 @@
+.gradient-text {
+  background: linear-gradient(to right, #1E3A8A, #0EA5E9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  @apply text-transparent;
+}
+
+.glass-effect {
+  @apply bg-white/80 backdrop-blur-lg border border-[#F5F5DC]/20;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+} 
