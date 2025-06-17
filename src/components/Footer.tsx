@@ -73,6 +73,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/gallery" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
+                  Gallery
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
                   Contact
                 </Link>
@@ -92,7 +97,7 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <PhoneIcon className="w-5 h-5 text-[#F5E6D3]" />
                 <a href="tel:+233244549446" className="hover:text-[#F5E6D3] transition-colors">
-                  +233 (0)244549446
+                  +233 (0) 24 454 9446
                 </a>
               </li>
               <li className="flex items-center space-x-3">

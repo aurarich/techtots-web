@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
 import {
   AcademicCapIcon,
   CpuChipIcon,
@@ -11,22 +10,14 @@ import {
   BookOpenIcon,
   BuildingOfficeIcon,
   ComputerDesktopIcon,
-  TrophyIcon,
-  StarIcon,
-  UserIcon,
-  RocketLaunchIcon,
   SparklesIcon,
   ArrowRightIcon,
   ChevronDownIcon,
-  MapPinIcon,
-  EnvelopeIcon,
-  PhoneIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
     <>
-      {/* <Navbar /> */}
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative flex items-center justify-center min-h-screen py-20 overflow-hidden">
@@ -147,56 +138,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Why Choose TechTots Section */}
-        <section className="relative overflow-hidden section bg-gradient-to-b from-[#F5F5DC]/30 to-[#0EA5E9]/10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#F5F5DC]/20 via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#0EA5E9]/20 via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-          
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-0 left-0 w-full h-full">
-              <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#F5F5DC]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-              <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[#0EA5E9]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-            </div>
-          </div>
-          
-          <div className="container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="mb-8 text-3xl font-bold text-gray-900 font-heading md:text-4xl">
-                Why Choose TechTots?
-              </h2>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {[
-                  {
-                    title: "Innovative Curriculum",
-                    description: "Combining Cambridge Curriculum with Reggio Emilia principles and AI-powered learning.",
-                    icon: AcademicCapIcon
-                  },
-                  {
-                    title: "Expert Teachers",
-                    description: "Highly qualified educators with experience in early childhood development.",
-                    icon: UserGroupIcon
-                  },
-                  {
-                    title: "Modern Facilities",
-                    description: "State-of-the-art learning spaces designed for optimal development.",
-                    icon: BuildingOfficeIcon
-                  }
-                ].map((feature, index) => (
-                  <div key={index} className="p-6 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
-                    <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10">
-                      <feature.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h3 className="mb-2 text-xl font-bold text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
         <section className="relative overflow-hidden section bg-gradient-to-b from-[#F5F5DC]/30 to-[#0EA5E9]/10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#F5F5DC]/20 via-transparent to-transparent" />
@@ -254,16 +195,12 @@ export default function Home() {
                   description: "Early exposure to science, technology, engineering, and mathematics."
                 }
               ].map((feature, index) => (
-                <div key={index} className="card group hover-lift bg-gradient-to-br from-white/80 to-[#F5F5DC]/20 backdrop-blur-sm border-[#0EA5E9]/10">
-                  <div className="w-12 h-12 mb-4 text-primary animate-float">
-                    <feature.icon className="w-full h-full" />
+                <div key={index} className="p-6 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+                  <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10">
+                    <feature.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="mb-3 text-xl font-semibold text-gray-900 font-heading">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {feature.description}
-                  </p>
+                  <h3 className="mb-2 text-xl font-bold text-center text-gray-900">{feature.title}</h3>
+                  <p className="text-center text-gray-600">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -398,62 +335,129 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Campus Section */}
-        <section className="relative overflow-hidden section bg-gradient-to-b from-background-alt to-background">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-secondary/5 via-transparent to-transparent" />
+                {/* Our Campus Section */}
+        <section className="relative overflow-hidden section bg-gradient-to-b from-[#F5F5DC]/30 to-[#0EA5E9]/10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#F5F5DC]/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#0EA5E9]/20 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
           
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#F5F5DC]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+              <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[#0EA5E9]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+            </div>
+          </div>
+          
           <div className="container relative z-10">
-            <div className="mb-16 text-center">
-              <h2 className="mb-6 text-4xl font-bold text-gray-900 font-heading md:text-5xl">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="mb-8 text-3xl font-bold text-gray-900 font-heading md:text-4xl">
                 Our Campus
               </h2>
-              <p className="max-w-2xl mx-auto text-xl text-gray-600">
-                Located in the heart of Pokuase's rapidly developing suburb.
+              <p className="mb-12 text-xl text-gray-600">
+                Located in the heart of Pokuase's rapidly developing suburb, our purpose-built campus is designed for optimal learning and development
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="card group hover-lift">
-                <div className="relative mb-6 overflow-hidden rounded-lg aspect-video">
-                  <Image
-                    src="https://plus.unsplash.com/premium_photo-1742995782977-ee4b53fecadb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Technology Lab"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mb-4 text-2xl font-semibold text-gray-900 font-heading">
-                  Learning Spaces
-                </h3>
-                <p className="mb-6 text-gray-600">
-                  Bright, spacious classrooms, digital learning hubs, and reading corners designed for optimal learning.
-                </p>
-                <Link href="/campus" className="inline-flex items-center font-medium text-primary hover:text-primary-dark">
-                  Explore Campus
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {[
+                  {
+                    title: "Learning Spaces",
+                    features: [
+                      "Bright, Spacious Classrooms",
+                      "Digital Learning Hubs",
+                      "Reading & Storytelling Corners"
+                    ]
+                  },
+                  {
+                    title: "Play & Recreation",
+                    features: [
+                      "Outdoor Nature Playground",
+                      "Music & Movement Studio",
+                      "Sensory Play Areas"
+                    ]
+                  },
+                  {
+                    title: "Care Facilities",
+                    features: [
+                      "Crèche Nap Rooms",
+                      "Health Bay",
+                      "Secure Environment"
+                    ]
+                  }
+                ].map((category, index) => (
+                  <div key={index} className="p-6 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+                    <h3 className="mb-4 text-xl font-bold text-center text-gray-900">{category.title}</h3>
+                    <ul className="space-y-3">
+                      {category.features.map((feature, idx) => (
+                        <li key={idx} className="flex gap-2 text-gray-600">
+                          <SparklesIcon className="w-4 h-4 text-primary" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-12">
+                <Link href="/tour" className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white transition-colors rounded-lg bg-primary hover:bg-primary/90">
+                  Schedule a Tour
+                  <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="card group hover-lift">
-                <div className="relative mb-6 overflow-hidden rounded-lg aspect-video">
-                  <Image
-                    src="https://images.unsplash.com/photo-1715775491904-ef5cdae40f0f?q=80&w=1335&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Playground"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h3 className="mb-4 text-2xl font-semibold text-gray-900 font-heading">
-                  Specialized Facilities
-                </h3>
-                <p className="mb-6 text-gray-600">
-                  Outdoor nature playground, music & movement studio, crèche nap rooms, and health bay.
-                </p>
-                <Link href="/campus" className="inline-flex items-center font-medium text-primary hover:text-primary-dark">
-                  Explore Campus
-                  <ArrowRightIcon className="w-4 h-4 ml-2" />
+        {/* Partner With Us Section */}
+        <section className="relative overflow-hidden section bg-gradient-to-b from-[#0EA5E9]/10 to-[#F5F5DC]/30">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-[#0EA5E9]/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-[#F5F5DC]/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
+          
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#0EA5E9]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
+              <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-[#F5F5DC]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
+            </div>
+          </div>
+          
+          <div className="container relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="mb-8 text-3xl font-bold text-gray-900 font-heading md:text-4xl">
+                Partner With Us
+              </h2>
+              <p className="mb-12 text-xl text-gray-600">
+                We're open to partnerships in various areas to enhance our educational offerings
+              </p>
+              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                {[
+                  {
+                    title: "Edtech",
+                    description: "Technology solutions for early childhood education"
+                  },
+                  {
+                    title: "Educational Publishing",
+                    description: "Curriculum materials and learning resources"
+                  },
+                  {
+                    title: "Corporate CSR",
+                    description: "Corporate social responsibility programs"
+                  },
+                  {
+                    title: "Internships",
+                    description: "Internship and volunteering opportunities"
+                  }
+                ].map((partner, index) => (
+                  <div key={index} className="p-6 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+                    <h3 className="mb-2 text-xl font-bold text-center text-gray-900">{partner.title}</h3>
+                    <p className="text-center text-gray-600">{partner.description}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-12">
+                <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white transition-colors rounded-lg bg-primary hover:bg-primary/90">
+                  Get in Touch
+                  <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
             </div>
