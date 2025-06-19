@@ -31,7 +31,7 @@ export default function Home() {
             <div className="absolute rounded-full top-1/3 right-10 w-72 h-72 bg-secondary/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
             <div className="absolute rounded-full -bottom-8 left-20 w-72 h-72 bg-accent/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
             {/* New floating elements */}
-            <div className="absolute w-16 h-16 top-1/4 right-1/4 animate-float">
+            <div className="absolute w-16 h-16 top-[20%] md:top-1/4 2xl:top-2 right-1/4 animate-float">
               <CpuChipIcon className="w-full h-full text-primary/30" />
             </div>
             <div className="absolute w-12 h-12 bottom-1/4 left-1/4 animate-float animation-delay-2000">
@@ -53,7 +53,7 @@ export default function Home() {
                 </div>
 
                 {/* Enhanced Heading */}
-                <h1 className="text-5xl font-bold leading-tight text-gray-900 font-heading md:text-6xl lg:text-7xl">
+                <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900 font-heading md:text-6xl lg:text-7xl">
                   Africa's Most Forward-Thinking
                   <span className="block mt-2 gradient-text">Early Childhood Institution</span>
                 </h1>
