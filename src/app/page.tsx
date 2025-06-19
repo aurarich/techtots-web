@@ -31,8 +31,8 @@ export default function Home() {
             <div className="absolute rounded-full top-1/3 right-10 w-72 h-72 bg-secondary/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
             <div className="absolute rounded-full -bottom-8 left-20 w-72 h-72 bg-accent/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
             {/* New floating elements */}
-            <div className="absolute w-16 h-16 top-[20%] md:top-1/4 2xl:top-2 right-1/4 animate-float">
-              <CpuChipIcon className="w-full h-full text-primary/30" />
+            <div className="absolute w-16 h-16 top-1/4 2xl:top-[15%] right-1/4 animate-float">
+              <CpuChipIcon className="w-full h-full text-primary/20" />
             </div>
             <div className="absolute w-12 h-12 bottom-1/4 left-1/4 animate-float animation-delay-2000">
               <PaintBrushIcon className="w-full h-full text-secondary/30" />
@@ -384,13 +384,13 @@ export default function Home() {
                     ]
                   }
                 ].map((category, index) => (
-                  <div key={index} className="p-6 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+                  <div key={index} className="p-6 transition-transform border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105">
                     <h3 className="mb-4 text-xl font-bold text-center text-gray-900">{category.title}</h3>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 col-span-1">
                       {category.features.map((feature, idx) => (
-                        <li key={idx} className="flex gap-2 text-gray-600">
+                        <li key={idx} className="flex items-center gap-2">
                           <SparklesIcon className="w-4 h-4 text-primary" />
-                          {feature}
+                          <span className="text-left">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -448,7 +448,7 @@ export default function Home() {
                     description: "Internship and volunteering opportunities"
                   }
                 ].map((partner, index) => (
-                  <div key={index} className="p-6 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+                  <div key={index} className="p-6 transition-transform border rounded-lg bg-white backdrop-blur-ssm border-accent/20 hover:scale-105">
                     <h3 className="mb-2 text-xl font-bold text-center text-gray-900">{partner.title}</h3>
                     <p className="text-center text-gray-600">{partner.description}</p>
                   </div>
