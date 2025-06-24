@@ -6,12 +6,13 @@ import {
   GlobeAltIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
+import HeaderTag from "@/components/ui/header-tag";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center py-20 overflow-hidden">
+      <section className="relative flex items-center justify-center pb-20 overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
@@ -23,15 +24,12 @@ export default function AboutPage() {
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto space-y-8 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-full bg-primary/10 text-primary hover:bg-primary/20">
-              <SparklesIcon className="w-4 h-4" />
-              <span>Our Story</span>
-            </div>
+          <div className="max-w-4xl mx-auto space-y-8 text-center pt-12">
+            <HeaderTag title="Our Story" />
             <h1 className="text-4xl font-bold leading-tight text-gray-900 font-heading md:text-5xl">
               About TechTots
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 -mt-5">
               Pioneering the future of early childhood education in Ghana through innovation and excellence.
             </p>
           </div>
@@ -39,16 +37,16 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-b from-background to-primary/5">
+      <section className="relative py-20 overflow-hidden bg-ai-image bg-center bg-cover bg-fixed bg-no-repeat">
         <div className="container">
           <div className="grid gap-12 md:grid-cols-2">
-            <div className="p-8 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+            <div className="p-8 transition-transform border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">Our Mission</h2>
               <p className="text-gray-600">
                  To nurture young minds through a world-class, technology-infused education that blends the Cambridge Early Years Curriculum and Reggio Emilia principles, preparing every child for a future of infinite possibilities.
               </p>
             </div>
-            <div className="p-8 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+            <div className="p-8 transition-transform border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">Our Vision</h2>
               <p className="text-gray-600">
                 To become Africa&apos;s most forward-thinking early childhood institution where innovation, creativity, and global citizenship begin in the earliest years.
@@ -59,7 +57,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary/5 to-background">
+      <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary/10 to-background">
         <div className="container">
           <div className="max-w-4xl mx-auto mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900 font-heading">Our Leadership Team</h2>
@@ -85,7 +83,7 @@ export default function AboutPage() {
                 description: "AI in Education Expert"
               }
             ].map((member, index) => (
-              <div key={index} className="p-6 transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105">
+              <div key={index} className="p-6 transition-transform border rounded-lg bg-white border-neutral/10 hover:scale-105">
                 <div className="w-24 h-24 mx-auto mb-4 bg-gray-200 rounded-full" />
                 <h3 className="mb-2 text-xl font-bold text-gray-900">{member.name}</h3>
                 <p className="mb-2 text-primary">{member.role}</p>

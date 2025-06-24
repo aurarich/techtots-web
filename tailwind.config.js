@@ -67,6 +67,10 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+	  backgroundImage: {
+        'ai-image': "url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1280')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

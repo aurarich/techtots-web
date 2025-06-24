@@ -34,16 +34,16 @@ const Navbar = () => {
   }, [path]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-lg py-2">
+    <header className="sticky inset-x-0 top-0 z-[999] border-b border-gray-200 bg-white/80 backdrop-blur-lg py-2">
       <nav
         className="container px-4 mx-auto sm:px-6 lg:px-8"
         aria-label="Global"
       >
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between">
           <div className="flex lg:flex-1 items-center">
-            <Image src="/logo.svg" alt="Logo" width={60} height={60} />
+            <Image src={require('../../public/logo.svg')} alt="Logo" className="max-md:w-12 w-16" />
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="text-2xl font-bold font-heading text-primary">
+              <span className="max-md:text-xl text-2xl font-bold font-heading text-primary">
                 TechTots
               </span>
             </Link>

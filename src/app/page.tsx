@@ -19,9 +19,8 @@ import HeaderTag from "@/components/ui/header-tag";
 export default function Home() {
   return (
     <>
-      <main className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative flex items-center justify-center min-h-screen py-20 overflow-hidden">
+          {/* Hero Section */}
+        <section className="relative flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 lg:pb-0 py-20 min-h-screen overflow-hidden">
           {/* Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
@@ -32,7 +31,7 @@ export default function Home() {
             <div className="absolute rounded-full top-1/3 right-10 w-72 h-72 bg-secondary/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
             <div className="absolute rounded-full -bottom-8 left-20 w-72 h-72 bg-accent/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
             {/* New floating elements */}
-            <div className="absolute w-16 h-16 top-1/4 2xl:top-[15%] right-1/4 animate-float">
+            <div className="absolute w-16 h-16 top-1/4 2xl:top-[10%] right-1/4 animate-float">
               <CpuChipIcon className="w-full h-full text-primary/20" />
             </div>
             <div className="absolute w-12 h-12 bottom-1/4 left-1/4 animate-float animation-delay-2000">
@@ -43,7 +42,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="container relative z-10">
+          <div className="container relative z-20">
             <div className="max-w-6xl mx-auto space-y-16 text-center">
               {/* Top Section */}
               <div className="space-y-6">
@@ -59,7 +58,7 @@ export default function Home() {
                 </h1>
 
                 {/* Enhanced Description */}
-                <p className="max-w-2xl mx-auto text-xl text-gray-600 md:text-2xl">
+                <p className="max-w-2xl mx-auto text-lg text-gray-600 md:text-2xl">
                   Where innovation meets education. Ghana's pioneering
                   institution combining Cambridge Curriculum and Reggio Emilia
                   principles with AI-powered learning.
@@ -67,10 +66,10 @@ export default function Home() {
               </div>
 
               {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+              <div className="flex items-center justify-center gap-4 sm:gap-6">
                 <Link
                   href="/admissions"
-                  className="px-8 py-4 text-lg group btn btn-primary"
+                  className="max-sm:px-4 max-md:py-3 px-8 py-4 text-base sm:text-lg group btn btn-primary"
                 >
                   <span className="flex items-center gap-2">
                     Apply Now
@@ -79,7 +78,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/tour"
-                  className="px-8 py-4 text-lg group btn btn-secondary"
+                  className="max-sm:px-4 max-md:py-3 px-8 py-4 text-base sm:text-lg group btn btn-secondary"
                 >
                   <span className="flex items-center gap-2">
                     Schedule a Tour
@@ -91,7 +90,8 @@ export default function Home() {
               {/* Stats Section */}
             </div>
           </div>
-          <div className="absolute bottom-0 grid max-w-3xl grid-cols-2 gap-8 mx-auto mt-auto mb-20 md:grid-cols-4">
+
+          <div className="grid max-w-3xl grid-cols-4 gap-8 my-auto md:grid-cols-4">
             {[
               { label: "Years Experience", value: "10+" },
               { label: "Students", value: "500+" },
@@ -100,9 +100,9 @@ export default function Home() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="text-center transition-transform border rounded-lg bg-white/50 backdrop-blur-sm border-accent/20 hover:scale-105"
+                className="text-center transition-transform hover:scale-105"
               >
-                <div className="mb-2 text-2xl font-bold text-primary">
+                <div className="mb-1 text-base md:text-2xl font-bold text-primary">
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
@@ -589,7 +589,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-      </main>
+
     </>
   );
 }
