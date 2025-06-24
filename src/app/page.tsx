@@ -471,7 +471,7 @@ export default function Home() {
               <div className="mt-12">
                 <Link
                   href="/tour"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white transition-colors rounded-lg bg-primary hover:bg-primary/90"
+                  className="btn transition-all inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white rounded-lg btn-primary"
                 >
                   Schedule a Tour
                   <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -540,7 +540,7 @@ export default function Home() {
               <div className="mt-12">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white transition-colors rounded-lg bg-primary hover:bg-primary/90"
+                  className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white rounded-lg btn btn-primary"
                 >
                   Get in Touch
                   <ArrowRightIcon className="w-5 h-5 transition-transform group-hover:translate-x-1" />
