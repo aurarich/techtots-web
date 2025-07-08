@@ -24,7 +24,7 @@
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: #F5F5DC;
+    --accent: #edcdae;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: hsl(0 0% 98%);
@@ -51,7 +51,7 @@
     --secondary-foreground: hsl(0 0% 98%);
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
-    --accent: #F5F5DC;
+    --accent: #edcdae;
     --accent-foreground: hsl(0 0% 98%);
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: hsl(0 0% 98%);
@@ -187,13 +187,13 @@ body {
   }
   
   .btn-beige {
-    background: linear-gradient(to right, #F5F5DC, #E5E5C0);
+    background: linear-gradient(to right, #edcdae, #E5E5C0);
     @apply text-[#1E3A8A];
     box-shadow: 0 4px 15px -3px rgba(245, 245, 220, 0.3);
   }
 
   .btn-beige:hover {
-    background: linear-gradient(to right, #E5E5C0, #F5F5DC);
+    background: linear-gradient(to right, #E5E5C0, #edcdae);
     box-shadow: 0 8px 25px -5px rgba(245, 245, 220, 0.4);
   }
 
@@ -209,7 +209,7 @@ body {
   }
 
   .section {
-    @apply py-16 md:py-24 relative overflow-hidden;
+    @apply py-16 md:py-24 relative;
   }
 
   .section::before {
@@ -236,7 +236,7 @@ body {
   }
 
   .glass-effect {
-    @apply bg-white/80 backdrop-blur-lg border border-[#F5F5DC]/20;
+    @apply bg-white/80 backdrop-blur-lg border border-[#edcdae]/20;
   }
 
   .hover-lift {
@@ -273,6 +273,43 @@ body {
     background-size: 1000px 100%;
     animation: shimmer 2s infinite linear;
   }
+
+
+  .animated-wave span {
+  content: "";
+  position: absolute;
+  width: 325vh;
+  height: 325vh;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.animated-wave span:nth-child(1) {
+  border-radius: 45%;
+  /* background: rgba(20, 20, 20, 1); */
+  animation: animate-background-wave 30s linear infinite;
+}
+
+.animated-wave span:nth-child(2) {
+  border-radius: 40%;
+  /* background: rgba(20, 20, 20, 0.5); */
+  animation: animate 10s linear infinite;
+}
+.animated-wave span:nth-child(3) {
+  border-radius: 42.5%;
+  /* background: rgba(20, 20, 20, 0.5); */
+  animation: animate 15s linear infinite;
+}
+@keyframes animate-background-wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
 }
 
 @layer base {

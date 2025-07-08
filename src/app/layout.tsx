@@ -18,22 +18,23 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "TechTots International School",
-  description: "Nurturing young innovators through technology-infused early education",
+  description:
+    "Nurturing young innovators through technology-infused early education",
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className={`${poppins.variable} ${openSans.variable}`}>
-      <body className="flex flex-col min-h-screen">
+      <body className="h-screen">
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow h-full bg-white">
           {children}
+          <Footer />
         </main>
-        <Footer />
       </body>
     </html>
   );
