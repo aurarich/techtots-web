@@ -1,3 +1,4 @@
+import HeaderTag from '@/components/ui/header-tag';
 import { SparklesIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
@@ -19,7 +20,8 @@ export default function GalleryPage() {
         </div>
         
         <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center space-y-6 pt-12">
+            <HeaderTag title="A view of our projects and resources" />
             <h1 className="mb-8 text-4xl font-bold text-gray-900 font-heading md:text-5xl">
               Our Gallery
             </h1>

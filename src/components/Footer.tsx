@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from "next/image"
 import {
   EnvelopeIcon,
   PhoneIcon,
@@ -9,8 +10,9 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="text-white bg-gray-900">
-      <div className="container py-16">
+    <footer className="text-white bg-gray-900 mt-auto">
+      <div className="container py-12 pb-5">
+            <Image src="/logo.svg" alt='Logo' width={100} height={100} />
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold text-white font-heading">TechTots</h3>
@@ -131,7 +133,7 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 mt-12 text-center text-gray-400 border-t border-gray-800">
+        <div className="pt-5 mt-12 text-center text-gray-400 border-t border-gray-800">
           <p>&copy; {new Date().getFullYear()} TechTots International School. All rights reserved.</p>
         </div>
       </div>
