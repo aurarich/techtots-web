@@ -28,22 +28,39 @@ const Navbar = () => {
   const path = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [pathname, setPathname] = useState("/");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setPathname(path);
   }, [path]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    // Set initial state on mount
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="sticky inset-x-0 top-0 z-[999] border-b border-gray-200 bg-white/80 backdrop-blur-lg py-2">
+    <header
+      className={`fixed inset-x-0 top-0 z-[999] transition-colors duration-300 py-2 ${scrolled ? "bg-white backdrop-blur-lg" : "bg-transparent"}`}
+    >
       <nav
         className="container px-4 mx-auto sm:px-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
           <div className="flex lg:flex-1 items-center">
-            <Image src={require('../../public/logo.svg')} alt="Logo" className="max-md:w-12 w-16" />
+            <Image
+              src={require("../../public/logo.svg")}
+              alt="Logo"
+              className="max-md:w-12 w-16"
+            />
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="max-md:text-xl text-2xl font-bold font-heading text-primary">
+              <span className={`max-md:text-xl text-2xl font-bold font-heading text-primary ${scrolled ? 'text-black': 'text-white'}`}>
                 TechTots
               </span>
             </Link>
@@ -68,7 +85,16 @@ const Navbar = () => {
                       <NavigationMenuLink asChild>
                         <Link
                           href={nav.href}
-                          className={`text-sm font-semibold leading-6 transition-colors hover:text-primary ${isActive ? "text-primary font-extrabold" : "text-gray-900"}`}
+                          className={`text-sm font-semibold leading-6 uppercase transition-all
+                          ${
+                            scrolled
+                              ? isActive
+                                ? "text-primary font-bold"
+                                : "text-gray-800"
+                              : isActive
+                                ? "text-white font-semibold underline underline-offset-8 decoration-2 hover:text-white"
+                                : "text-white"
+                          }`}
                         >
                           {nav.name}
                         </Link>
