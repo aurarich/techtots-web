@@ -9,7 +9,8 @@
 # next.js
 /.next/
 /out/
-/.vscode/ftp.json
+
+# VSCODE
 /.vscode/sftp.json
 
 # production
