@@ -18,6 +18,7 @@ import ParentTestimonialSection from "./landing/parents";
 import WhyChooseUsSection from "./landing/why-choose-us";
 import OurProgrammes from "./landing/our-programs";
 import TechInnovationSection from "./landing/tech_innovation";
+import AnimatedWave from "@/components/Wave";
 
 export default function Home() {
   return (
@@ -120,18 +121,7 @@ export default function Home() {
       </section>
 
       {/* Partner With Us Section */}
-      <section className="relative overflow-hidden section bg-gradient-to-b from-[#0EA5E9]/10 to-[#F5F5DC]/30">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-[#0EA5E9]/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_var(--tw-gradient-stops))] from-[#F5F5DC]/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#0EA5E9]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-            <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-[#F5F5DC]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-          </div>
-        </div>
+      <section className="relative overflow-hidden section bg-white">
 
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -164,12 +154,12 @@ export default function Home() {
               ].map((partner, index) => (
                 <div
                   key={index}
-                  className="p-6 transition-transform border rounded-lg bg-white backdrop-blur-ssm border-accent/20 hover:scale-105"
+                  className="p-6 transition-transform border rounded-lg bg-primary backdrop-blur-ssm border-accent/20 hover:scale-105 btn space-y-6"
                 >
-                  <h3 className="mb-2 text-xl font-bold text-center text-gray-900">
+                  <h3 className="text-lg font-semibold text-center text-white leading-[1.2]">
                     {partner.title}
                   </h3>
-                  <p className="text-center text-gray-600">
+                  <p className="text-gray-200 text-sm">
                     {partner.description}
                   </p>
                 </div>
@@ -189,24 +179,17 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden section bg-gradient-to-br from-[#0EA5E9]/20 to-[#F5F5DC]/30">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/50 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-5" />
-
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#0EA5E9]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#F5F5DC]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-          </div>
-        </div>
-
+      <div className="bg-white">
+        <AnimatedWave className="rotate-180 w-screen fill-beige" />
+      </div>
+      <section className="relative overflow-hidden section bg-beige pt-10">
+              {/* <div className="absolute w-full top-0 h-full bg-gradient-to-b from-primary to-primary/40 z-10"></div> */}
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="mb-6 text-4xl font-bold text-gray-900 font-heading md:text-5xl">
+            <h2 className="mb-6 text-4xl font-bold text-white font-heading md:text-5xl">
               Join Our Community
             </h2>
-            <p className="mb-8 text-xl text-gray-600">
+            <p className="mb-8 text-xl text-white">
               Take the first step towards your child's future in technology and
               innovation.
             </p>
