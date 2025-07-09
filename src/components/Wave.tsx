@@ -6,7 +6,7 @@ interface WaveProps extends React.SVGAttributes<HTMLOrSVGElement> {
     colors?: string[] 
 }
 
-const svgVariant = cva('text-white')
+const svgVariant = cva('text-white max-h-28')
 
 const AnimatedWave = ({colors, className, ...props}: WaveProps) => {
   return (

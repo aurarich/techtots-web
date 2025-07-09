@@ -2,14 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import SectionBackground from "@/components/SectionBackground";
 
 const NotFoundComponent = () => {
     const router = useRouter()
   return (
     <div className="relative h-full flex flex-col items-center justify-center py-16">
-      {/* Decorative grid background */}
-      <SectionBackground />
       {/* Globe Icon */}
       <div className="mb-6">
         <Image

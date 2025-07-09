@@ -8,23 +8,37 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
+        },
+      },
       colors: {
         background: "#FFFFFF",
         primary: {
           DEFAULT: "#000080",
+          dark: "#1E40AF",
+          light: "#3B82F6",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
           DEFAULT: "#87CEEB",
+          dark: "#0284C7",
+          light: "#38BDF8",
           foreground: "hsl(var(--secondary-foreground))",
         },
         accent: {
           DEFAULT: "#edcdae",
           foreground: "hsl(var(--accent-foreground))",
         },
-		beige: {
-			DEFAULT: "#edcdae"
-		},
+        beige: {
+          DEFAULT: "#edcdae",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -58,20 +72,18 @@ module.exports = {
         sans: ["var(--font-open-sans)", "system-ui", "sans-serif"],
         heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
       },
-      container: {
-        center: true,
-        padding: "1rem",
-      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-	  backgroundImage: {
-        'ai-image': "url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1280')",
-        'parent-bg': "url('https://www.pexels.com/photo/photo-of-boy-hugging-his-mom-935951')",
-        'footer-texture': "url('/img/footer-texture.png')",
-      }
+      backgroundImage: {
+        "ai-image":
+          "url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1280')",
+        "parent-bg":
+          "url('https://www.pexels.com/photo/photo-of-boy-hugging-his-mom-935951')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

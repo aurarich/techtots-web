@@ -7,7 +7,7 @@ const TechInnovationSection = () => {
     <div className="bg-white rotate-180">
             <AnimatedWave className="w-full fill-primary" />
         </div>
-    <section className="relative overflow-hidden section bg-[url('https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg')] bg-top bg-cover bg-fixed bg-no-repeat">
+    <section className="relative overflow-hidden section bg-[url('https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg')] bg-top bg-cover bg-fixed bg-no-repeat pt-10">
         <div className="absolute w-full top-0 h-full bg-gradient-to-b from-primary to-primary/30 z-10"></div>
         <div className="container relative z-20">
           <div className="mb-16 text-center">
