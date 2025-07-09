@@ -3,10 +3,11 @@ import { ArrowRightIcon, ChevronDownIcon, CpuChipIcon, GlobeAltIcon, PaintBrushI
 import Link from 'next/link'
 import React from 'react'
 import Image from "next/image"
+import { SingleWaveSvg } from '@/components/SVGBackground'
 
 const LandingHeroSection = () => {
   return (
-    <section className="relative flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 pt-40 lg:pb-5 xl:h-5/6 overflow-hidden">
+    <section className="flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 pt-40 lg:pb-5 xl:h-5/6 overflow-hidden">
       <Image src="https://images.pexels.com/photos/4143791/pexels-photo-4143791.jpeg" alt='Hero' fill className='object-cover' />
       <div className="absolute w-full top-0 h-full bg-primary/50 z-10"></div>
 

@@ -10,6 +10,7 @@ import {
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import AnimatedWave from "@/components/Wave";
+import { SVGBlobCard } from "@/components/SVGBackground";
 
 const WhyChooseUsSection = () => {
   return (
@@ -79,8 +80,9 @@ const WhyChooseUsSection = () => {
           ].map((feature, index) => (
             <Card
               key={index}
-              className="p-2 transition-transform border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105"
+              className="blob-container relative p-2 transition-transform border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105"
             >
+              {/* <SVGBlobCard className="absolute -z-10 left-0 top-0" blobClassName="fill-white" /> */}
                 <Image src={feature.image} alt={feature.title} width={100} height={100} className="rounded-md h-48 w-full aspect-square object-cover object-center" />
               <CardHeader>
                 {/* <div className="flex items-center justify-center w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10">
