@@ -1,13 +1,5 @@
 import React from "react";
 import {
-  AcademicCapIcon,
-  BeakerIcon,
-  BuildingOfficeIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  PaintBrushIcon,
-} from "@heroicons/react/24/outline";
-import {
   Card,
   CardDescription,
   CardHeader,
@@ -15,12 +7,12 @@ import {
 } from "@/components/ui/card";
 import Image from "next/image";
 import AnimatedWave from "@/components/Wave";
-import { SVGBlobCard } from "@/components/SVGBackground";
+import { whyTechTotData } from "@/data";
 
 const WhyChooseUsSection = () => {
   return (
     <>
-    <div className="bg-white rotate-180">
+      <div className="bg-white rotate-180">
         <AnimatedWave className="w-full fill-beige" />
       </div>
       <section className="relative section bg-beige pb-0 pt-5">
@@ -35,67 +27,17 @@ const WhyChooseUsSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                icon: AcademicCapIcon,
-                title: "Cambridge + Reggio Emilia",
-                image:
-                  "https://images.pexels.com/photos/414422/pexels-photo-414422.jpeg?auto=compress&w=400&h=300&fit=crop", // children learning, books
-                description:
-                  "World-class curriculum combining academic excellence with creative exploration.",
-              },
-              {
-                icon: CpuChipIcon,
-                title: "AI-Powered Learning",
-                image:
-                  "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&w=400&h=300&fit=crop", // child with tablet/tech
-                description:
-                  "First preschool in Ghana to integrate artificial intelligence in early learning.",
-              },
-              {
-                icon: PaintBrushIcon,
-                title: "Child-Centered Approach",
-                image:
-                  "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&w=400&h=300&fit=crop", // kids painting
-                description:
-                  "Play-based learning that nurtures creativity and individual growth.",
-              },
-              {
-                icon: GlobeAltIcon,
-                title: "Digital Communication",
-                image:
-                  "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&w=400&h=300&fit=crop", // parent and child video call
-                description:
-                  "Advanced parent communication tools for seamless updates and engagement.",
-              },
-              {
-                icon: BuildingOfficeIcon,
-                title: "Purpose-Built Campus",
-                image:
-                  "https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&w=400&h=300&fit=crop", // modern school building
-                description:
-                  "State-of-the-art facilities in suburban Accra designed for optimal learning.",
-              },
-              {
-                icon: BeakerIcon,
-                title: "STEM Focus",
-                image:
-                  "https://images.pexels.com/photos/256401/pexels-photo-256401.jpeg?auto=compress&w=400&h=300&fit=crop", // kids science experiment
-                description:
-                  "Early exposure to science, technology, engineering, and mathematics.",
-              },
-            ].map((feature, index) => (
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 content-center justify-center">
+            {whyTechTotData.map((feature, index) => (
               <Card
                 key={index}
-                className="blob-container relative p-2 transition-transform border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105"
+                className="relative p-2 transition-all border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105"
               >
-                {/* <SVGBlobCard className="absolute -z-10 left-0 top-0" blobClassName="fill-white" /> */}
                 <Image
                   src={feature.image}
                   alt={feature.title}
-                  width={100}
-                  height={100}
+                  width={500}
+                  height={500}
                   className="rounded-md h-48 w-full aspect-square object-cover object-center"
                 />
                 <CardHeader>

@@ -1,0 +1,4 @@
+.hero_image {
+    @apply w-full md:w-2/3 h-full rounded-xl;
+    transform: translateZ(24, 12, 18);
+}
