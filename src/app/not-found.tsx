@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 const NotFoundComponent = () => {
     const router = useRouter()
   return (
-    <div className="relative h-full flex flex-col items-center justify-center py-16">
+    <div className="relative mt-20 flex flex-col items-center justify-center py-16">
       {/* Globe Icon */}
       <div className="mb-6">
         <Image
@@ -17,8 +17,8 @@ const NotFoundComponent = () => {
           className="drop-shadow-lg"
         />
       </div>
-      <h1 className="text-6xl font-bold text-[var(--primary)] mb-2">404</h1>
-      <h2 className="text-2xl font-semibold text-[var(--foreground)] mb-4">
+      <h1 className="text-6xl font-bold text-primary mb-2">404</h1>
+      <h2 className="text-2xl font-semibold mb-4">
         Page Not Found
       </h2>
       <p className="text-lg text-[var(--muted-foreground)] mb-8 text-center max-w-md">

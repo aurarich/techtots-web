@@ -1,33 +1,28 @@
 import Link from "next/link";
 import {
-  AcademicCapIcon,
   CpuChipIcon,
   GlobeAltIcon,
-  BeakerIcon,
   PaintBrushIcon,
-  UserGroupIcon,
-  BookOpenIcon,
-  BuildingOfficeIcon,
-  ComputerDesktopIcon,
   SparklesIcon,
   ArrowRightIcon,
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
-import LandingHeroSection from "./landing/hero";
 import ParentTestimonialSection from "./landing/parents";
 import WhyChooseUsSection from "./landing/why-choose-us";
 import OurProgrammes from "./landing/our-programs";
 import TechInnovationSection from "./landing/tech_innovation";
 import AnimatedWave from "@/components/Wave";
+import LandingHeroSection from "./landing/hero";
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <LandingHeroSection />
+      <LandingHeroSection variant="side" />
+      
 
       {/* Testimonials Section */}
-      <ParentTestimonialSection />
+      {/* <ParentTestimonialSection /> */}
 
       {/* Features Section */}
       <WhyChooseUsSection />
@@ -154,12 +149,13 @@ export default function Home() {
               ].map((partner, index) => (
                 <div
                   key={index}
-                  className="p-6 transition-transform border rounded-lg bg-primary backdrop-blur-ssm border-accent/20 hover:scale-105 btn space-y-6"
+                  className="relative p-6 transition-transform border rounded-lg bg-gray-200 backdrop-blur-ssm border-accent/20 hover:scale-105 btn gap-y-6"
                 >
-                  <h3 className="text-lg font-semibold text-center text-white leading-[1.2]">
+                  {/* <Image className src="" alt="" /> */}
+                  <h3 className="text-lg font-semibold text-center text-black leading-[1.2]">
                     {partner.title}
                   </h3>
-                  <p className="text-gray-200 text-sm">
+                  <p className="text-gray-700 text-sm">
                     {partner.description}
                   </p>
                 </div>
