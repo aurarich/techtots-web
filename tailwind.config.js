@@ -71,6 +71,8 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-open-sans)", "system-ui", "sans-serif"],
         heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        raleway: ['var(--font-raleway)', 'sans-serif'],
+        roboto: ['var(--font-roboto)', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

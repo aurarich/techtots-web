@@ -1,4 +1,5 @@
 import AnimatedWave from '@/components/Wave';
+import { ourProgrammes } from '@/data';
 import { BookOpenIcon, BuildingOfficeIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import React from 'react'
@@ -19,33 +20,8 @@ const OurProgrammes = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {[
-              {
-                icon: BookOpenIcon,
-                title: "Crèche (6-18 months)",
-                description:
-                  "Sensory play, safe care, and emotional bonding in a nurturing environment.",
-                color: "primary",
-                btnColor: "primary",
-              },
-              {
-                icon: BuildingOfficeIcon,
-                title: "Nursery (18 months-3 years)",
-                description:
-                  "Language development, social skills, and motor development through play-based learning.",
-                color: "secondary",
-                btnColor: "secondary",
-              },
-              {
-                icon: ComputerDesktopIcon,
-                title: "Kindergarten (4-6 years)",
-                description:
-                  "Literacy, numeracy, coding, and digital literacy in an engaging environment.",
-                color: "beige",
-                btnColor: "primary",
-              },
-            ].map((program, index) => {
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
+            {ourProgrammes.map(({colors, ...program}, index) => {
               const iconColor = `text-${program.color}`;
               const bgColor =
                 program.color === "beige"
@@ -55,23 +31,24 @@ const OurProgrammes = () => {
               return (
                 <div
                   key={index}
-                  className="group rounded-2xl border border-accent/10 bg-white/80 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
+                  className={`card relative group rounded-2xl border border-secondary 
+                  transition-all duration-300 flex flex-col gap-12 p-8 hover:bg-[darkblue]/50 hover:text-white`} 
                 >
-                  <div className="flex flex-col items-center p-8 pb-4">
-                    <div className={`flex items-center justify-center w-20 h-20 mb-4 rounded-full ${bgColor}`}>
-                      <program.icon className={`w-12 h-12 ${iconColor}`} />
+                  <div className="text-center space-y-5">
+                    <div className={`flex items-center justify-center size-14 mx-auto rounded-full ${bgColor}`}>
+                      <program.icon className={`size-7 ${iconColor}`} />
                     </div>
-                    <h3 className="mb-2 text-2xl font-bold text-center text-gray-900 font-heading">
+                    <h3 className="w-full text-2xl font-semibold text-gray-900 font-heading">
                       {program.title}
                     </h3>
-                    <p className="text-center text-gray-600 mb-6">
+                    <p className="text-center text-gray-600">
                       {program.description}
                     </p>
                   </div>
-                  <div className="px-8 pb-8 mt-auto">
+                  <div className="mx-auto mt-auto">
                     <Link
                       href={`/programs/${program.title.toLowerCase().split(" ")[0]}`}
-                      className={`w-full text-center btn ${btnColor}`}
+                      className={`text-center btn ${btnColor}`}
                     >
                       Learn More
                     </Link>
