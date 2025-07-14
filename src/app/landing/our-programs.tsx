@@ -32,7 +32,11 @@ const OurProgrammes = () => {
                 <div
                   key={index}
                   className={`card relative group rounded-2xl border border-secondary 
-                  transition-all duration-300 flex flex-col gap-12 p-8 hover:bg-[darkblue]/50 hover:text-white`} 
+                  transition-all duration-300 flex flex-col gap-12 p-8 before:absolute before:left-0
+                  before:-bottom-10 before:w-4/5 hover:before:bg-gradient-to-r before:from-white 
+                  before:via-gray-300 before:to-white before:h-5 before:rounded-t-[50%] 
+                  before:rounded-b-[50%] before:bg-white before:transition-all before:duration-1000 
+                  before:mx-auto before:right-0`} 
                 >
                   <div className="text-center space-y-5">
                     <div className={`flex items-center justify-center size-14 mx-auto rounded-full ${bgColor}`}>

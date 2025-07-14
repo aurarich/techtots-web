@@ -86,16 +86,16 @@ export default function Home() {
               ].map((category, index) => (
                 <div
                   key={index}
-                  className="p-6 transition-transform border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105"
+                  className="p-6 transition-all group border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:bg-primary hover:text-white space-y-5"
                 >
-                  <h3 className="mb-4 text-xl font-bold text-center text-gray-900">
+                  <h3 className="text-xl transition-all font-bold text-center text-gray-900 group-hover:text-white">
                     {category.title}
                   </h3>
                   <ul className="space-y-3 col-span-1">
                     {category.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <SparklesIcon className="w-4 h-4 text-primary" />
-                        <span className="text-left">{feature}</span>
+                        <SparklesIcon className="w-4 h-4 text-primary group-hover:text-white/80 transition-all" />
+                        <span className="text-left transition-all">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -119,7 +119,7 @@ export default function Home() {
       <section className="relative overflow-hidden section bg-white">
 
         <div className="container relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="mb-8 text-3xl font-bold text-gray-900 font-heading md:text-4xl">
               Partner With Us
             </h2>
@@ -149,7 +149,7 @@ export default function Home() {
               ].map((partner, index) => (
                 <div
                   key={index}
-                  className="relative p-6 transition-transform border rounded-lg bg-gray-200 backdrop-blur-ssm border-accent/20 hover:scale-105 btn gap-y-6"
+                  className="relative p-6 transition-transform border rounded-lg bg-gray-200 backdrop-blur-ssm border-accent/20 hover:scale-105 btn space-y-5"
                 >
                   {/* <Image className src="" alt="" /> */}
                   <h3 className="text-lg font-semibold text-center text-black leading-[1.2]">
