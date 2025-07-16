@@ -1,18 +1,18 @@
 import Link from 'next/link'
-import Image from "next/image"
+import img from "next/image"
 import {
   EnvelopeIcon,
   PhoneIcon,
   MapPinIcon,
   GlobeAltIcon,
-  ChatBubbleLeftRightIcon,
+  DevicePhoneMobileIcon
 } from "@heroicons/react/24/outline"
 
 export default function Footer() {
   return (
     <footer className="text-white bg-gray-900 mt-auto">
       <div className="container py-12 pb-5">
-            <Image src="/logo.svg" alt='Logo' width={100} height={100} />
+            <img src="/logo.svg" alt='Logo' width={100} height={100} />
         <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold text-white font-heading">TechTots</h3>
@@ -94,6 +94,12 @@ export default function Footer() {
                 <EnvelopeIcon className="w-5 h-5 text-[#F5E6D3]" />
                 <a href="mailto:admission@techtots.edu.gh" className="hover:text-[#F5E6D3] transition-colors">
                   admission@techtots.edu.gh
+                </a>
+              </li>
+              <li className="flex items-center space-x-3">
+                <DevicePhoneMobileIcon className="w-5 h-5 text-[#F5E6D3]" />
+                <a href="tel:+233256124133" className="hover:text-[#F5E6D3] transition-colors">
+                  +233 (0) 25 612 4133
                 </a>
               </li>
               <li className="flex items-center space-x-3">

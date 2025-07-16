@@ -56,9 +56,10 @@ export const whyTechTotData = [
 
 export const ourProgrammes = [
   {
+    slug: "creche",
     icon: BookOpenIcon,
     title: "Crèche",
-    caption: "Infants & Toddlers", // already filled
+    caption: "Infants & Toddlers", 
     ageGroup: "6 months - 2 years",
     description:
       "Sensory play, safe care, and emotional bonding in a nurturing environment.",
@@ -86,10 +87,12 @@ export const ourProgrammes = [
         iconBackground: 'bg-primary/20',
         buttonColor: 'btn-primary',
         pseudoColors: 'after:bg-primary/20 before:bg-primary/20'
-    }
+    },
+    future: false,
   },
   {
     icon: BuildingOfficeIcon,
+    slug: "early-year-preparatory",
     title: "Early Year Preparatory",
     caption: "Play, learn, grow", // newly added
     ageGroup: "3 - 6years",
@@ -115,13 +118,15 @@ export const ourProgrammes = [
         iconBackground: 'bg-primary/20',
         buttonColor: 'btn-primary',
         pseudoColors: 'after:bg-primary/20 before:bg-primary/20'
-    }
+    },
+    future: false,
   },
   {
     icon: ComputerDesktopIcon,
+    slug: "cambridge-early-year",
     title: "Cambridge Early Year",
     caption: "Curious minds in motion", // newly added
-    ageGRoup: "3 - 6 years",
+    ageGroup: "3 - 6 years",
     description:
       "Literacy, numeracy, coding, and digital literacy in an engaging environment.",
     color: "beige",
@@ -144,13 +149,15 @@ export const ourProgrammes = [
         iconBackground: 'bg-primary/20',
         buttonColor: 'btn-primary',
         pseudoColors: 'after:bg-primary/20 before:bg-primary/20'
-    }
+    },
+    future: false,
   },
   {
     icon: ComputerDesktopIcon,
+    slug: "cambridge-primary",
     title: "Cambridge Primary",
     caption: "Confident, curious learners", // newly added
-    ageGRoup: "6+ years",
+    ageGroup: "6+ years",
     description:
       "Literacy, numeracy, coding, and digital literacy in an engaging environment.",
     color: "beige",
@@ -170,7 +177,8 @@ export const ourProgrammes = [
         iconBackground: 'bg-primary/20',
         buttonColor: 'btn-primary',
         pseudoColors: 'after:bg-primary/20 before:bg-primary'
-    }
+    },
+    future: true,
   },
 ];
 

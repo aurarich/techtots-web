@@ -1,6 +1,6 @@
 'use client';
 import React from "react";
-import Image from "next/image";
+import img from "next/image";
 import { useRouter } from "next/navigation";
 
 const NotFoundComponent = () => {
@@ -9,7 +9,7 @@ const NotFoundComponent = () => {
     <div className="relative mt-20 flex flex-col items-center justify-center py-16">
       {/* Globe Icon */}
       <div className="mb-6">
-        <Image
+        <img
           src="/globe.svg"
           alt="Globe icon"
           width={64}
