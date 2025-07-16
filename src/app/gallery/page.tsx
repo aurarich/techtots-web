@@ -1,6 +1,4 @@
 import HeaderTag from '@/components/ui/header-tag';
-import { SparklesIcon } from '@heroicons/react/24/outline';
-import img from 'next/image';
 
 export default function GalleryPage() {
   return (
@@ -48,7 +46,6 @@ export default function GalleryPage() {
                   <img
                     src="https://plus.unsplash.com/premium_photo-1742995782977-ee4b53fecadb?q=80&w=2670&auto=format&fit=crop"
                     alt="Digital Learning Hub"
-                    fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
@@ -61,7 +58,6 @@ export default function GalleryPage() {
                   <img
                     src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2670&auto=format&fit=crop"
                     alt="Reading Corner"
-                    fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
@@ -81,7 +77,6 @@ export default function GalleryPage() {
                   <img
                     src="https://images.unsplash.com/photo-1715775491904-ef5cdae40f0f?q=80&w=1335&auto=format&fit=crop"
                     alt="Nature Playground"
-                    fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
@@ -94,7 +89,6 @@ export default function GalleryPage() {
                   <img
                     src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2670&auto=format&fit=crop"
                     alt="Music Studio"
-                    fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
@@ -114,7 +108,6 @@ export default function GalleryPage() {
                   <img
                     src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop"
                     alt="STEM Activity"
-                    fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
@@ -127,7 +120,6 @@ export default function GalleryPage() {
                   <img
                     src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2670&auto=format&fit=crop"
                     alt="Cultural Celebration"
-                    fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
