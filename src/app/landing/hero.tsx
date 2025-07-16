@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React from "react";
-import Image from "next/image";
+import img from "next/image";
 import heroStyle from "./hero.module.css";
 
 type HeroType = "default" | "overlay" | "side";
@@ -24,7 +24,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
         <section
           id="hero"
           aria-label="hero-section"
-          className="flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 pt-40 lg:pb-5 xl:h-5/6 overflow-hidden"
+          className="flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 lg:pb-5 xl:h-5/6 overflow-hidden"
         >
           {/* Background Elements */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
@@ -123,13 +123,13 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
         <section
           id="hero"
           aria-label="hero-section"
-          className="flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 pt-40 lg:pb-5 xl:h-5/6 overflow-hidden"
+          className="flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 lg:pb-5 xl:h-5/6 overflow-hidden"
         >
-          <Image
+          <img
             src="/images/kids-with-computer.png"
             alt="Hero"
-            fill
             className="object-cover"
+            fetchPriority="high"
           />
           <div className="absolute w-full top-0 h-full bg-black/60 z-10"></div>
 
@@ -225,7 +225,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
         <section
           id="hero"
           aria-label="hero-section"
-          className="relative w-full md:h-screen flex flex-col items-center gap-10 md:items-start overflow-hidden bg-white pt-28 pb-10"
+          className="relative w-full h-[calc(100%_-180px)] flex flex-col items-center gap-10 md:items-start overflow-hidden bg-white pt-10 pb-10"
         >
           <div className="flex items-center gap-2 px-4 py-2 mx-auto text-sm font-medium transition-colors rounded-full bg-primary/10 text-primary hover:bg-primary/20 w-fit">
             <SparklesIcon className="w-4 h-4" />
@@ -249,7 +249,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
                 AI-powered learning.
               </p>
 
-              <div className="container grid gap-8 mt-auto mb-20 grid-cols-4 lg:hidden">
+              <div className="container gap-8 mt-auto mb-20 grid-cols-4 hidden">
             {[
               { label: "Years Experience", value: "10+" },
               { label: "Students", value: "500+" },
@@ -290,7 +290,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right img */}
             <div className="hidden w-full lg:flex justify-end items-center relative">
                 <svg
                 className="absolute -z-10 -top-1/2 left-0 w-[130%] opacity-20 text-blue-300"
@@ -304,12 +304,12 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
                 />
               </svg>
               <div className="relative w-full max-w-sm aspect-square float justify-self-end">
-                <Image
+                <img
                   src={"/images/school-girl.jpg"}
-                  fill
                   alt="kids in IT lab"
-                  className="object-cover rounded-3xl shadow-2xl border-4 border-white object-top"
-                  priority
+                  fetchPriority="high"
+                  className="object-cover rounded-3xl shadow-2xl border-4 border-white object-top aspect-square"
+                  
                 />
 
                 {/* Floating icons */}
@@ -326,7 +326,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
             </div>
           </div>
 
-          <div className="container hidden mx-auto lg:grid lg:max-w-2xl gap-8 mt-auto mb-20 grid-cols-4">
+          <div className="container hidden mx-auto lg:max-w-2xl gap-8 mt-auto mb-20 grid-cols-4">
             {[
               { label: "Years Experience", value: "10+" },
               { label: "Students", value: "500+" },

@@ -1,6 +1,6 @@
 import HeaderTag from '@/components/ui/header-tag';
 import { SparklesIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
+import img from 'next/image';
 
 export default function GalleryPage() {
   return (
@@ -45,7 +45,7 @@ export default function GalleryPage() {
               <h2 className="text-2xl font-bold text-gray-900 font-heading">Learning Spaces</h2>
               <div className="grid gap-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
-                  <Image
+                  <img
                     src="https://plus.unsplash.com/premium_photo-1742995782977-ee4b53fecadb?q=80&w=2670&auto=format&fit=crop"
                     alt="Digital Learning Hub"
                     fill
@@ -58,7 +58,7 @@ export default function GalleryPage() {
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
-                  <Image
+                  <img
                     src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2670&auto=format&fit=crop"
                     alt="Reading Corner"
                     fill
@@ -78,7 +78,7 @@ export default function GalleryPage() {
               <h2 className="text-2xl font-bold text-gray-900 font-heading">Play & Recreation</h2>
               <div className="grid gap-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
-                  <Image
+                  <img
                     src="https://images.unsplash.com/photo-1715775491904-ef5cdae40f0f?q=80&w=1335&auto=format&fit=crop"
                     alt="Nature Playground"
                     fill
@@ -91,7 +91,7 @@ export default function GalleryPage() {
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
-                  <Image
+                  <img
                     src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2670&auto=format&fit=crop"
                     alt="Music Studio"
                     fill
@@ -111,7 +111,7 @@ export default function GalleryPage() {
               <h2 className="text-2xl font-bold text-gray-900 font-heading">Activities & Events</h2>
               <div className="grid gap-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
-                  <Image
+                  <img
                     src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop"
                     alt="STEM Activity"
                     fill
@@ -124,7 +124,7 @@ export default function GalleryPage() {
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
-                  <Image
+                  <img
                     src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2670&auto=format&fit=crop"
                     alt="Cultural Celebration"
                     fill

@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Image from "next/image";
+import img from "next/image";
 import AnimatedWave from "@/components/Wave";
 import { whyTechTotData } from "@/data";
 
@@ -33,7 +33,7 @@ const WhyChooseUsSection = () => {
                 key={index}
                 className="relative p-2 transition-all border rounded-lg bg-white backdrop-blur-sm border-accent/20 hover:scale-105"
               >
-                <Image
+                <img
                   src={feature.image}
                   alt={feature.title}
                   width={500}
