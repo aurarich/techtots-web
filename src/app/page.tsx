@@ -151,7 +151,7 @@ export default function Home() {
                   key={index}
                   className="relative p-6 transition-transform border rounded-lg bg-gray-200 backdrop-blur-ssm border-accent/20 hover:scale-105 btn space-y-5"
                 >
-                  {/* <Image className src="" alt="" /> */}
+                  {/* <img className src="" alt="" /> */}
                   <h3 className="text-lg font-semibold text-center text-black leading-[1.2]">
                     {partner.title}
                   </h3>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import img from "next/image";
 import {
   AcademicCapIcon,
   UserGroupIcon,
@@ -68,26 +68,44 @@ export default function AboutPage() {
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                name: "Dr. Sarah Mensah",
+                name: "Hayford Siaw",
                 role: "Founder & Director",
-                description: "20+ years in early childhood education"
+                description: "20+ years in Education Management & Policy",
+                image: '/images/hayford.jpeg'
               },
               {
-                name: "Prof. Kwame Osei",
-                role: "Academic Director",
-                description: "Cambridge Curriculum Specialist"
+                name: "Hannes O",
+                role: "General Education Expert",
+                description: "Cambridge Curriculum Specialist",
+                image: '/images/hannes.jpeg'
               },
               {
-                name: "Ms. Ama Kufuor",
-                role: "Technology Director",
-                description: "AI in Education Expert"
+                name: "Portia S",
+                role: "School Management Expert",
+                description: "AI in Education Expert",
+                image: '/images/portia.jpeg'
               }
             ].map((member, index) => (
-              <div key={index} className="p-6 transition-transform border rounded-lg bg-white border-neutral/10 hover:scale-105">
-                <div className="w-24 h-24 mx-auto mb-4 bg-gray-200 rounded-full" />
-                <h3 className="mb-2 text-xl font-bold text-gray-900">{member.name}</h3>
-                <p className="mb-2 text-primary">{member.role}</p>
-                <p className="text-sm text-gray-600">{member.description}</p>
+              <div
+                key={index}
+                className="relative flex flex-col justify-end h-96 overflow-hidden transition-all border rounded-2xl shadow-lg bg-white border-primary/10 group"
+              >
+                <img
+                  src={member.image}
+                  fetchPriority="auto"
+                  className="absolute inset-0 rounded-2xl object-cover w-full h-full transition-all duration-500 mix-blend-multiply group-hover:scale-110 group-hover:object-top"
+                  alt={member.name}
+                />
+                {/* Overlay for readability */}
+                <div className="absolute rounded-2xl overflow-hidden inset-1 bg-gradient-to-t from-black/80 group-hover:to-20% via-black/20 group-hover:via-30% group-hover:from-black/50 transition-all duration-500" />
+                {/* Content at the bottom */}
+                <div className="relative z-10 p-6 text-white">
+                  <h3 className="mb text-2xl font-extrabold tracking-tight">{member.name}</h3>
+                  <p className="mb-2 text-lg font-semibold text-beige drop-shadow">{member.role}</p>
+                  <p className="text-sm text-white/90 drop-shadow-sm">{member.description}</p>
+                </div>
+                {/* Subtle bottom glow */}
+                <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-primary/40 to-transparent blur-md opacity-60" />
               </div>
             ))}
           </div>
@@ -95,4 +113,4 @@ export default function AboutPage() {
       </section>
     </main>
   );
-} 
+}

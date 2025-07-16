@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} ${roboto.variable} font-roboto`}>
       <body className="h-screen">
         <Navbar />
-        <main className="flex-grow h-full bg-white">
+        <main className="flex-grow h-full bg-white mt-20">
           {children}
           <Footer />
         </main>
