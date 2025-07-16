@@ -6,6 +6,12 @@ import { ourProgrammes } from "@/data";
 import { notFound, useParams } from "next/navigation";
 import { Bubbles, Milestone, Shapes } from "lucide-react";
 
+export async function generateStaticParams() {
+  return ourProgrammes.map(pg => ({
+    slug: pg.slug,
+  }));
+}
+
 export default function ProgrammeDetails() {
   const {slug} = useParams<{ slug: string }>()
 
