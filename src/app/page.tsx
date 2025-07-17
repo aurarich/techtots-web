@@ -104,7 +104,7 @@ export default function Home() {
             </div>
             <div className="mt-12">
               <Link
-                href="/tour"
+                href="/get-started/schedule-tour"
                 className="btn transition-all inline-flex items-center gap-2 px-8 py-4 text-lg font-medium text-white rounded-lg btn-primary"
               >
                 Schedule a Tour
@@ -197,7 +197,7 @@ export default function Home() {
                 Apply Now
               </Link>
               <Link
-                href="/contact"
+                href="/get-started/schedule-tour"
                 className="px-8 py-4 text-lg btn btn-secondary"
               >
                 Schedule a Tour
