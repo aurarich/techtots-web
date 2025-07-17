@@ -103,12 +103,6 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <PhoneIcon className="w-5 h-5 text-[#F5E6D3]" />
-                <a href="tel:+233244549446" className="hover:text-[#F5E6D3] transition-colors">
-                  +233 (0) 24 454 9446
-                </a>
-              </li>
-              <li className="flex items-center space-x-3">
                 <MapPinIcon className="w-5 h-5 text-[#F5E6D3]" />
                 <a href="https://maps.google.com/?q=TechTots+International+School+Pokuase" target="_blank" rel="noopener noreferrer" className="hover:text-[#F5E6D3] transition-colors">
                   Pokuase, Greater Accra, Ghana

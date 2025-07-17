@@ -85,7 +85,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
                   </span>
                 </Link>
                 <Link
-                  href="/tour"
+                  href="/get-started/schedule-tour"
                   className="px-8 py-4 text-lg group btn btn-secondary"
                 >
                   <span className="flex items-center gap-2">
@@ -184,7 +184,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
                   </span>
                 </Link>
                 <Link
-                  href="/tour"
+                  href="/get-started/schedule-tour"
                   className="max-sm:px-4 max-md:py-3 px-8 py-4 text-base sm:text-lg group btn btn-secondary"
                 >
                   <span className="flex items-center gap-2">
@@ -225,7 +225,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
         <section
           id="hero"
           aria-label="hero-section"
-          className="relative w-full h-[calc(100%_-180px)] flex flex-col items-center gap-10 md:items-start overflow-hidden bg-white pt-10 pb-10"
+          className="relative w-full h-full xl:h-[calc(100%_-180px)] flex flex-col items-center gap-10 md:items-start overflow-hidden bg-white py-12 xl:py-20"
         >
           <div className="flex items-center gap-2 px-4 py-2 mx-auto text-sm font-medium transition-colors rounded-full bg-primary/10 text-primary hover:bg-primary/20 w-fit">
             <SparklesIcon className="w-4 h-4" />
@@ -279,7 +279,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
                   </span>
                 </Link>
                 <Link
-                  href="/tour"
+                  href="/get-started/schedule-tour"
                   className="px-8 py-4 text-lg w-full md:w-fit group btn btn-secondary"
                 >
                   <span className="flex items-center justify-center gap-2">

@@ -1,8 +1,6 @@
-import AnimatedWave from '@/components/Wave';
-import { ourProgrammes } from '@/data';
-import { BookOpenIcon, BuildingOfficeIcon, ComputerDesktopIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
 import React from 'react'
+import { ourProgrammes } from '@/data';
+import Link from 'next/link';
 
 const OurProgrammes = () => {
   return (
@@ -46,12 +44,12 @@ const OurProgrammes = () => {
                       {program.title}
                     </h3>
                     <p className="text-center text-gray-600">
-                      {program.description}
+                      {program.short_description}
                     </p>
                   </div>
                   <div className="mx-auto mt-auto">
                     <Link
-                      href={`/programs/${program.title.toLowerCase().split(" ")[0]}`}
+                      href={`/programmes/${program.slug}`}
                       className={`text-center btn ${btnColor}`}
                     >
                       Learn More
@@ -63,9 +61,6 @@ const OurProgrammes = () => {
           </div>
         </div>
       </section>
-      {/* <div className="rotate-180 bg-white">
-        <AnimatedWave className='fill-primary/60' />
-      </div> */}
     </>
   )
 }

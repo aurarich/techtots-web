@@ -59,6 +59,7 @@ export const ourProgrammes = [
     slug: "creche",
     icon: BookOpenIcon,
     title: "Crèche",
+    short_description: "Sensory play, safe care, and emotional bonding in a nurturing environment.",
     caption: "Infants & Toddlers", 
     ageGroup: "6 months - 2 years",
     description:
@@ -94,8 +95,9 @@ export const ourProgrammes = [
     icon: BuildingOfficeIcon,
     slug: "early-year-preparatory",
     title: "Early Year Preparatory",
-    caption: "Play, learn, grow", // newly added
-    ageGroup: "3 - 6years",
+    short_description: "Language development, social skills, and motor development through play-based learning.",
+    caption: "Play, learn, grow",
+    ageGroup: "3 - 6 years",
     description:
       "Language development, social skills, and motor development through play-based learning.",
     color: "secondary",
@@ -125,6 +127,7 @@ export const ourProgrammes = [
     icon: ComputerDesktopIcon,
     slug: "cambridge-early-year",
     title: "Cambridge Early Year",
+    short_description: "Literacy, numeracy, coding, and digital literacy in an engaging environment.",
     caption: "Curious minds in motion", // newly added
     ageGroup: "3 - 6 years",
     description:
@@ -156,10 +159,11 @@ export const ourProgrammes = [
     icon: ComputerDesktopIcon,
     slug: "cambridge-primary",
     title: "Cambridge Primary",
-    caption: "Confident, curious learners", // newly added
+    short_description: "A broad, creative Cambridge curriculum for ages 5–11, building strong foundations in core subjects and life skills.",
+    caption: "Confident, curious learners",
     ageGroup: "6+ years",
     description:
-      "Literacy, numeracy, coding, and digital literacy in an engaging environment.",
+      "Cambridge Primary covers core learning areas including English, Mathematics, Science, ICT, Global Perspectives, Art & Design, Music, and Physical Education, fostering foundational knowledge, creativity, and critical thinking in learners aged 5 to 11.",
     color: "beige",
     btnColor: "primary",
     classes: [
