@@ -27,7 +27,7 @@ module.exports = {
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "#87CEEB",
+          DEFAULT: "#0ea5e9",
           dark: "#0284C7",
           light: "#38BDF8",
           foreground: "hsl(var(--secondary-foreground))",
@@ -83,7 +83,7 @@ module.exports = {
         "ai-image":
           "url('https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1280')",
         "parent-bg":
-          "url('https://www.pexels.com/photo/photo-of-boy-hugging-his-mom-935951')",
+          "url('https://images.pexels.com/photos/935951/pexels-photo-935951.jpeg?auto=compress&cs=tinysrgb&w=1280')",
         "footer-texture": "url('/img/footer-texture.png')",
       },
     },

@@ -57,10 +57,10 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-b from-primary/10 to-background">
-        <div className="container">
-          <div className="max-w-4xl mx-auto mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold text-gray-900 font-heading">Our Leadership Team</h2>
+      <section className="relative py-20 overflow-hidden">
+        <div className="container space-y-16">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="mb-2 text-3xl font-bold text-gray-900 font-heading">Our Leadership Team</h2>
             <p className="text-gray-600">
               Meet the passionate educators and innovators behind TechTots
             </p>
@@ -76,13 +76,15 @@ export default function AboutPage() {
               {
                 name: "Hannes O",
                 role: "General Education Expert",
-                description: "Cambridge Curriculum Specialist",
+                // description: "Cambridge Curriculum Specialist",
+                description: "",
                 image: '/images/hannes.jpeg'
               },
               {
                 name: "Portia S",
                 role: "School Management Expert",
-                description: "AI in Education Expert",
+                // description: "AI in Education Expert",
+                description: "",
                 image: '/images/portia.jpeg'
               }
             ].map((member, index) => (
@@ -102,7 +104,7 @@ export default function AboutPage() {
                 <div className="relative z-10 p-6 text-white">
                   <h3 className="mb text-2xl font-extrabold tracking-tight">{member.name}</h3>
                   <p className="mb-2 text-lg font-semibold text-beige drop-shadow">{member.role}</p>
-                  <p className="text-sm text-white/90 drop-shadow-sm">{member.description}</p>
+                  {member.description && <p className="text-sm text-white/90 drop-shadow-sm">{member.description}</p>}
                 </div>
                 {/* Subtle bottom glow */}
                 <div className="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-primary/40 to-transparent blur-md opacity-60" />

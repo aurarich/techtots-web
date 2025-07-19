@@ -18,7 +18,7 @@ export default function ProgrammeDetails() {
     <div className="relative overflow-hidden flex-1">
       <section
         aria-label="programme-details"
-        className="relative text-center py-16 bg-[url('/images/kids-with-computer.png')] bg-cover bg-top bg-no-repeat bg-scroll"
+        className="relative text-center py-20 min-h-96 bg-[url('/images/kids-with-computer.png')] bg-cover bg-top bg-no-repeat bg-scroll"
       >
         <div className="overlay absolute inset-0 bg-black/80 z-10"></div>
         <div className="relative content z-20 space-y-12">
@@ -53,15 +53,25 @@ export default function ProgrammeDetails() {
         </div>
       </section>
 
-      <section className="space-y-20">
+      <section className="space-y-20 bg-gray-100">
         <div className="container max-w-3xl py-16 space-y-16">
           <div className="space-y-4">
             <div className="relative">
-              <h2 className="text-base w-fit flex items-center gap-2 bg-sky-500 text-white p-2 px-3 rounded-t-lg"
-              >
+              <h2 className="text-base w-fit flex items-center gap-2 bg-sky-500 text-white p-2 px-3 rounded-t-lg">
+                <Shapes className="size-5" /> Overview
+              </h2>
+              <span className="block absolute h-px w-full bg-sky-500 bottom-0"></span>
+            </div>
+            <div className="">
+              <p>{programme.description}</p>
+            </div>
+          </div>
+          <div className="space-y-4">
+            <div className="relative">
+              <h2 className="text-base w-fit flex items-center gap-2 bg-sky-500 text-white p-2 px-3 rounded-t-lg">
                 <Shapes className="size-5" /> Classes
               </h2>
-                <span className="block absolute h-[0.5px] w-full bg-sky-500 bottom-0"></span>
+              <span className="block absolute h-px w-full bg-sky-500 bottom-0"></span>
             </div>
             <ul className="flex flex-wrap gap-2 md:gap-4">
               {programme.classes.map((cls, i) => (
@@ -78,19 +88,18 @@ export default function ProgrammeDetails() {
           </div>
           <div className="space-y-5">
             <div className="relative">
-              <h2 className="text-base w-fit flex items-center gap-2 bg-sky-500 text-white p-2 px-3 rounded-t-lg"
-              >
+              <h2 className="text-base w-fit flex items-center gap-2 bg-sky-500 text-white p-2 px-3 rounded-t-lg">
                 <Milestone className="size-5" /> Programme Milestones
               </h2>
-                <span className="block absolute h-[0.5px] w-full bg-sky-500 bottom-0"></span>
+              <span className="block absolute h-px w-full bg-sky-500 bottom-0"></span>
             </div>
-            <ul className="grid gap-3 md:gap-4 md:grid-cols-2">
+            <ul className="grid gap-5 md:grid-cols-2">
               {programme.milestones.map((ms, i) => (
                 <li
                   key={i}
-                  className="flex cursor-default w-fit items-start gap-3 
-                  p-4 rounded-md bg-gray-100 hover:bg-primary/10 
-                  transition-colors text-gray-800 text-base"
+                  className={`relative flex cursor-default w-fit 
+                  items-start gap-3 p-4 rounded-md bg-gray-200 hover:bg-primary/10 
+                  transition-colors text-gray-800 text-base z-[999]`}
                 >
                   <Bubbles className="size-5 text-primary" />
                   <span>{ms}</span>
@@ -98,7 +107,7 @@ export default function ProgrammeDetails() {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 justify-center mt-8 bg-white">
+          <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
             <Link
               href="/programmes"
               className="btn btn-secondary text-center py-3"
@@ -114,9 +123,6 @@ export default function ProgrammeDetails() {
           </div>
         </div>
       </section>
-      {/* Playful background blobs */}
-      <div className="pointer-events-none absolute -top-20 -left-20 w-72 h-72 bg-primary rounded-full filter blur-2xl opacity-60 animate-blob" />
-      <div className="pointer-events-none absolute -bottom-20 -right-20 w-72 h-72 bg-secondary rounded-full filter blur-2xl opacity-60 animate-blob animation-delay-2000" />
-    </div>
+      </div>
   );
 }
