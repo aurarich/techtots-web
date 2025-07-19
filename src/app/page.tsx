@@ -78,8 +78,8 @@ export default function Home() {
                 {
                   title: "Care Facilities",
                   features: [
-                    "Crèche Nap Rooms",
-                    "Health Bay",
+                    "Crèche Nap Zones",
+                    "Well Equipped First Aid",
                     "Secure Environment",
                   ],
                 },

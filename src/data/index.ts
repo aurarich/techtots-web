@@ -13,35 +13,35 @@ export const whyTechTotData = [
   {
     icon: AcademicCapIcon,
     title: "Cambridge + Reggio Emilia",
-    image: "https://images.pexels.com/photos/414422/pexels-photo-414422.jpeg", // children learning, books
+    image: "/images/kids-in-it-lab.png",
     description:
       "World-class curriculum combining academic excellence with creative exploration.",
   },
   {
     icon: CpuChipIcon,
     title: "AI-Powered Learning",
-    image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg", // child with tablet/tech
+    image: "https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg",
     description:
       "First preschool in Ghana to integrate artificial intelligence in early learning.",
   },
   {
     icon: PaintBrushIcon,
     title: "Child-Centered Approach",
-    image: "/images/lego-great-mind.png", // kids painting
+    image: "/images/lego-great-mind.png",
     description:
       "Play-based learning that nurtures creativity and individual growth.",
   },
   {
     icon: GlobeAltIcon,
     title: "Digital Communication",
-    image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg", // parent and child video call
+    image: "https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg",
     description:
       "Advanced parent communication tools for seamless updates and engagement.",
   },
   {
     icon: BuildingOfficeIcon,
     title: "Purpose-Built Campus",
-    image: "https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg", // modern school building
+    image: "/images/campus.png",
     description:
       "State-of-the-art facilities in suburban Accra designed for optimal learning.",
   },
@@ -84,10 +84,10 @@ export const ourProgrammes = [
       "Beginning to engage in parallel play"
     ],
     colors: {
-        iconColor: "text-primary",
-        iconBackground: 'bg-primary/20',
-        buttonColor: 'btn-primary',
-        pseudoColors: 'after:bg-primary/20 before:bg-primary/20'
+        iconColor: "text-beige",
+        iconBackground: 'bg-beige/20',
+        buttonColor: 'btn-beige',
+        pseudoColors: 'after:bg-beige/20 before:bg-beige/20'
     },
     future: false,
   },
@@ -97,7 +97,7 @@ export const ourProgrammes = [
     title: "Early Year Preparatory",
     short_description: "Language development, social skills, and motor development through play-based learning.",
     caption: "Play, learn, grow",
-    ageGroup: "3 - 6 years",
+    ageGroup: "2 - 3 years",
     description:
       "Language development, social skills, and motor development through play-based learning.",
     color: "secondary",
@@ -148,9 +148,9 @@ export const ourProgrammes = [
       "Building independence in self-care and classroom responsibilities"
     ],
     colors: {
-        iconColor: "text-primary",
-        iconBackground: 'bg-primary/20',
-        buttonColor: 'btn-primary',
+        iconColor: "text-secondary",
+        iconBackground: 'bg-secondary/20',
+        buttonColor: 'btn-secondary',
         pseudoColors: 'after:bg-primary/20 before:bg-primary/20'
     },
     future: false,
@@ -177,10 +177,10 @@ export const ourProgrammes = [
       "Cultivating leadership, resilience, and a lifelong love of learning"
     ],
     colors: {
-        iconColor: "text-primary",
-        iconBackground: 'bg-primary/20',
-        buttonColor: 'btn-primary',
-        pseudoColors: 'after:bg-primary/20 before:bg-primary'
+        iconColor: "text-beige",
+        iconBackground: 'bg-beige/20',
+        buttonColor: 'btn-beige',
+        pseudoColors: 'after:bg-beige/20 before:bg-beige'
     },
     future: true,
   },
