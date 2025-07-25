@@ -1,23 +1,29 @@
 import type { Metadata } from "next";
-import { Poppins, Open_Sans, Roboto } from "next/font/google";
+import {
+  Poppins,
+  Open_Sans,
+  Roboto,
+  Plus_Jakarta_Sans,
+  Raleway,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
 });
 
 const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: "variable",
   variable: "--font-open-sans",
 });
-const roboto = Open_Sans({
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["100", "300", "400", "500", "700", "900"],
   variable: "--font-roboto",
 });
 
@@ -33,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${roboto.variable} font-roboto`}>
+    <html
+      lang="en"
+      className={`${poppins.variable} ${openSans.variable} ${roboto.variable} font-sans`}
+    >
       <body className="h-screen">
         <Navbar />
         <main className="flex-grow h-full bg-white mt-20">
