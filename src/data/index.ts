@@ -41,7 +41,7 @@ export const whyTechTotData = [
   {
     icon: BuildingOfficeIcon,
     title: "Purpose-Built Campus",
-    image: "/images/campus.png",
+    image: "/images/campus-2.jpeg",
     description:
       "State-of-the-art facilities in suburban Accra designed for optimal learning.",
   },
@@ -186,3 +186,62 @@ export const ourProgrammes = [
   },
 ];
 
+
+export const roadmapData = [
+  {
+    className: "Little Seeds (Crèche)",
+    cambridge: "Not formally part of Cambridge",
+    ghana: "Crèche",
+    uk: "Baby Room",
+    age: "6 months – 1 year",
+    focus: "Sensory play, bonding routines, early communication",
+  },
+  {
+    className: "Sprouts (Crèche)",
+    cambridge: "Not formally part of Cambridge",
+    ghana: "Crèche",
+    uk: "Toddler Room",
+    age: "1–2 years",
+    focus: "Secure attachment, first words, active exploration",
+  },
+  {
+    className: "Explorers (EY Preparatory)",
+    cambridge: "Pre-Early Years / Transition to EY1",
+    ghana: "Nursery",
+    uk: "Pre-Nursery",
+    age: "2–3 years",
+    focus: "Language, social play, motor skills",
+  },
+  {
+    className: "Adventurers (EY1)",
+    cambridge: "Early Years 1 (EY1)",
+    ghana: "Nursery 2",
+    uk: "Foundation Stage 1",
+    age: "3–4 years",
+    focus: "Early literacy/numeracy, discovery learning, tech intro",
+  },
+  {
+    className: "Discoverers (EY2)",
+    cambridge: "Early Years 2 (EY2)",
+    ghana: "KG1",
+    uk: "Foundation Stage 1",
+    age: "4–5 years",
+    focus: "Collaboration, confidence, emerging independence",
+  },
+  {
+    className: "Innovators (EY3)",
+    cambridge: "Early Years 3 (EY3)",
+    ghana: "KG2",
+    uk: "Reception (FS2)",
+    age: "5 – 6 years",
+    focus: "School readiness, creativity, problem-solving",
+  },
+  {
+    className: "Pioneers (Primary 1)",
+    cambridge: "Cambridge Primary – Year 1",
+    ghana: "Basic 1",
+    uk: "Year 1 (Key Stage 1)",
+    age: "6 – 7 years",
+    focus: "Cambridge core subjects, project-based learning",
+  },
+];
