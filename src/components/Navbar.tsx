@@ -7,8 +7,8 @@ import img from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Programs', href: '/programmes' },
-  { name: 'Admissions', href: '/admissions' },
+  { name: 'Our Programs', href: '/programmes' },
+  { name: 'Admissions & Fees', href: '/admissions' },
   { name: 'About', href: '/about' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Contact', href: '/contact' },

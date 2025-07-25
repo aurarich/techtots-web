@@ -73,11 +73,16 @@ module.exports = {
         heading: ["var(--font-poppins)", "system-ui", "sans-serif"],
         raleway: ['var(--font-raleway)', 'sans-serif'],
         roboto: ['var(--font-roboto)', 'sans-serif'],
+        poppins: ['var(--font-poppins)', 'sans-serif'],
+        jakarta: ['var(--font-jakarta)', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      transitionDuration: {
+        "5000": '5000ms'
       },
       backgroundImage: {
         "ai-image":
@@ -85,6 +90,7 @@ module.exports = {
         "parent-bg":
           "url('https://images.pexels.com/photos/935951/pexels-photo-935951.jpeg?auto=compress&cs=tinysrgb&w=1280')",
         "footer-texture": "url('/img/footer-texture.png')",
+        "blob-small": "url('/blob.svg')"
       },
     },
   },
