@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '../../public/styles/animation.css';
+
 @layer base {
   h1,
   h2,
@@ -24,7 +26,7 @@
     --popover-foreground: hsl(0 0% 3.9%);
     --primary: #000080;
     --primary-foreground: hsl(0 0% 98%);
-    --secondary: #87ceeb;
+    --secondary: #0ea5e9;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
@@ -51,7 +53,7 @@
     --popover-foreground: hsl(0 0% 98%);
     --primary: #000080;
     --primary-foreground: 0 0% 9%;
-    --secondary: #87ceeb;
+    --secondary: #0ea5e9;
     --secondary-foreground: hsl(0 0% 98%);
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
@@ -90,15 +92,15 @@ body {
 
 @layer components {
   .btn {
-    @apply px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform relative overflow-hidden;
+    @apply px-6 py-2 rounded-md font-semibold transition-all duration-300 transform relative overflow-hidden;
   }
 
   .btn::before {
     content: "";
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    left: 0;
+    width: 0%;
     height: 100%;
     background: linear-gradient(
       90deg,
@@ -110,7 +112,7 @@ body {
   }
 
   .btn:hover::before {
-    left: 100%;
+    width: 100%;
   }
 
   .btn-primary {
@@ -136,13 +138,13 @@ body {
   }
 
   .btn-beige {
-    background: linear-gradient(to right, #edcdae, #e5e5c0);
-    @apply text-[#1E3A8A];
+    @apply text-black;
+    background: linear-gradient(to right, #edcdae, #f2d9c0);
     box-shadow: 0 4px 15px -3px rgba(245, 245, 220, 0.3);
   }
 
   .btn-beige:hover {
-    background: linear-gradient(to right, #e5e5c0, #edcdae);
+    background: linear-gradient(to right, #f2d9c0, #edcdae);
     box-shadow: 0 8px 25px -5px rgba(245, 245, 220, 0.4);
   }
 
@@ -168,17 +170,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(
-        circle at top right,
-        rgba(30, 58, 138, 0.05),
-        transparent 50%
-      ),
-      radial-gradient(
-        circle at bottom left,
-        rgba(14, 165, 233, 0.05),
-        transparent 50%
-      );
-    z-index: -1;
   }
 
   .container {
@@ -200,71 +191,6 @@ body {
     @apply transition-transform duration-300 hover:-translate-y-1;
   }
 
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  .animate-pulse-slow {
-    animation: pulse 3s ease-in-out infinite;
-  }
-
-  .animate-blob {
-    animation: blob 7s infinite;
-  }
-
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-
-  .shimmer {
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    background-size: 1000px 100%;
-    animation: shimmer 2s infinite linear;
-  }
-
-  .animated-wave span {
-    content: "";
-    position: absolute;
-    width: 325vh;
-    height: 325vh;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -75%);
-  }
-
-  .animated-wave span:nth-child(1) {
-    border-radius: 45%;
-    /* background: rgba(20, 20, 20, 1); */
-    animation: animate-background-wave 30s linear infinite;
-  }
-
-  .animated-wave span:nth-child(2) {
-    border-radius: 40%;
-    /* background: rgba(20, 20, 20, 0.5); */
-    animation: animate 10s linear infinite;
-  }
-  .animated-wave span:nth-child(3) {
-    border-radius: 42.5%;
-    /* background: rgba(20, 20, 20, 0.5); */
-    animation: animate 15s linear infinite;
-  }
-  @keyframes animate-background-wave {
-    0% {
-      transform: translate(-50%, -75%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -75%) rotate(360deg);
-    }
-  }
 }
 
 @layer base {
@@ -277,79 +203,35 @@ body {
 }
 
 
-/* Animation */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.pseudo-rotate {
+  position: relative;
+  z-index: 1;
 }
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
+.pseudo-rotate::before, 
+.pseudo-rotate::after {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 90%;
+  border-radius: inherit;
+  z-index: -1;
+  @apply hidden md:block;
 }
-
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse 3s ease-in-out infinite;
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-.shimmer {
+.pseudo-rotate::before {
+  left: -20px;
+  top: -20px;
   background: linear-gradient(
     90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
+    rgba(255,255,255, 0.5),
     transparent
   );
-  background-size: 1000px 100%;
-  animation: shimmer 2s infinite linear;
-} 
+}
+.pseudo-rotate::after {
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(
+    to left,
+    rgba(255,255,255, 0.5),
+    transparent
+  );
+}
