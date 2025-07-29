@@ -1,27 +1,17 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: "export",
-  distDir: "techtots.edu.gh",
+  output: isProd ? 'export' : undefined,
+  distDir: isProd ? 'techtots.edu.gh' : '.next',
   images: {
     remotePatterns: [
-      // new URL("https://images.unsplash.com"),
-      // new URL("https://plus.unsplash.com"),
-      // new URL("https://www.pexels.com"),
-      // new URL("https://images.pexels.com"),
-      {
-        hostname: "images.pexels.com"
-      },
-      {
-        hostname: "www.pexels.com"
-      },
-      {
-        hostname: "plus.unsplash.com"
-      },
-      {
-        hostname: "images.unsplash.com"
-      },
+      { hostname: "images.pexels.com" },
+      { hostname: "www.pexels.com" },
+      { hostname: "plus.unsplash.com" },
+      { hostname: "images.unsplash.com" },
     ],
   },
 };

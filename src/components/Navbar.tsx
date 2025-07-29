@@ -8,7 +8,9 @@ import img from 'next/image';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Our Programs', href: '/programmes' },
-  { name: 'Admissions & Fees', href: '/admissions' },
+  { name: 'Enrichment Programmes', href: '/enrichment' },
+  { name: 'Tuition & Fees', href: '/tuition' },
+  { name: 'Admissions', href: '/admissions' },
   { name: 'About', href: '/about' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Contact', href: '/contact' },
