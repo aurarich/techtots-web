@@ -70,7 +70,7 @@ export default function ProgrammesPage() {
                 </div>
                 <div className="mt-auto">
                   <Link
-                    href={`/#`}
+                    href={`/programmes/${prog.slug}`}
                     className={`w-full text-center btn ${prog.colors.buttonColor}`}
                   >
                     Learn More
