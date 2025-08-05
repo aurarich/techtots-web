@@ -45,17 +45,17 @@ export default function ContactPage() {
               {
                 icon: MapPinIcon,
                 title: "Location",
-                content: "Pokuase, Greater Accra, Ghana"
+                content: "GG 232-3777, GRIDCO Avenue, Nr ACP Estate, Pokuase"
               },
               {
                 icon: PhoneIcon,
                 title: "Phone",
-                content: "+233 (0) 24 454 9446"
+                content: "+233 256124133"
               },
               {
                 icon: EnvelopeIcon,
                 title: "Email",
-                content: "info@techtots.edu.gh"
+                content: "admission@techtots.edu.gh"
               },
               {
                 icon: ClockIcon,

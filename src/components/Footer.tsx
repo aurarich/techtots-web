@@ -60,8 +60,18 @@ export default function Footer() {
             <h4 className="mb-4 text-lg font-semibold font-heading">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/programs" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
-                  Programs
+                <Link href="/" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/enrichment" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
+                  Our Programmes
+                </Link>
+              </li>
+              <li>
+                <Link href="/tuition" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
+                  Tuition & Fees
                 </Link>
               </li>
               <li>
@@ -99,19 +109,19 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <DevicePhoneMobileIcon className="w-5 h-5 text-[#F5E6D3]" />
                 <a href="tel:+233256124133" className="hover:text-[#F5E6D3] transition-colors">
-                  +233 (0) 25 612 4133
+                  +233 (0) 256124133
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPinIcon className="w-5 h-5 text-[#F5E6D3]" />
                 <a href="https://maps.google.com/?q=TechTots+International+School+Pokuase" target="_blank" rel="noopener noreferrer" className="hover:text-[#F5E6D3] transition-colors">
-                  Pokuase, Greater Accra, Ghana
+                  GG 232-3777, GRIDCO Avenue, Nr ACP Estate, Pokuase
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <GlobeAltIcon className="w-5 h-5 text-[#F5E6D3]" />
                 <a href="https://www.techtots.edu.gh" target="_blank" rel="noopener noreferrer" className="hover:text-[#F5E6D3] transition-colors">
-                  www.techtots.edu.gh
+                  techtots.edu.gh
                 </a>
               </li>
             </ul>
