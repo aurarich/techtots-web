@@ -1,5 +1,5 @@
 import React from 'react'
-import { ourProgrammes } from '@/data';
+import { ourProgrammes } from '../../data';
 import Link from 'next/link';
 
 const OurProgrammes = () => {

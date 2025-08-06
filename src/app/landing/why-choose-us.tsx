@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/card";
 import img from "next/image";
 import AnimatedWave from "@/components/Wave";
-import { whyTechTotData } from "@/data";
+import { whyTechTotData } from "../../data";
 
 const WhyChooseUsSection = () => {
   return (

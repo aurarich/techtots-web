@@ -1,7 +1,7 @@
 import HeaderTag from '@/components/ui/header-tag';
 import { SingleWaveSvg } from '@/components/SVGBackground';
 import { SparklesIcon } from '@heroicons/react/24/outline';
-import { ourProgrammes } from '@/data';
+import { ourProgrammes } from '../../data';
 import Link from 'next/link';
 import React from 'react';
 

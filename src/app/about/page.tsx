@@ -2,7 +2,7 @@ import img from "next/image";
 
 import HeaderTag from "@/components/ui/header-tag";
 import AnimatedWave from "@/components/Wave";
-import {camBridge, roadmapData} from "@/data";
+import {camBridge, roadmapData} from "../../data";
 import { SVGBlobCard } from "@/components/SVGBackground";
 
 export default function AboutPage() {

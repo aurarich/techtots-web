@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import HeaderTag from "@/components/ui/header-tag";
-import { ourProgrammes } from "@/data";
+import { ourProgrammes } from "../../../data";
 import { notFound } from "next/navigation";
 import { Bubbles, Milestone, Shapes } from "lucide-react";
 
