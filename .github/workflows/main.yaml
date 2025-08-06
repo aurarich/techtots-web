@@ -3,7 +3,7 @@ name: Deploy to GoDaddy via FTP
 on:
   push:
     branches:
-      - main  # or master
+      - main
 
 jobs:
   build-and-deploy:
@@ -13,16 +13,26 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
     - name: Install dependencies
       run: npm install
 
     - name: Build the React app
       run: npm run build
+      env:
+        NODE_ENV: production
 
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{secrets.FTP_SERVER}}
+        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftp
