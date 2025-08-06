@@ -18,6 +18,18 @@ module.exports = {
           "2xl": "6rem",
         },
       },
+      extend: {
+        animation: {
+          shake: 'shake 0.4s ease-in-out',
+        },
+        keyframes: {
+          shake: {
+            '0%, 100%': { transform: 'translateX(0)' },
+            '25%': { transform: 'translateX(-5px)' },
+            '75%': { transform: 'translateX(5px)' },
+          }
+        }
+      },
       colors: {
         background: "#FFFFFF",
         primary: {

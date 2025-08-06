@@ -2,14 +2,19 @@
 import React from "react";
 import Link from "next/link";
 import HeaderTag from "@/components/ui/header-tag";
-import { ourProgrammes } from "@/data";
-import { notFound, useParams } from "next/navigation";
+import { ourProgrammes } from "../../../data";
+import { notFound } from "next/navigation";
 import { Bubbles, Milestone, Shapes } from "lucide-react";
 
-export default function ProgrammeDetails() {
-  const { slug } = useParams<{ slug: string }>();
+export async function generateStaticParams() {
+  return ourProgrammes.map(pg => ({
+    slug: pg.slug,
+  }));
+}
 
-  const programme = ourProgrammes.find((item) => item.slug === slug);
+export default function ProgrammeDetails({ params }: { params: { slug: string } }) {
+  const programme = ourProgrammes.find(item => item.slug === params.slug);
+
   if (!programme) {
     notFound();
   }

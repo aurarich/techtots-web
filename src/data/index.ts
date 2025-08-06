@@ -60,12 +60,13 @@ export const ourProgrammes = [
     icon: BookOpenIcon,
     title: "Crèche",
     short_description: "Sensory play, safe care, and emotional bonding in a nurturing environment.",
-    caption: "Infants & Toddlers", 
+    caption: "Infants & Toddlers",
     ageGroup: "6 months - 2 years",
     description:
       "Sensory play, safe care, and emotional bonding in a nurturing environment.",
     color: "primary",
     btnColor: "primary",
+
     classes: [
       {
         name: 'Little Seeds',
@@ -87,7 +88,7 @@ export const ourProgrammes = [
         iconColor: "text-beige",
         iconBackground: 'bg-beige/20',
         buttonColor: 'btn-beige',
-        pseudoColors: 'after:bg-beige/20 before:bg-beige/20'
+        pseudoColors: 'after:bg-beige/20 before:bg-beige/20',
     },
     future: false,
   },
@@ -132,7 +133,7 @@ export const ourProgrammes = [
     ageGroup: "3 - 6 years",
     description:
       "Literacy, numeracy, coding, and digital literacy in an engaging environment.",
-    color: "beige",
+    color: "red",
     btnColor: "primary",
     classes: [
       { name: "Discoverers - EY1", ageGroup: "3 - 4years" },
@@ -245,3 +246,36 @@ export const roadmapData = [
     focus: "Cambridge core subjects, project-based learning",
   },
 ];
+export const camBridge = [
+  {
+    stage: "Early Years",
+    age_range: "3–6 years",
+    grade: "Nursery, Kindergarten / KG1 & KG2, Reception",
+    notes: "Offered at TechTots – play-based with structured learning outcomes",
+  },
+  {
+    stage: "Primary",
+    age_range: "6–11 years",
+    grade: "Year 1 to Year 6 (equivalent to Class1 – Class 6)",
+    notes: "Primary 1 available at TechTots. Focus on foundational subjects + inquiry and personal development",
+  },
+  {
+    stage: "Lower Secondary",
+    age_range: "11–14 years",
+    grade: "Year 7 to Year 9 (equivalent to JHS 1–3)",
+    notes: "Prepares for Cambridge Checkpoint (end of Year 9)",
+  },
+  {
+    stage: "Upper Secondary",
+    age_range: "14–16 years",
+    grade: "Year 10 to Year 11 (equivalent to SHS 1–2)",
+    notes: "Prepares for IGCSE exams",
+  },
+  {
+    stage: "Cambridge Advanced",
+    age_range: "16–19 years",
+    grade: "Year 12 to Year 13 (equivalent to SHS 3 & university prep)",
+    notes: "Prepares for AS and A Level qualifications",
+  }
+]
+

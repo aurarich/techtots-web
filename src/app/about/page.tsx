@@ -2,7 +2,7 @@ import img from "next/image";
 
 import HeaderTag from "@/components/ui/header-tag";
 import AnimatedWave from "@/components/Wave";
-import { roadmapData } from "@/data";
+import {camBridge, roadmapData} from "../../data";
 import { SVGBlobCard } from "@/components/SVGBackground";
 
 export default function AboutPage() {
@@ -34,21 +34,16 @@ export default function AboutPage() {
         <div className="container space-y-20">
           <div className="max-w-5xl mx-auto rounded-xl p-12 transition-all bg-beige shadow-lg">
               <p className="leading-loose text-lg">
-                At TechTots International School, we believe that early
-                childhood is the foundation of lifelong learning. <br /> Located
-                in Pokuase, Accra, we are a{" "}
-                <strong className="font-semibold">
-                  forward-thinking
-                </strong>{" "}
-                institution offering a unique blend of the Cambridge Early Years
-                and Primary Curriculum and the Reggio Emilia philosophy,
-                thoughtfully designed to nurture children from 6 months., We
-                provide a <span className="font-semibold">warm, safe, and intellectually</span> stimulating environment
-                where every child is encouraged to explore, imagine, and grow.
-                Through a balanced mix of play-based learning, project work, and
-                technology integration, our children develop strong roots in
-                literacy, numeracy, creativity, and problem-solving—skills that
-                will prepare them for a dynamic, rapidly changing world
+                At TechTots International School,
+                we believe that early childhood is the
+                foundation of lifelong learning. Located in Pokuase,
+                Accra, we are a forward-thinking institution offering a unique
+                blend of the <strong className='font-semibold'>Cambridge Early Years and Primary Curriculum</strong>  and
+                the <strong className='font-semibold'>Reggio Emilia philosophy</strong>, thoughtfully designed to nurture children from <strong className='font-semibold'>6 months.</strong>,
+                We provide a warm, safe, and intellectually stimulating environment where every child is encouraged to explore,
+                imagine, and grow. Through a balanced mix of <strong className='font-semibold'>play-based learning, project work</strong>, and <strong className='font-semibold'>technology integration</strong>,
+                our children develop strong roots in literacy, numeracy, creativity, and problem-solving—skills
+                that will prepare them for a dynamic, rapidly changing world.
               </p>
           </div>
         </div>
@@ -150,6 +145,48 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Our Programs  */}
+      <section className="relative py-20" style={{ background: '#f0f1f2' }}>
+        <div className="container max-w-7xl mx-auto space-y-12">
+          <div className="text-center space-y-5">
+            <h2 className="text-3xl md:text-4xl font-semibold flex items-center justify-center gap-2">
+              Our Programmes
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+            {/* Crèche */}
+            <div className="shadow-md rounded-2xl p-6" style={{ background: 'hsl(29.52deg 63.64% 80.59%)' }}>
+              <h3 className="text-xl font-bold mb-2">Crèche (6m – 2y)</h3>
+              <p>Little Seeds & Sprouts – nurturing first bonds, sensory play, and discovery.</p>
+            </div>
+
+            {/* Early Years Prep */}
+            <div className="shadow-md rounded-2xl p-6" style={{ background: '#fbf5ef' }}>
+              <h3 className="text-xl font-bold mb-2">Early Years Prep (2 – 3y)</h3>
+              <p>Explorers – building early communication and motor skills.</p>
+            </div>
+
+            {/* Cambridge Early Years */}
+            <div className="shadow-md rounded-2xl p-6" style={{ background: '#f1f8fd' }}>
+              <h3 className="text-xl font-bold mb-2">Cambridge Early Years (3 – 6y)</h3>
+              <ul className="list-disc list-inside space-y-1">
+                <li>EY1 Adventurers</li>
+                <li>EY2 Discoverers</li>
+                <li>EY3 Innovators</li>
+              </ul>
+            </div>
+
+            {/* Cambridge Primary */}
+            <div className="shadow-md rounded-2xl p-6 text-white" style={{ background: 'hsl(206.54deg 39.39% 25.88%)' }}>
+              <h3 className="text-xl font-bold mb-2">Cambridge Primary 1 (6 – 7y)</h3>
+              <p>Pioneers – formal academic learning with project-based inquiry.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Roadmap Section */}
       <section className="relative py-20 bg-gradient-to-b from-background to-secondary/30">
         <div className="container max-w-7xl mx-auto space-y-12">
@@ -194,6 +231,83 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* What makes us special */}
+      <section className="relative py-20 bg-white">
+        <div className="container max-w-7xl mx-auto space-y-12 px-4">
+          {/* Key Features */}
+          <div className="container max-w-7xl mx-auto space-y-12 px-4">
+            <div className="text-center space-y-5">
+              <h2 className="text-3xl md:text-4xl font-semibold flex items-center justify-center gap-2">
+                 What Makes TechTots Special
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Item 1 */}
+              <div className="p-6 rounded-xl shadow-md" style={{ background: '#f1f8fd' }}>
+                <p className="text-base md:text-lg">
+                  <strong>Blend</strong> the Cambridge Early Years Curriculum with the Reggio Emilia approach — making learning both structured and child-led.
+                </p>
+              </div>
+
+              {/* Item 2 */}
+              <div className="p-6 rounded-xl shadow-md text-white" style={{ background: 'hsl(206.54deg 39.39% 25.88%)' }} >
+                <p className="text-base md:text-lg">
+                  <strong>Offer</strong> a purposefully designed environment that supports social, emotional, cognitive, and creative development.
+                </p>
+              </div>
+
+              {/* Item 3 */}
+              <div className="p-6 rounded-xl shadow-md" style={{ background: 'hsl(29.52deg 63.64% 80.59%)' }}>
+                <p className="text-base md:text-lg">
+                  <strong>Ensure</strong> a smooth, developmentally appropriate journey from 6 months to Primary 1, preparing your child for lifelong learning.
+                </p>
+              </div>
+
+              {/* Item 4 */}
+              <div className="p-6 rounded-xl shadow-md text-black" style={{ background: '#fbf5ef' }}>
+                <p className="text-base md:text-lg">
+                  <strong>Early exposure</strong> to AI tools, robotics, and digital platforms to build tech fluency.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Cambridge Curriculum Table */}
+          <div className="space-y-5">
+            <h3 className="text-2xl font-semibold flex items-center flex items-center justify-center gap-2">
+              Cambridge Curriculum Grade Levels
+            </h3>
+
+
+            <div className="overflow-x-auto rounded-xl shadow-2xl shadow-secondary-dark/20">
+              <table className="min-w-full text-sm md:text-base text-left bg-white">
+                <thead>
+                <tr className="bg-[#f5d6b0] text-black">
+                  <th className="px-6 py-4 font-semibold">Stage</th>
+                  <th className="px-6 py-4 font-semibold">Age Range</th>
+                  <th className="px-6 py-4 font-semibold">Grade Level Equivalent</th>
+                  <th className="px-6 py-4 font-semibold">Notes</th>
+                </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                {camBridge.map((row, idx) => (
+                    <tr key={`${row.stage}-${idx}`} className="hover:bg-primary/5">
+                      <td className="p-4">{row.stage}</td>
+                      <td className="p-4">{row.age_range}</td>
+                      <td className="p-4">{row.grade}</td>
+                      <td className="p-4">{row.notes}</td>
+                    </tr>
+                ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </main>
   );
 }
