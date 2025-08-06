@@ -60,12 +60,13 @@ export const ourProgrammes = [
     icon: BookOpenIcon,
     title: "Crèche",
     short_description: "Sensory play, safe care, and emotional bonding in a nurturing environment.",
-    caption: "Infants & Toddlers", 
+    caption: "Infants & Toddlers",
     ageGroup: "6 months - 2 years",
     description:
       "Sensory play, safe care, and emotional bonding in a nurturing environment.",
     color: "primary",
     btnColor: "primary",
+
     classes: [
       {
         name: 'Little Seeds',
@@ -87,7 +88,7 @@ export const ourProgrammes = [
         iconColor: "text-beige",
         iconBackground: 'bg-beige/20',
         buttonColor: 'btn-beige',
-        pseudoColors: 'after:bg-beige/20 before:bg-beige/20'
+        pseudoColors: 'after:bg-beige/20 before:bg-beige/20',
     },
     future: false,
   },
@@ -132,7 +133,7 @@ export const ourProgrammes = [
     ageGroup: "3 - 6 years",
     description:
       "Literacy, numeracy, coding, and digital literacy in an engaging environment.",
-    color: "beige",
+    color: "red",
     btnColor: "primary",
     classes: [
       { name: "Discoverers - EY1", ageGroup: "3 - 4years" },

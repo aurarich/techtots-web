@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${openSans.variable} ${roboto.variable} font-sans`}
+      className={`${poppins.variable} ${openSans.variable} ${roboto.variable} font-heading`}
     >
       <body className="h-screen">
         <Navbar />
