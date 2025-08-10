@@ -88,7 +88,7 @@ export default function Page() {
 
                                     {prog.future && (
                                         <div className="text-xs text-yellow-600 font-semibold">
-                                            (Planned for future expansion)
+                                            {/*(Planned for future expansion)*/}
                                         </div>
                                     )}
                                 </div>
