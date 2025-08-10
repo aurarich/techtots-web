@@ -35,7 +35,7 @@ export default function Page() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {[
                                 { title: "Registration", amount: "$0" },
-                                { title: "Admission Fees", amount: "$1000" }
+                                { title: "Admission Fees", amount: "$0" }
                             ].map(({ title, amount }) => (
                                 <div key={title} className="p-6 bg-white rounded-xl shadow transition transform hover:scale-105 hover:shadow-lg text-center">
                                     <h4 className="font-bold text-lg">{title}</h4>
@@ -55,9 +55,9 @@ export default function Page() {
                         <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-center">🎓 Tuition Fees</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[
-                                "Crèche / Preparatory Year / Cambridge Early Years – $1200/term ($3600 annually)",
-                                "Cambridge Primary – $1400/term ($4200 annually)",
-                                "20% discount for first 50 kids enrolled in 2025–2026",
+                                "Crèche / Preparatory Year / Cambridge Early Years – $1,000/term ($3,000 annually)",
+                                "Cambridge Primary – $1,200/term ($3,600 annually)",
+                                "10% discount for first 50 kids enrolled in 2025–2026",
                                 "Siblings discount: 10% (2 kids), 15% (3+), +5% for annual payment"
                             ].map(item => (
                                 <div key={item} className="p-5 bg-white rounded-xl shadow transition transform hover:scale-105 hover:shadow-lg">

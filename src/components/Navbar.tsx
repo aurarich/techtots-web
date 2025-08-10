@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Our Programmes', href: '/enrichment' },
   { name: 'Tuition & Fees', href: '/tuition' },
   { name: 'Admissions', href: '/admissions' },
+  { name: 'Wonder Lab', href: '/wonderlab' },
   { name: 'About', href: '/about' },
   { name: 'Gallery', href: '/gallery' },
   { name: 'Contact', href: '/contact' },
