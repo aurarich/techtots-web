@@ -278,4 +278,66 @@ export const camBridge = [
     notes: "Prepares for AS and A Level qualifications",
   }
 ]
-
+export const wonderLabSections = [
+  {
+    title: "What is WonderLab?",
+    bg: "#f1f8fe",
+    items: [
+      "TechTots International School’s premium weekend enrichment program for ages 2–10.",
+      "Open to all children – whether they attend TechTots or not.",
+      "Every Saturday & Sunday afternoon: hands-on learning, purposeful play, and discovery."
+    ]
+  },
+  {
+    title: "What We Offer",
+    bg: "#fbf5ef",
+    items: [
+      "WonderLab STEM – Robotics, AI & Coding, Digital Literacy",
+      "WonderLab Creators – Art, Music (Piano, Violin), Craft, Design",
+      "WonderLab Sports – Mini Tennis, Football, Cycling, Basketball, Mini Golf",
+      "WonderLab Nature – Eco Farm, Gardening, Nature Play, Outdoor Games"
+    ]
+  },
+  {
+    title: "Weekend Schedule",
+    bg: "#28455c",
+    textWhite: true,
+    items: [
+      "Saturday Morning: 9:00 AM – 1:00 PM",
+      "Saturday Afternoon: 1:00 PM – 5:00 PM",
+      "Sunday Afternoon: 1:00 PM – 5:00 PM",
+      "Flexible participation – join full sessions or drop in for activities."
+    ]
+  },
+  {
+    title: "Participation Fees (USD)",
+    bg: "#f0f1f2",
+    items: [
+      "Full Morning (9:00 AM – 1:00 PM) – $10",
+      "Full Afternoon (1:00 PM – 5:00 PM) – $10",
+      "Drop-In Activity (per 1-hour session) – $5"
+    ]
+  },
+  {
+    title: "Location & Contact",
+    bg: "#f1f8fe",
+    items: [
+      "TechTots International School, GRIDCO Avenue, Pokuase, Accra",
+      "📞 +233 25 612 4133",
+      "📧 techtots@vpwa.org",
+      "🌐 techtots.edu.gh",
+      "📱 @techtotsgh"
+    ]
+  },
+  {
+    title: "Why WonderLab?",
+    bg: "#fbf5ef",
+    items: [
+      "Blends structured learning with free exploration",
+      "Encourages early STEM and arts fluency",
+      "Fosters independence, teamwork & expression",
+      "Open to all children aged 2–10",
+      "Led by trained facilitators using Cambridge & Reggio-inspired methods"
+    ]
+  }
+]
