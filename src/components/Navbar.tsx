@@ -12,16 +12,24 @@ const navigation = [
   { name: 'Tuition & Fees', href: '/tuition' },
   { name: 'Admissions', href: '/admissions' },
   { name: 'Wonder Lab', href: '/wonderlab' },
-  { name: 'About', href: '/about' },
+  // { name: 'About', href: '/about' },
   { name: 'Gallery', href: '/gallery' },
-  { name: 'Contact', href: '/contact' },
+  // { name: 'Contact', href: '/contact' },
 ];
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-lg py-2">
+    <>
+    <div className="w-full bg-slate-900">
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8 flex items-center justify-end text-white h-10 gap-5">
+          <Link href={'/about'} className='transition-all hover:underline'>About</Link>
+          <Link href={'/contact'} className='transition-all hover:underline'>Contact Us</Link>
+          <Link href={'tel:+233256124133'} className='transition-all hover:underline'>+233 (0) 256124133</Link>
+        </div>
+    </div>
+    <header className="sticky inset-x-0 top-0 z-[999] border-b border-gray-200 bg-white/80 backdrop-blur-lg py-2">
       <nav className="container px-4 mx-auto sm:px-6 lg:px-8" aria-label="Global">
         <div className="flex items-center justify-between h-16">
           <div className="flex lg:flex-1 items-center">
@@ -106,5 +114,6 @@ export default function Navbar() {
         </div>
       </div>
     </header>
+    </>
   );
 } 

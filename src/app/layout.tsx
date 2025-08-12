@@ -21,11 +21,6 @@ const openSans = Open_Sans({
   weight: "variable",
   variable: "--font-open-sans",
 });
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
-});
 
 export const metadata: Metadata = {
   title: "TechTots International School",
@@ -41,11 +36,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${openSans.variable} ${roboto.variable} font-heading`}
+      className={`${poppins.variable} ${openSans.variable} font-sans`}
     >
-      <body className="h-screen">
+      <body className="min-h-screen relative">
         <Navbar />
-        <main className="flex-grow h-full bg-white mt-20">
+        <main className="flex-grow h-full bg-white">
           {children}
           <Footer />
         </main>
