@@ -5,6 +5,13 @@ import {
   ClockIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "We'd love to hear from you. Reach out to us for any inquiries about admissions, tours, or general information.",
+};
 
 export default function ContactPage() {
   return (

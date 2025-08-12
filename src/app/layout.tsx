@@ -23,9 +23,22 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TechTots International School",
+  title: {
+    default: "TechTots International School",
+    template: "%s | TechTots International School",
+  },
   description:
     "Nurturing young innovators through technology-infused early education",
+  keywords: [
+    "TechTots",
+    "International School",
+    "Early Childhood Education",
+    "Technology in Education",
+    "Innovative Learning",
+    "STEM for Kids",
+    "Creative Learning",
+    "Future Innovators",
+  ],
 };
 
 export default function RootLayout({

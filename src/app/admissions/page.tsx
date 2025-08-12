@@ -9,6 +9,14 @@ import {
   ClockIcon,
 } from "@heroicons/react/24/outline";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admissions",
+  description:
+    "Begin your child's journey towards a future of innovation and excellence at TechTots International School. Explore our admissions process, age eligibility, and tuition details.",
+};
+
 export default function AdmissionsPage() {
   return (
     <main className="min-h-screen bg-background">
