@@ -44,15 +44,6 @@ export default function ProgrammeDetails({ params }: { params: { slug: string } 
             <p className="text-lg mb-2 text-gray-300">
               Age Group: <span>{programme.ageGroup}</span>
             </p>
-            {programme.future && (
-              <div
-                className="inline-block px-3 py-1 
-              text-xs font-bold text-yellow-700 
-              bg-yellow-100 rounded-full animate-pulse"
-              >
-                Planned for future expansion
-              </div>
-            )}
           </div>
         </div>
       </section>
