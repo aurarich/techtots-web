@@ -23,9 +23,10 @@ export default function Navbar() {
   return (
     <>
     <div className="w-full bg-slate-900">
-      <div className="container px-4 mx-auto sm:px-6 lg:px-8 flex items-center justify-end text-white h-10 gap-5">
-          <Link href={'/about'} className='transition-all hover:underline'>About</Link>
-          <Link href={'/contact'} className='transition-all hover:underline'>Contact Us</Link>
+      <div className="container px-4 mx-auto sm:px-6 lg:px-8 flex items-center justify-end text-white h-10 gap-5 text-sm">
+          <Link href={'/about'} className='transition-all hover:underline'>About Us</Link>
+          <Link href={'/contact'} className='transition-all hover:underline'>Contact</Link>
+          <span>|</span>
           <Link href={'tel:+233256124133'} className='transition-all hover:underline'>+233 (0) 256124133</Link>
         </div>
     </div>
