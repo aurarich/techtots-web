@@ -3,12 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import img from 'next/image';
 
 const navigation = [
   { name: 'Home', href: '/' },
   // { name: 'Our  Programmes', href: '/programmes' },
-  { name: 'Our Programmes', href: '/programmes' },
+  { name: 'Our Programmes', href: '/enrichment' },
   { name: 'Tuition & Fees', href: '/tuition' },
   { name: 'Admissions', href: '/admissions' },
   { name: 'Wonder Lab', href: '/wonderlab' },
@@ -30,7 +29,7 @@ export default function Navbar() {
           <Link href={'tel:+233256124133'} className='transition-all hover:underline'>+233 (0) 256124133</Link>
         </div>
     </div>
-    <header className="sticky inset-x-0 top-0 z-[999] border-b border-gray-200 bg-white/80 backdrop-blur-lg py-2">
+    <header className="sticky top-0 z-[999] border-b border-gray-200 bg-white/80 backdrop-blur-lg py-2 transition-all duration-500">
       <nav className="container px-4 mx-auto sm:px-6 lg:px-8" aria-label="Global">
         <div className="flex items-center justify-between h-16">
           <div className="flex lg:flex-1 items-center">
@@ -71,7 +70,7 @@ export default function Navbar() {
         </div>
       </nav>
       {/* Mobile menu */}
-      <div className={`lg:hidden ${mobileMenuOpen ? 'fixed inset-0 z-50' : 'hidden'}`}>
+      <div className={`lg:hidden ${mobileMenuOpen ? 'sticky inset-0 z-50' : 'hidden'}`}>
         <div className="fixed inset-0 bg-gray-900/80" aria-hidden="true" />
         <div className="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
