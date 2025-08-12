@@ -7,6 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Metadata } from "next";
+
+const metadata: Metadata = {
+  title: "Schedule a Tour",
+  description:
+    "We'd love to welcome you and your family for a personalized tour of our campus. Please complete this form and our admissions team will contact you to confirm your visit.",
+};
 
 export default function ScheduleTourPage() {
   return (
@@ -208,7 +215,6 @@ export default function ScheduleTourPage() {
               Submit Request
             </Button>
           </div>
-
         </CardContent>
       </Card>
     </main>

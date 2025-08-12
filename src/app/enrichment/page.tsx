@@ -2,7 +2,12 @@ import { SparklesIcon } from '@heroicons/react/24/outline';
 import { ourProgrammes } from '../../data';
 import Link from 'next/link';
 import React from 'react';
+import { Metadata } from 'next';
 
+export const metadata:Metadata = {
+    title: 'Programmes',
+    description: 'Explore our diverse range of programmes designed to nurture young minds and foster innovation at TechTots International School.'
+};
 
 export default function Page() {
     return (
