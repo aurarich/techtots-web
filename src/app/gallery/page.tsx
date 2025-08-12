@@ -1,21 +1,16 @@
 import HeaderTag from '@/components/ui/header-tag';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Gallery',
+  description: 'Take a visual journey through our vibrant learning spaces, happy children, and engaging activities at TechTots International School.',
+};
 
 export default function GalleryPage() {
   return (
     <main>
       {/* Hero Section */}
       <section className="relative overflow-hidden section bg-gradient-to-b from-[#F5F5DC]/30 to-[#0EA5E9]/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-[#F5F5DC]/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-[#0EA5E9]/20 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-        
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#F5F5DC]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
-            <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-[#0EA5E9]/20 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
-          </div>
-        </div>
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6 pt-12">
