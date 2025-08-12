@@ -88,12 +88,12 @@ export default function Page() {
 
                                     {prog.future && (
                                         <div className="text-xs text-yellow-600 font-semibold">
-                                            (Planned for future expansion)
+                                            {/*(Planned for future expansion)*/}
                                         </div>
                                     )}
                                 </div>
 
-                                <Link href={`/#`} className={`w-full text-center btn ${prog.colors.buttonColor}`}>
+                                <Link href={`/programmes/${prog.slug}`} className={`w-full text-center btn ${prog.colors.buttonColor}`}>
                                     Learn More
                                 </Link>
                             </div>
