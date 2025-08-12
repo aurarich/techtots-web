@@ -93,7 +93,7 @@ export default function Page() {
                                     )}
                                 </div>
 
-                                <Link href={`/#`} className={`w-full text-center btn ${prog.colors.buttonColor}`}>
+                                <Link href={`/programmes/${prog.slug}`} className={`w-full text-center btn ${prog.colors.buttonColor}`}>
                                     Learn More
                                 </Link>
                             </div>
