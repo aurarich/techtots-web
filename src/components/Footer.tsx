@@ -86,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
-                  About
+                  About TechTots
                 </Link>
               </li>
               <li>
@@ -96,7 +96,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-[#F5E6D3] transition-colors">
-                  Contact
+                  Contact Us
                 </Link>
               </li>
             </ul>
