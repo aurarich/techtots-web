@@ -227,7 +227,7 @@ export default function Page() {
                         {/* Optional CTAs */}
                         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                             <a
-                                href="/contact"
+                                href="/weekend/booking"
                                 className="px-6 py-3 rounded-lg bg-primary text-white hover:bg-primary/90 transition"
                             >
                                 Register Now
