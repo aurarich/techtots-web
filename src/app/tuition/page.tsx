@@ -1,7 +1,12 @@
 import HeaderTag from '@/components/ui/header-tag';
 import { SVGBlobCard } from "@/components/SVGBackground";
 import {SparklesIcon} from "@heroicons/react/24/outline";
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Tuition & Fees',
+  description: 'Below is a summary of our fees for the 2025–2026 Academic Year.',
+};
 
 
 export default function Page() {

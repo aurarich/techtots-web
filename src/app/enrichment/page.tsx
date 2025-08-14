@@ -1,20 +1,13 @@
-import HeaderTag from '@/components/ui/header-tag';
-import { SingleWaveSvg } from '@/components/SVGBackground';
 import { SparklesIcon } from '@heroicons/react/24/outline';
-import { ourProgrammes } from '@/data';
+import { ourProgrammes } from '../../data';
 import Link from 'next/link';
 import React from 'react';
+import { Metadata } from 'next';
 
-const WaveDivider = () => (
-    <div className="absolute -bottom-8 left-0 w-full overflow-hidden">
-        <svg viewBox="0 0 1440 100" className="w-full h-24">
-            <path
-                fill="#ffffff"
-                d="M0,64L40,58.7C80,53,160,43,240,58.7C320,75,400,117,480,117.3C560,117,640,75,720,74.7C800,75,880,117,960,128C1040,139,1120,117,1200,106.7C1280,96,1360,96,1400,96L1440,96L1440,160L0,160Z"
-            />
-        </svg>
-    </div>
-);
+export const metadata:Metadata = {
+    title: 'Programmes',
+    description: 'Explore our diverse range of programmes designed to nurture young minds and foster innovation at TechTots International School.'
+};
 
 export default function Page() {
     return (
@@ -50,9 +43,6 @@ export default function Page() {
                 </div>
             </section>
 
-            {/* Wave Divider */}
-            {/*<SingleWaveSvg className="rotate-180 fill-secondary h-32 w-full" />*/}
-
             {/* Programmes Section */}
             <section className="relative overflow-hidden py-20 pb-32 bg-gradient-to-b ">
                 <div className="container px-4 mx-auto">
@@ -85,15 +75,9 @@ export default function Page() {
                                             ))}
                                         </ul>
                                     </div>
-
-                                    {prog.future && (
-                                        <div className="text-xs text-yellow-600 font-semibold">
-                                            {/*(Planned for future expansion)*/}
-                                        </div>
-                                    )}
                                 </div>
 
-                                <Link href={`/#`} className={`w-full text-center btn ${prog.colors.buttonColor}`}>
+                                <Link href={`/programmes/${prog.slug}`} className={`w-full text-center btn ${prog.colors.buttonColor}`}>
                                     Learn More
                                 </Link>
                             </div>

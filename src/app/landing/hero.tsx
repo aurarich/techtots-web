@@ -26,15 +26,8 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
           aria-label="hero-section"
           className="flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 lg:pb-5 xl:h-5/6 overflow-hidden"
         >
-          {/* Background Elements */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-
           {/* Enhanced Decorative Elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-            <div className="absolute rounded-full top-1/4 left-10 w-72 h-72 bg-primary/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
-            <div className="absolute rounded-full top-1/3 right-10 w-72 h-72 bg-secondary/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
-            <div className="absolute rounded-full -bottom-8 left-20 w-72 h-72 bg-accent/20 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
             {/* New floating elements */}
             <div className="absolute w-16 h-16 top-1/4 2xl:top-[15%] right-1/4 animate-float">
               <CpuChipIcon className="w-full h-full text-primary/20" />
@@ -58,7 +51,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
                 </div>
 
                 {/* Enhanced Heading */}
-                <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900 font-heading md:text-6xl lg:text-7xl">
+                <h1 className="text-4xl sm:text-5xl font-semibold leading-tight text-gray-900 font-heading md:text-6xl lg:text-7xl">
                   Africa's Most Forward-Thinking
                   <span className="block mt-2 gradient-text">
                     Early Childhood Institution
@@ -225,19 +218,18 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
         <section
           id="hero"
           aria-label="hero-section"
-          className="relative w-full h-full xl:h-[calc(100%_-180px)] flex flex-col items-center gap-10 md:items-start overflow-hidden bg-white py-12 xl:py-20"
+          className="relative w-full h-full xl:h-[calc(100vh-180px)] flex flex-col items-center gap-10 md:items-start overflow-hidden bg-white py-12 xl:py-20"
         >
           <div className="flex items-center gap-2 px-4 py-2 mx-auto text-sm font-medium transition-colors rounded-full bg-primary/10 text-primary hover:bg-primary/20 w-fit">
             <SparklesIcon className="w-4 h-4" />
             <span>Now Enrolling for September 2025</span>
           </div>
 
-
           <div className="relative container my-auto mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 z-10">
             {/* Left Content */}
             <div className="w-full flex flex-col justify-center gap-8 max-w-2xl lg:max-w-3xl text-center lg:text-left">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold leading-tight md:leading-[1.2] text-gray-900 font-heading">
-                Africa's Most Forward-Thinking
+              <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-semibold leading-tight md:leading-[1.2] text-gray-900 font-heading">
+                Africa's Most <span className="font-bolds">Forward-Thinking</span>
                 <span className="block mt-2 gradient-text">
                   Early Childhood Institution
                 </span>

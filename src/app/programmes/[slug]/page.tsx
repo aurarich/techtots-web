@@ -1,19 +1,41 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import HeaderTag from "@/components/ui/header-tag";
-import { ourProgrammes } from "@/data";
+import { ourProgrammes } from "../../../data";
 import { notFound } from "next/navigation";
 import { Bubbles, Milestone, Shapes } from "lucide-react";
+import type { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = (await params).slug;
+
+  // fetch programme information
+  const programme = ourProgrammes.find((item) => item.slug === slug);
+
+  return {
+    title: programme?.title,
+    description: programme?.description,
+  };
+}
 
 export async function generateStaticParams() {
-  return ourProgrammes.map(pg => ({
+  return ourProgrammes.map((pg) => ({
     slug: pg.slug,
   }));
 }
 
-export default function ProgrammeDetails({ params }: { params: { slug: string } }) {
-  const programme = ourProgrammes.find(item => item.slug === params.slug);
+export default function ProgrammeDetails({ params, searchParams }: Props) {
+  const programme = ourProgrammes.find(
+    async (item) => item.slug === (await params).slug
+  );
 
   if (!programme) {
     notFound();
@@ -45,15 +67,6 @@ export default function ProgrammeDetails({ params }: { params: { slug: string } 
             <p className="text-lg mb-2 text-gray-300">
               Age Group: <span>{programme.ageGroup}</span>
             </p>
-            {programme.future && (
-              <div
-                className="inline-block px-3 py-1 
-              text-xs font-bold text-yellow-700 
-              bg-yellow-100 rounded-full animate-pulse"
-              >
-                Planned for future expansion
-              </div>
-            )}
           </div>
         </div>
       </section>
@@ -128,6 +141,6 @@ export default function ProgrammeDetails({ params }: { params: { slug: string } 
           </div>
         </div>
       </section>
-      </div>
+    </div>
   );
 }
