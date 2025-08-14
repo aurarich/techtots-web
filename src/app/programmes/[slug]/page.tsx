@@ -127,7 +127,7 @@ export default function ProgrammeDetails({ params, searchParams }: Props) {
           </div>
           <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
             <Link
-              href="/programmes"
+              href="/enrichment"
               className="btn btn-secondary text-center py-3"
             >
               ← All Programmes
