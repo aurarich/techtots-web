@@ -295,14 +295,16 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
                   transform="translate(100 100)"
                 />
               </svg>
-              <div className="relative w-full max-w-sm aspect-square float justify-self-end">
-                <img
-                  src={"/images/school-girl.jpg"}
+              <div className="relative w-full max-w-sm aspect-[1.5] float justify-self-end flex flex-col items-center justify-center bg-[#e9f3ff] rounded-3xl">
+                <div className="rounded-3xl shadow-xl border-4 border-white overflow-hidden">
+                  <img
+                  src={"/images/techtots-kids.png"}
                   alt="kids in IT lab"
                   fetchPriority="high"
-                  className="object-cover rounded-3xl shadow-2xl border-4 border-white object-top aspect-square"
+                  className="rounded-3xl aspect-square object-center object-contain scale-[1.15]"
                   
                 />
+                </div>
 
                 {/* Floating icons */}
                 <div className="absolute -top-10 -left-10 animate-float">
