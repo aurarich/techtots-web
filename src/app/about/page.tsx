@@ -3,6 +3,7 @@ import { camBridge, roadmapData } from "../../data";
 import { SVGBlobCard } from "@/components/SVGBackground";
 import { Metadata } from "next";
 
+
 export const metadata: Metadata = {
   title: "About TechTots",
   description:
