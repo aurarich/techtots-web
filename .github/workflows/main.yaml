@@ -22,8 +22,8 @@ jobs:
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.yourdomain.com
+        server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: build
-        server-dir: public_html/techtots.edu.gh/
+        local-dir: techtots.edu.gh/
+        server-dir: /
