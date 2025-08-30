@@ -6,6 +6,10 @@ class UtilityService extends BaseService {
     super();
   }
 
+  async makeComplaints(data:any, config?: AxiosRequestConfig) {
+    return this.handleRequest(this.AxiosInstance.post(`${this.path}/contact-forms`, data, config))
+  }
+
   async getGenders(config?:AxiosRequestConfig) {
     return this.handleRequest(this.AxiosInstance.get(`${this.path}/genders`, config));
   }
