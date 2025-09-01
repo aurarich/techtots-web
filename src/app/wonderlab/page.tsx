@@ -11,10 +11,6 @@ type Flight = {
 };
 
 
-
-
-
-
 export default function Page() {
     const [flight, setFlight] = useState<Flight | null>(null);
     const [emit, setEmit] = useState(false); // toggle comet emission while flying
