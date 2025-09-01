@@ -205,7 +205,7 @@ export default function AdmissionsPage() {
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="/contact"
+                href="/application"
                 className="px-8 py-4 text-lg font-medium text-white transition-colors rounded-lg bg-primary hover:bg-primary/90"
               >
                 Apply Now

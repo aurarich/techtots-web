@@ -52,7 +52,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
 
                 {/* Enhanced Heading */}
                 <h1 className="text-4xl sm:text-5xl font-semibold leading-tight text-gray-900 font-heading md:text-6xl lg:text-7xl">
-                  Africa's Most Forward-Thinking
+                  Africa's Most Forward-Thinking12
                   <span className="block mt-2 gradient-text">
                     Early Childhood Institution
                   </span>
@@ -69,7 +69,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
               {/* Enhanced CTA Buttons */}
               <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
                 <Link
-                  href="/admissions"
+                  href="/application"
                   className="px-8 py-4 text-lg group btn btn-primary"
                 >
                   <span className="flex items-center gap-2">
@@ -168,7 +168,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
               {/* Enhanced CTA Buttons */}
               <div className="flex items-center justify-center gap-4 sm:gap-6">
                 <Link
-                  href="/admissions"
+                  href="/application"
                   className="max-sm:px-4 max-md:py-3 px-8 py-4 text-base sm:text-lg group btn btn-primary"
                 >
                   <span className="flex items-center gap-2">
@@ -262,7 +262,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
 
               <div className="flex flex-wrap gap-4">
                 <Link
-                  href="/admissions"
+                  href="/application"
                   className="px-8 py-4 text-lg w-full md:w-fit group btn btn-primary"
                 >
                   <span className="flex items-center justify-center gap-2">
