@@ -191,7 +191,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col justify-center gap-6 sm:flex-row">
               <Link
-                href="/admissions"
+                href="/application"
                 className="px-8 py-4 text-lg btn btn-primary"
               >
                 Apply Now
