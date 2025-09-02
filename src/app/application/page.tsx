@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -40,9 +40,18 @@ const admissionSchema = z.object({
         .refine((v) => !Number.isNaN(Number(v)) && Number(v) >= 0, "Provide a valid age"),
     gender: z.enum(["male", "female"], { required_error: "Please select a gender" }),
     nationality: z.string().min(2, "Nationality is required"),
-    classApplying: z
-        .array(z.string())
-        .min(1, "Select at least one class"),
+    classApplying: z.array(z.string()).min(1, "Select at least one class"),
+
+    // NEW: Child photo (optional, with type/size validation)
+    childPhoto: z
+        .any()
+        .transform((files: FileList | undefined) => (files && files.length ? files[0] : undefined))
+        .refine(
+            (file) => !file || ["image/jpeg", "image/png", "image/webp"].includes(file.type),
+            "Photo must be a JPG, PNG, or WEBP"
+        )
+        .refine((file) => !file || file.size <= 3 * 1024 * 1024, "Photo must be 3MB or smaller")
+        .optional(),
 
     // 2) Father / Guardian 1
     fatherName: z.string().min(2, "Name is required"),
@@ -96,6 +105,14 @@ const FieldError = ({ message }: { message?: string }) =>
 
 export default function AdmissionFormPage() {
     const [submitting, setSubmitting] = useState(false);
+    const [photoPreview, setPhotoPreview] = useState<string | null>(null);
+
+    useEffect(() => {
+        // cleanup preview URL on unmount or when replaced
+        return () => {
+            if (photoPreview) URL.revokeObjectURL(photoPreview);
+        };
+    }, [photoPreview]);
 
     const {
         register,
@@ -117,10 +134,27 @@ export default function AdmissionFormPage() {
     const onSubmit = async (data: AdmissionFormValues) => {
         try {
             setSubmitting(true);
-            // TODO: send to your API endpoint
-            // await fetch("/api/admissions", { method: "POST", body: JSON.stringify(data) });
+
+            // If you plan to send the photo, use FormData:
+            const formData = new FormData();
+            Object.entries(data).forEach(([key, value]) => {
+                if (key === "childPhoto" && value instanceof File) {
+                    formData.append("childPhoto", value);
+                } else if (Array.isArray(value)) {
+                    value.forEach((v) => formData.append(`${key}[]`, v));
+                } else if (value !== undefined && value !== null) {
+                    formData.append(key, String(value));
+                }
+            });
+
+            // Example:
+            // await fetch("/api/admissions", { method: "POST", body: formData });
+
             console.log("ADMISSION FORM SUBMITTED:", data);
             alert("Admission form submitted! We’ll contact you shortly.");
+            // reset preview + form
+            if (photoPreview) URL.revokeObjectURL(photoPreview);
+            setPhotoPreview(null);
             reset();
         } catch (e) {
             alert("Something went wrong. Please try again.");
@@ -146,11 +180,11 @@ export default function AdmissionFormPage() {
                     </CardTitle>
                     <p className="text-lg text-gray-700 leading-relaxed bg-white p-6">
                         We’re{" "}
-                        <span className="font-bold text-blue-700">excited that you’re considering TechTots{" "}</span>
+                        <span className="font-bold text-blue-700">excited that you’re considering TechTots </span>
                         as the place for your child’s learning journey. Our admission process is simple and supportive
                         from start to finish. Please complete the form with your child’s details and parent/guardian
                         information. We look forward to partnering with you to provide a{" "}
-                        <span className="font-semibold text-blue-700">nurturing, innovative, and inspiring environment{" "}</span>
+                        <span className="font-semibold text-blue-700">nurturing, innovative, and inspiring environment </span>
                         where your child can thrive.
                     </p>
                 </CardHeader>
@@ -218,6 +252,51 @@ export default function AdmissionFormPage() {
                                         ))}
                                     </div>
                                     <FieldError message={errors.classApplying?.message} />
+                                </div>
+
+                                {/* NEW: Child Photo upload + preview */}
+                                <div className="md:col-span-2">
+                                    <Label className="block mb-2">Child’s Photo (JPG/PNG/WEBP, max 3MB)</Label>
+                                    <input
+                                        type="file"
+                                        accept="image/*"
+                                        {...register("childPhoto")}
+                                        onChange={(e) => {
+                                            const file = e.target.files?.[0];
+                                            // Let RHF keep the file via register; we only manage preview
+                                            if (file) {
+                                                if (photoPreview) URL.revokeObjectURL(photoPreview);
+                                                setPhotoPreview(URL.createObjectURL(file));
+                                            } else {
+                                                if (photoPreview) URL.revokeObjectURL(photoPreview);
+                                                setPhotoPreview(null);
+                                            }
+                                        }}
+                                        className="w-full rounded-xl border border-gray-300 bg-white px-4 py-2 text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+                                    />
+                                    <FieldError message={errors.childPhoto?.message as string | undefined} />
+
+                                    {photoPreview && (
+                                        <div className="mt-4">
+                                            <p className="text-sm text-gray-600 mb-2">Preview:</p>
+                                            <img
+                                                src={photoPreview}
+                                                alt="Child preview"
+                                                className="h-36 w-36 object-cover rounded-xl border border-gray-200 shadow-sm"
+                                            />
+                                            <button
+                                                type="button"
+                                                onClick={() => {
+                                                    setValue("childPhoto", undefined as any);
+                                                    if (photoPreview) URL.revokeObjectURL(photoPreview);
+                                                    setPhotoPreview(null);
+                                                }}
+                                                className="mt-3 inline-flex items-center px-3 py-1.5 rounded-lg text-sm bg-gray-100 hover:bg-gray-200"
+                                            >
+                                                Remove photo
+                                            </button>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </section>
