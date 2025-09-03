@@ -2,6 +2,7 @@ import axios, { AxiosError, AxiosRequestConfig } from 'axios'
 import { StoreKeys } from '@/models/AuthModel'
 
 const BASE_URL = 'https://backend-staging-606d.up.railway.app'
+// const BASE_URL = 'http://localhost:3000'
 
 const AxiosInstance = axios.create({
   baseURL: BASE_URL,
