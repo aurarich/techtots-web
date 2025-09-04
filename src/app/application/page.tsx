@@ -248,7 +248,7 @@ export default function AdmissionFormPage() {
                           </div>
                           <div className="flex items-center gap-2">
                             <RadioGroupItem value="female" id="gender-female" />
-                            <Label htmlFor="gender-female">Male</Label>
+                            <Label htmlFor="gender-female">Female</Label>
                           </div>
                         </div>
                       </RadioGroup>
@@ -478,7 +478,7 @@ export default function AdmissionFormPage() {
                   <div className="flex gap-4 mt-4">
                     <div className="flex-1">
                       <Input
-                        placeholder="Signature of Parent/Guardian"
+                        placeholder="Full name of Parent/Guardian as signature"
                         {...register("consentSignature")}
                       />
                       <FieldError message={errors.consentSignature?.message} />
