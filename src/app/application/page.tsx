@@ -412,7 +412,7 @@ export default function AdmissionFormPage() {
 
                                 <div className="flex gap-4 mt-4">
                                     <div className="flex-1">
-                                        <Input placeholder="Signature of Parent/Guardian" {...register("consentSignature")} />
+                                        <Input placeholder="Full name of Parent/Guardian as signature" {...register("consentSignature")} />
                                         <FieldError message={errors.consentSignature?.message} />
                                     </div>
                                     <div className="flex-1">
