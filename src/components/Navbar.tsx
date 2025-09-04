@@ -61,7 +61,7 @@ export default function Navbar() {
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Link
-              href="/admissions"
+              href="/application"
               className="btn btn-primary"
             >
               Apply Now
