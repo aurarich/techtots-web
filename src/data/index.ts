@@ -16,6 +16,7 @@ export const whyTechTotData = [
     image: "/images/kids-in-it-lab.png",
     description:
       "World-class curriculum combining academic excellence with creative exploration.",
+    bgColor: "#fef400", // hex color
   },
   {
     icon: CpuChipIcon,
@@ -48,7 +49,7 @@ export const whyTechTotData = [
   {
     icon: BeakerIcon,
     title: "STEM Focus",
-    image: "https://images.pexels.com/photos/7869077/pexels-photo-7869077.jpeg", // kids science experiment
+    image: "/images/STEM.jpg", // kids science experiment
     description:
       "Early exposure to science, technology, engineering, and mathematics.",
   },

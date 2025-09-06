@@ -118,13 +118,14 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
           aria-label="hero-section"
           className="flex flex-col max-md:gap-8 items-center justify-center max-md:py-5 py-20 lg:pb-5 xl:h-5/6 overflow-hidden"
         >
+
           <img
             src="/images/kids-with-computer.png"
             alt="Hero"
             className="object-cover"
             fetchPriority="high"
           />
-          <div className="absolute w-full top-0 h-full bg-black/60 z-10"></div>
+          <div className="absolute w-full top-0 h-full bg-black/60 z-10" ></div>
 
           {/* Enhanced Decorative Elements */}
           <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
