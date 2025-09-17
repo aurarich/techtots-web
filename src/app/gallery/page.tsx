@@ -39,25 +39,25 @@ export default function GalleryPage() {
               <div className="grid gap-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
                   <img
-                    src="https://plus.unsplash.com/premium_photo-1742995782977-ee4b53fecadb?q=80&w=2670&auto=format&fit=crop"
-                    alt="Digital Learning Hub"
+                    src="/images/learningspace2.jpeg"
+                    alt="Our Class Rooms"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 text-white">
-                      <p className="font-medium">Digital Learning Hub</p>
+                      <p className="font-medium">Our Class Rooms</p>
                     </div>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
                   <img
-                    src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2670&auto=format&fit=crop"
+                    src="/images/learnigspace1.jpeg"
                     alt="Reading Corner"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 text-white">
-                      <p className="font-medium">Reading Corner</p>
+                      <p className="font-medium">Learning & Play Resources</p>
                     </div>
                   </div>
                 </div>
@@ -70,25 +70,25 @@ export default function GalleryPage() {
               <div className="grid gap-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
                   <img
-                    src="https://images.unsplash.com/photo-1715775491904-ef5cdae40f0f?q=80&w=1335&auto=format&fit=crop"
-                    alt="Nature Playground"
+                    src="/images/playground2.jpeg"
+                    alt="Football Pitch"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 text-white">
-                      <p className="font-medium">Nature Playground</p>
+                      <p className="font-medium">Football Pitch</p>
                     </div>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
                   <img
-                    src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2670&auto=format&fit=crop"
-                    alt="Music Studio"
+                    src="/images/playground.jpeg"
+                    alt="Basketball Court."
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 text-white">
-                      <p className="font-medium">Music & Movement Studio</p>
+                      <p className="font-medium">Basketball Court.</p>
                     </div>
                   </div>
                 </div>
@@ -101,25 +101,25 @@ export default function GalleryPage() {
               <div className="grid gap-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
                   <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2622&auto=format&fit=crop"
-                    alt="STEM Activity"
+                    src="/images/activity2.jpeg"
+                    alt="My First Day at School – I am a TechTot"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 text-white">
-                      <p className="font-medium">STEM Activities</p>
+                      <p className="font-medium">My First Day at School – I am a TechTot!</p>
                     </div>
                   </div>
                 </div>
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
                   <img
-                    src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2670&auto=format&fit=crop"
-                    alt="Cultural Celebration"
+                    src="/images/activity3.jpeg"
+                    alt="Explorers Cove"
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                     <div className="absolute bottom-4 left-4 text-white">
-                      <p className="font-medium">Cultural Celebrations</p>
+                      <p className="font-medium">Explorers Cove</p>
                     </div>
                   </div>
                 </div>
