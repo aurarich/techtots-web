@@ -98,6 +98,7 @@ export default function GalleryPage() {
             {/* Activities & Events */}
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-gray-900 font-heading">Activities & Events</h2>
+
               <div className="grid gap-4">
                 <div className="relative overflow-hidden rounded-lg aspect-video group">
                   <img
