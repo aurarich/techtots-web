@@ -1,80 +1,58 @@
-name: Deploy to Contabo Server (Enhanced)
+name: Deploy to Contabo Server
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: [ main ]
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Deploy to Contabo Server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.CONTABO_HOST }}
-          username: ${{ secrets.CONTABO_USERNAME }}
-          password: ${{ secrets.CONTABO_PASSWORD }}
-          port: 22
-          timeout: 300s
-          script: |
-            set -e  # Exit on any error
-
-            echo "Starting deployment process..."
-
-            # Navigate to project directory
-            if [ ! -d "workspace/techtots-web" ]; then
-              echo "Error: Project directory not found!"
-              exit 1
-            fi
-
-            cd workspace/techtots-web
-            echo "Current directory: $(pwd)"
-
-            # Check git status
-            echo "Checking git status..."
-            git status
-
-            # Pull latest changes
-            echo "Pulling latest changes from main branch..."
-            git pull origin main || {
-              echo "Error: Failed to pull changes"
-              exit 1
-            }
-
-            # Check if bun is installed
-            if ! command -v bun &> /dev/null; then
-              echo "Error: Bun is not installed"
-              exit 1
-            fi
-
-            # Install/update dependencies
-            echo "Installing dependencies..."
-            bun install || {
-              echo "Error: Failed to install dependencies"
-              exit 1
-            }
-
-            # Build the application
-            echo "Building application..."
-            bun run build || {
-              echo "Error: Build failed"
-              exit 1
-            }
-
-            # Start the application with PM2
-            echo "Starting application with PM2..."
-            pm2 restart ecosystem.config.js || {
-              echo "Error: Failed to start with PM2"
-              exit 1
-            }
-
-            # Show PM2 status
-            echo "PM2 Status:"
-            pm2 list
-
-            echo "Deployment completed successfully!"
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to Contabo Server
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.CONTABO_HOST }}
+        username: ${{ secrets.CONTABO_USERNAME }}
+        password: ${{ secrets.CONTABO_PASSWORD }}
+        port: 22
+        script: |
+          # Navigate to project directory
+          cd workspace/techtots-web
+          
+          # Show current status
+          echo "Current git status:"
+          git status
+          
+          # Fetch all remote changes
+          echo "Fetching remote changes..."
+          git fetch origin
+          
+          # Force reset to match remote main exactly (discards all local changes)
+          echo "Force resetting to remote main branch (discarding local changes)..."
+          git reset --hard origin/main
+          
+          # Verify we're on the correct commit
+          echo "Current commit:"
+          git log -1 --oneline
+          
+          # Install/update dependencies
+          echo "Installing dependencies..."
+          bun install
+          
+          # Build the application
+          echo "Building application..."
+          bun run build
+          
+          # Restart PM2 service (more reliable than start + restart)
+          echo "Restarting PM2 service..."
+          pm2 restart ecosystem.config.js || {
+            echo "PM2 restart failed, attempting fresh start..."
+            pm2 start ecosystem.config.js
+          }
+          
+          echo "Deployment completed successfully!"
