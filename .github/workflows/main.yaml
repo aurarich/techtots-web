@@ -1,29 +1,80 @@
-name: Deploy to GoDaddy via FTP
+name: Deploy to Contabo Server (Enhanced)
 
 on:
   push:
-    branches:
-      - main  # or master
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Install dependencies
-      run: npm install
+      - name: Deploy to Contabo Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.CONTABO_HOST }}
+          username: ${{ secrets.CONTABO_USERNAME }}
+          password: ${{ secrets.CONTABO_PASSWORD }}
+          port: 22
+          timeout: 300s
+          script: |
+            set -e  # Exit on any error
 
-    - name: Build the React app
-      run: npm run build
+            echo "Starting deployment process..."
 
-    - name: Deploy via FTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: techtots.edu.gh/
-        server-dir: /
+            # Navigate to project directory
+            if [ ! -d "workspace/techtots-web" ]; then
+              echo "Error: Project directory not found!"
+              exit 1
+            fi
+
+            cd workspace/techtots-web
+            echo "Current directory: $(pwd)"
+
+            # Check git status
+            echo "Checking git status..."
+            git status
+
+            # Pull latest changes
+            echo "Pulling latest changes from main branch..."
+            git pull origin main || {
+              echo "Error: Failed to pull changes"
+              exit 1
+            }
+
+            # Check if bun is installed
+            if ! command -v bun &> /dev/null; then
+              echo "Error: Bun is not installed"
+              exit 1
+            fi
+
+            # Install/update dependencies
+            echo "Installing dependencies..."
+            bun install || {
+              echo "Error: Failed to install dependencies"
+              exit 1
+            }
+
+            # Build the application
+            echo "Building application..."
+            bun run build || {
+              echo "Error: Build failed"
+              exit 1
+            }
+
+            # Start the application with PM2
+            echo "Starting application with PM2..."
+            pm2 restart ecosystem.config.js || {
+              echo "Error: Failed to start with PM2"
+              exit 1
+            }
+
+            # Show PM2 status
+            echo "PM2 Status:"
+            pm2 list
+
+            echo "Deployment completed successfully!"
