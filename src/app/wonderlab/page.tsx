@@ -99,6 +99,8 @@ export default function Page() {
                 </div>
             </section>
 
+
+
             {/* WonderLab Grid Section (unchanged structure, styled like your Enrichment section) */}
             <section className="py-20 bg-blue">
                 <div className="container max-w-7xl mx-auto px-4 text-center">
@@ -113,34 +115,34 @@ export default function Page() {
                                     "Sat & Sun afternoons: hands-on learning & discovery",
                                 ],
                             },
+                            // {
+                            //     title: "What We Offer",
+                            //     bg: "#fbf5ef",
+                            //     items: [
+                            //         "WonderLab STEM – Robotics, AI & Coding, Digital Literacy",
+                            //         "WonderLab Creators – Art, Music (Piano, Violin), Craft, Design",
+                            //         "WonderLab Sports – Mini Tennis, Football, Cycling, Basketball, Mini Golf",
+                            //         "WonderLab Nature – Eco Farm, Gardening, Nature Play, Outdoor Games",
+                            //     ],
+                            // },
+                            // {
+                            //     title: "Weekend Schedule",
+                            //     bg: "#28455c",
+                            //     textWhite: true,
+                            //     items: [
+                            //         "Saturday Morning: 9:00 AM – 1:00 PM",
+                            //         "Saturday Afternoon: 1:00 PM – 5:00 PM",
+                            //         "Sunday Afternoon: 1:00 PM – 5:00 PM",
+                            //         "Flexible: Full Sessions",
+                            //     ],
+                            // },
                             {
-                                title: "What We Offer",
-                                bg: "#fbf5ef",
-                                items: [
-                                    "WonderLab STEM – Robotics, AI & Coding, Digital Literacy",
-                                    "WonderLab Creators – Art, Music (Piano, Violin), Craft, Design",
-                                    "WonderLab Sports – Mini Tennis, Football, Cycling, Basketball, Mini Golf",
-                                    "WonderLab Nature – Eco Farm, Gardening, Nature Play, Outdoor Games",
-                                ],
-                            },
-                            {
-                                title: "Weekend Schedule",
-                                bg: "#28455c",
-                                textWhite: true,
-                                items: [
-                                    "Saturday Morning: 9:00 AM – 1:00 PM",
-                                    "Saturday Afternoon: 1:00 PM – 5:00 PM",
-                                    "Sunday Afternoon: 1:00 PM – 5:00 PM",
-                                    "Flexible: full sessions or drop‑in activities",
-                                ],
-                            },
-                            {
-                                title: "Participation Fees (USD)",
+                                title: "Participation Fees (GH₵)",
                                 bg: "#f0f1f2",
+                                gridCols: "grid-cols-1 sm:grid-cols-2", // 👈 override grid for this section
                                 items: [
-                                    "Full Morning (9:00 AM – 1:00 PM) – $10",
-                                    "Full Afternoon (1:00 PM – 5:00 PM) – $10",
-                                    "Drop‑In Activity (per 1‑hour session) – $5",
+                                    "Full Morning (9:00 AM – 1:00 PM) – ₵100",
+                                    "Full Afternoon (1:00 PM – 5:00 PM) – ₵100",
                                 ],
                             },
                             {
@@ -162,7 +164,7 @@ export default function Page() {
                                     "Early STEM & arts fluency",
                                     "Independence, teamwork & expression",
                                     "Open to ages 2–10",
-                                    "Cambridge & Reggio‑inspired facilitators",
+                                    "Cambridge & Reggio-inspired facilitators",
                                 ],
                             },
                         ].map((section, idx) => (
@@ -179,11 +181,18 @@ export default function Page() {
                                     {section.title}
                                 </h3>
 
-                                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                {/* 👇 dynamic grid per section */}
+                                <div
+                                    className={`grid ${
+                                        section.gridCols
+                                            ? section.gridCols
+                                            : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+                                    } gap-4`}
+                                >
                                     {section.items.map((item) => (
                                         <div
                                             key={item}
-                                            className={`p-4 bg-white rounded-xl shadow transition duration-300 ease-in-out transform hover:scale-105 hover:animate-shake hover:cursor-pointer ${
+                                            className={`p-4 bg-white rounded-xl shadow transition duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer ${
                                                 section.textWhite ? "text-black" : ""
                                             }`}
                                         >
@@ -196,6 +205,114 @@ export default function Page() {
                     </div>
                 </div>
             </section>
+            <section className="py-20 bg-blue">
+                <div className="container max-w-7xl mx-auto px-4 text-center">
+                    <div className="space-y-16">
+                        {/* Flat Day Pass */}
+                        <div className="relative p-8 rounded-xl shadow-md bg-[#f1f8fe]">
+                            <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
+                                 Flat Day Pass (All Sports, Arts & Nature Activities)
+                            </h3>
+                            <p className="mb-6 text-gray-700">
+                                Includes: Mini Tennis, Football, Cycling, Basketball, Table Tennis,
+                                Mini Golf, Art & Craft, Design, Eco Farm, Gardening, Nature Play &
+                                Outdoor Games.
+                            </p>
+
+                            {/* Schedule */}
+                            <h4 className="font-bold text-lg mb-4">Weekend Programme Schedule</h4>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                {[
+                                    "Saturday Morning: 9:00 AM – 1:00 PM",
+                                    "Saturday Afternoon: 1:00 PM – 5:00 PM",
+                                    "Sunday Afternoon: 1:00 PM – 5:00 PM",
+                                ].map((slot) => (
+                                    <div
+                                        key={slot}
+                                        className="p-4 bg-white rounded-xl shadow hover:scale-105 transition"
+                                    >
+                                        {slot}
+                                    </div>
+                                ))}
+                            </div>
+
+                            <p className="mb-6 text-gray-600 italic">
+                                Each fee entitles your child to a full 4-hour block. Parents may
+                                choose a full session or drop-in activities within the slot.
+                            </p>
+
+                            {/* Fees */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="p-5 bg-white rounded-xl shadow text-center">
+                                    <h4 className="font-bold mb-2">Day Pass (per 4-hour session)</h4>
+                                    <p>Standard: GHC 100 / session</p>
+                                    {/*<p className="font-semibold text-blue-600">*/}
+                                    {/*    TechTots Students: GHC 70 / session*/}
+                                    {/*</p>*/}
+                                </div>
+                                <div className="p-5 bg-white rounded-xl shadow text-center">
+                                    <h4 className="font-bold mb-2">Term Pass (12 sessions)</h4>
+                                    <p>Standard: GHC 1,200 / term</p>
+                                    {/*<p className="font-semibold text-blue-600">*/}
+                                    {/*    TechTots Students: GHC 840 / term*/}
+                                    {/*</p>*/}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Specialised Programmes */}
+                        <div className="relative p-8 rounded-xl shadow-md bg-[#fbf5ef]">
+                            <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
+                                 Specialised Programmes
+                            </h3>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                {[
+                                    {
+                                        programme: "Robotics, AI & Coding",
+                                        schedule: "Saturdays (9:00 AM – 1:00 PM)",
+                                        fee: "GHC 2,500 / term",
+                                        // studentFee: "GHC 1,750 / term",
+                                    },
+                                    {
+                                        programme: "Music (Piano)",
+                                        schedule: "Saturdays (1:00 PM – 5:00 PM)",
+                                        fee: "GHC 1,800 / term",
+                                        // studentFee: "GHC 1,260 / term",
+                                    },
+                                    {
+                                        programme: "Taekwondo",
+                                        schedule: "Saturdays (1:00 PM – 5:00 PM)",
+                                        fee: "GHC 1,300 / term",
+                                        // studentFee: "GHC 910 / term",
+                                    },
+                                    {
+                                        programme: "Library & Literacy Club",
+                                        schedule:
+                                            "Saturdays (Flexible across sessions, Jolly Phonics, Epic! & Book Borrowing)",
+                                        fee: "GHC 600 / year",
+                                        // studentFee: "GHC 420 / year",
+                                    },
+                                ].map(({ programme, schedule, fee, studentFee }) => (
+                                    <div
+                                        key={programme}
+                                        className="p-5 bg-white rounded-xl shadow hover:scale-105 transition text-left"
+                                    >
+                                        <h4 className="font-bold">{programme}</h4>
+                                        <p className="text-gray-600">{schedule}</p>
+                                        <p className="mt-2">Standard: {fee}</p>
+                                        {/*<p className="font-semibold text-blue-600">*/}
+                                        {/*    TechTots Students: {studentFee}*/}
+                                        {/*</p>*/}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
             {/* CTA Section */}
             <section className="py-16">
                 <div className="container max-w-7xl mx-auto px-4 text-center">

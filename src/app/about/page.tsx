@@ -2,6 +2,7 @@ import HeaderTag from "@/components/ui/header-tag";
 import { camBridge, roadmapData } from "../../data";
 import { SVGBlobCard } from "@/components/SVGBackground";
 import { Metadata } from "next";
+import Image from "next/image"
 
 
 export const metadata: Metadata = {
@@ -135,9 +136,11 @@ export default function AboutPage() {
                 key={index}
                 className="relative flex flex-col justify-end h-96 overflow-hidden transition-all border rounded-2xl shadow-lg bg-white border-primary/10 group"
               >
-                <img
+                <Image
                   src={member.image}
                   fetchPriority="auto"
+                  width={100}
+                  height={100}
                   className="absolute inset-0 rounded-2xl object-cover w-full h-full transition-all duration-500 mix-blend-multiply group-hover:scale-110 group-hover:object-top"
                   alt={member.name}
                 />
@@ -177,10 +180,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
             {/* Crèche */}
             <div
-              className="shadow-md rounded-2xl p-6"
+              className="shadow-md rounded-lg p-5 space-y-4"
               style={{ background: "hsl(29.52deg 63.64% 80.59%)" }}
             >
-              <h3 className="text-xl font-bold mb-2">Crèche (6m – 2y)</h3>
+              <h3 className="text-lg font-bold">Crèche (6m – 2y)</h3>
               <p>
                 Little Seeds & Sprouts – nurturing first bonds, sensory play,
                 and discovery.
@@ -189,10 +192,10 @@ export default function AboutPage() {
 
             {/* Early Years Prep */}
             <div
-              className="shadow-md rounded-2xl p-6"
+              className="shadow-md rounded-lg p-5 space-y-4"
               style={{ background: "#fbf5ef" }}
             >
-              <h3 className="text-xl font-bold mb-2">
+              <h3 className="text-lg font-bold mb-2">
                 Early Years Prep (2 – 3y)
               </h3>
               <p>Explorers – building early communication and motor skills.</p>
@@ -200,10 +203,10 @@ export default function AboutPage() {
 
             {/* Cambridge Early Years */}
             <div
-              className="shadow-md rounded-2xl p-6"
+              className="shadow-md rounded-lg p-5 space-y-4"
               style={{ background: "#f1f8fd" }}
             >
-              <h3 className="text-xl font-bold mb-2">
+              <h3 className="text-lg font-bold mb-2">
                 Cambridge Early Years (3 – 6y)
               </h3>
               <ul className="list-disc list-inside space-y-1">
@@ -215,10 +218,10 @@ export default function AboutPage() {
 
             {/* Cambridge Primary */}
             <div
-              className="shadow-md rounded-2xl p-6 text-white"
+              className="shadow-md rounded-lg p-5 space-y-4 text-white"
               style={{ background: "hsl(206.54deg 39.39% 25.88%)" }}
             >
-              <h3 className="text-xl font-bold mb-2">
+              <h3 className="text-lg font-bold">
                 Cambridge Primary 1 (6 – 7y)
               </h3>
               <p>
@@ -241,31 +244,31 @@ export default function AboutPage() {
               the Cambridge curriculum and Reggio Emilia principles
             </p>
           </div>
-          <div className="overflow-x-auto rounded-xl shadow-2xl shadow-secondary-dark/20">
+          <div className="overflow-x-auto rounded-lg shadow-2xl shadow-secondary-dark/20">
             <table className="min-w-full text-sm md:text-base text-left">
               <thead>
-                <tr className="bg-beige">
-                  <th className="px-4 py-3 font-bold">Class Name</th>
-                  <th className="px-4 py-3 font-bold">
-                    Cambridge Curriculum Equivalent
+                <tr className="bg-beige space-x-4">
+                  <th className="px-4 py-3 font-semibold">Class Name</th>
+                  <th className="px-4 py-3 font-semibold">
+                    Cambridge Equivalent
                   </th>
-                  <th className="px-4 py-3 font-bold">
-                    Ghana Education System
+                  <th className="px-4 py-3 font-semibold">
+                    GES System
                   </th>
-                  <th className="px-4 py-3 font-bold">UK Equivalent</th>
-                  <th className="px-4 py-3 font-bold">Age Range</th>
-                  <th className="px-4 py-3 font-bold">Core Focus</th>
+                  <th className="px-4 py-3 font-semibold">UK Equivalent</th>
+                  <th className="px-4 py-3 font-semibold">Age Range</th>
+                  <th className="px-4 py-3 font-semibold">Core Focus</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {roadmapData.map((row, idx) => (
                   <tr key={row.className} className="hover:bg-primary/5">
-                    <td className="p-3">{row.className}</td>
-                    <td className="p-3">{row.cambridge}</td>
-                    <td className="p-3">{row.ghana}</td>
-                    <td className="p-3">{row.uk}</td>
-                    <td className="p-3">{row.age}</td>
-                    <td className="p-3">{row.focus}</td>
+                    <td className="p-3 text-[15px]">{row.className}</td>
+                    <td className="p-3 text-[15px]">{row.cambridge}</td>
+                    <td className="p-3 text-[15px]">{row.ghana}</td>
+                    <td className="p-3 text-[15px]">{row.uk}</td>
+                    <td className="p-3 text-[15px]">{row.age}</td>
+                    <td className="p-3 text-[15px]">{row.focus}</td>
                   </tr>
                 ))}
               </tbody>
@@ -288,10 +291,10 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Item 1 */}
               <div
-                className="p-6 rounded-xl shadow-md"
+                className="p-6 rounded-lg shadow-md"
                 style={{ background: "#f1f8fd" }}
               >
-                <p className="text-base md:text-lg">
+                <p>
                   <strong>Blend</strong> the Cambridge Early Years Curriculum
                   with the Reggio Emilia approach — making learning both
                   structured and child-led.
@@ -300,10 +303,10 @@ export default function AboutPage() {
 
               {/* Item 2 */}
               <div
-                className="p-6 rounded-xl shadow-md text-white"
+                className="p-6 rounded-lg shadow-md text-white"
                 style={{ background: "hsl(206.54deg 39.39% 25.88%)" }}
               >
-                <p className="text-base md:text-lg">
+                <p className="">
                   <strong>Offer</strong> a purposefully designed environment
                   that supports social, emotional, cognitive, and creative
                   development.
@@ -312,10 +315,10 @@ export default function AboutPage() {
 
               {/* Item 3 */}
               <div
-                className="p-6 rounded-xl shadow-md"
+                className="p-6 rounded-lg shadow-md"
                 style={{ background: "hsl(29.52deg 63.64% 80.59%)" }}
               >
-                <p className="text-base md:text-lg">
+                <p className="">
                   <strong>Ensure</strong> a smooth, developmentally appropriate
                   journey from 6 months to Primary 1, preparing your child for
                   lifelong learning.
@@ -324,10 +327,10 @@ export default function AboutPage() {
 
               {/* Item 4 */}
               <div
-                className="p-6 rounded-xl shadow-md text-black"
+                className="p-6 rounded-lg shadow-md text-black"
                 style={{ background: "#fbf5ef" }}
               >
-                <p className="text-base md:text-lg">
+                <p className="">
                   <strong>Early exposure</strong> to AI tools, robotics, and
                   digital platforms to build tech fluency.
                 </p>
