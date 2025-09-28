@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosRequestConfig } from 'axios'
 import { StoreKeys } from '@/models/AuthModel'
 
-const BASE_URL = 'https://staging.api.techtots.edu.gh'
+const BASE_URL = 'https://api.techtots.edu.gh'
 // const BASE_URL = 'http://localhost:3000'
 
 const AxiosInstance = axios.create({
