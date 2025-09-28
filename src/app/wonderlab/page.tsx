@@ -115,27 +115,6 @@ export default function Page() {
                                     "Sat & Sun afternoons: hands-on learning & discovery",
                                 ],
                             },
-                            // {
-                            //     title: "What We Offer",
-                            //     bg: "#fbf5ef",
-                            //     items: [
-                            //         "WonderLab STEM – Robotics, AI & Coding, Digital Literacy",
-                            //         "WonderLab Creators – Art, Music (Piano, Violin), Craft, Design",
-                            //         "WonderLab Sports – Mini Tennis, Football, Cycling, Basketball, Mini Golf",
-                            //         "WonderLab Nature – Eco Farm, Gardening, Nature Play, Outdoor Games",
-                            //     ],
-                            // },
-                            // {
-                            //     title: "Weekend Schedule",
-                            //     bg: "#28455c",
-                            //     textWhite: true,
-                            //     items: [
-                            //         "Saturday Morning: 9:00 AM – 1:00 PM",
-                            //         "Saturday Afternoon: 1:00 PM – 5:00 PM",
-                            //         "Sunday Afternoon: 1:00 PM – 5:00 PM",
-                            //         "Flexible: Full Sessions",
-                            //     ],
-                            // },
                             {
                                 title: "Participation Fees (GH₵)",
                                 bg: "#f0f1f2",
@@ -174,9 +153,7 @@ export default function Page() {
                                 style={{ backgroundColor: section.bg }}
                             >
                                 <h3
-                                    className={`text-2xl md:text-3xl font-semibold mb-6 flex justify-center ${
-                                        section.textWhite ? "text-white" : "text-gray-800"
-                                    }`}
+                                    className={`text-2xl md:text-3xl font-semibold mb-6 flex justify-center text-gray-800`}
                                 >
                                     {section.title}
                                 </h3>
@@ -192,9 +169,7 @@ export default function Page() {
                                     {section.items.map((item) => (
                                         <div
                                             key={item}
-                                            className={`p-4 bg-white rounded-xl shadow transition duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer ${
-                                                section.textWhite ? "text-black" : ""
-                                            }`}
+                                            className={`p-4 bg-white rounded-xl shadow transition duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer text-black`}
                                         >
                                             {item}
                                         </div>
@@ -293,7 +268,7 @@ export default function Page() {
                                         fee: "GHC 600 / year",
                                         // studentFee: "GHC 420 / year",
                                     },
-                                ].map(({ programme, schedule, fee, studentFee }) => (
+                                ].map(({ programme, schedule, fee, }) => (
                                     <div
                                         key={programme}
                                         className="p-5 bg-white rounded-xl shadow hover:scale-105 transition text-left"
