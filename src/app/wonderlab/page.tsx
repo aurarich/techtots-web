@@ -105,6 +105,8 @@ export default function Page() {
             <section className="py-20 bg-blue">
                 <div className="container max-w-7xl mx-auto px-4 text-center">
                     <div className="space-y-16">
+
+                        {/* --- mapped sections --- */}
                         {[
                             {
                                 title: "What is WonderLab?",
@@ -115,31 +117,10 @@ export default function Page() {
                                     "Sat & Sun afternoons: hands-on learning & discovery",
                                 ],
                             },
-                            // {
-                            //     title: "What We Offer",
-                            //     bg: "#fbf5ef",
-                            //     items: [
-                            //         "WonderLab STEM – Robotics, AI & Coding, Digital Literacy",
-                            //         "WonderLab Creators – Art, Music (Piano, Violin), Craft, Design",
-                            //         "WonderLab Sports – Mini Tennis, Football, Cycling, Basketball, Mini Golf",
-                            //         "WonderLab Nature – Eco Farm, Gardening, Nature Play, Outdoor Games",
-                            //     ],
-                            // },
-                            // {
-                            //     title: "Weekend Schedule",
-                            //     bg: "#28455c",
-                            //     textWhite: true,
-                            //     items: [
-                            //         "Saturday Morning: 9:00 AM – 1:00 PM",
-                            //         "Saturday Afternoon: 1:00 PM – 5:00 PM",
-                            //         "Sunday Afternoon: 1:00 PM – 5:00 PM",
-                            //         "Flexible: Full Sessions",
-                            //     ],
-                            // },
                             {
                                 title: "Participation Fees (GH₵)",
                                 bg: "#f0f1f2",
-                                gridCols: "grid-cols-1 sm:grid-cols-2", // 👈 override grid for this section
+                                gridCols: "grid-cols-1 sm:grid-cols-2",
                                 items: [
                                     "Full Morning (9:00 AM – 1:00 PM) – ₵100",
                                     "Full Afternoon (1:00 PM – 5:00 PM) – ₵100",
@@ -181,7 +162,6 @@ export default function Page() {
                                     {section.title}
                                 </h3>
 
-                                {/* 👇 dynamic grid per section */}
                                 <div
                                     className={`grid ${
                                         section.gridCols
@@ -202,16 +182,11 @@ export default function Page() {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </div>
-            </section>
-            <section className="py-20 bg-blue">
-                <div className="container max-w-7xl mx-auto px-4 text-center">
-                    <div className="space-y-16">
-                        {/* Flat Day Pass */}
+
+                        {/* --- Flat Day Pass block --- */}
                         <div className="relative p-8 rounded-xl shadow-md bg-[#f1f8fe]">
                             <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
-                                 Flat Day Pass (All Sports, Arts & Nature Activities)
+                                Flat Day Pass (All Sports, Arts & Nature Activities)
                             </h3>
                             <p className="mb-6 text-gray-700">
                                 Includes: Mini Tennis, Football, Cycling, Basketball, Table Tennis,
@@ -219,7 +194,6 @@ export default function Page() {
                                 Outdoor Games.
                             </p>
 
-                            {/* Schedule */}
                             <h4 className="font-bold text-lg mb-4">Weekend Programme Schedule</h4>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                                 {[
@@ -241,29 +215,22 @@ export default function Page() {
                                 choose a full session or drop-in activities within the slot.
                             </p>
 
-                            {/* Fees */}
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="p-5 bg-white rounded-xl shadow text-center">
                                     <h4 className="font-bold mb-2">Day Pass (per 4-hour session)</h4>
                                     <p>Standard: GHC 100 / session</p>
-                                    {/*<p className="font-semibold text-blue-600">*/}
-                                    {/*    TechTots Students: GHC 70 / session*/}
-                                    {/*</p>*/}
                                 </div>
                                 <div className="p-5 bg-white rounded-xl shadow text-center">
                                     <h4 className="font-bold mb-2">Term Pass (12 sessions)</h4>
                                     <p>Standard: GHC 1,200 / term</p>
-                                    {/*<p className="font-semibold text-blue-600">*/}
-                                    {/*    TechTots Students: GHC 840 / term*/}
-                                    {/*</p>*/}
                                 </div>
                             </div>
                         </div>
 
-                        {/* Specialised Programmes */}
+                        {/* --- Specialised Programmes block --- */}
                         <div className="relative p-8 rounded-xl shadow-md bg-[#fbf5ef]">
                             <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
-                                 Specialised Programmes
+                                Specialised Programmes
                             </h3>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -272,28 +239,24 @@ export default function Page() {
                                         programme: "Robotics, AI & Coding",
                                         schedule: "Saturdays (9:00 AM – 1:00 PM)",
                                         fee: "GHC 2,500 / term",
-                                        // studentFee: "GHC 1,750 / term",
                                     },
                                     {
                                         programme: "Music (Piano)",
                                         schedule: "Saturdays (1:00 PM – 5:00 PM)",
                                         fee: "GHC 1,800 / term",
-                                        // studentFee: "GHC 1,260 / term",
                                     },
                                     {
                                         programme: "Taekwondo",
                                         schedule: "Saturdays (1:00 PM – 5:00 PM)",
-                                        fee: "GHC 1,300 / term",
-                                        // studentFee: "GHC 910 / term",
+                                        fee: "GHC 1,700 / term",
                                     },
                                     {
                                         programme: "Library & Literacy Club",
                                         schedule:
                                             "Saturdays (Flexible across sessions, Jolly Phonics, Epic! & Book Borrowing)",
-                                        fee: "GHC 600 / year",
-                                        // studentFee: "GHC 420 / year",
+                                        fee: "GHC 1000 / year",
                                     },
-                                ].map(({ programme, schedule, fee, studentFee }) => (
+                                ].map(({ programme, schedule, fee }) => (
                                     <div
                                         key={programme}
                                         className="p-5 bg-white rounded-xl shadow hover:scale-105 transition text-left"
@@ -301,16 +264,15 @@ export default function Page() {
                                         <h4 className="font-bold">{programme}</h4>
                                         <p className="text-gray-600">{schedule}</p>
                                         <p className="mt-2">Standard: {fee}</p>
-                                        {/*<p className="font-semibold text-blue-600">*/}
-                                        {/*    TechTots Students: {studentFee}*/}
-                                        {/*</p>*/}
                                     </div>
                                 ))}
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
+
 
 
             {/* CTA Section */}
