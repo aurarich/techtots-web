@@ -155,9 +155,7 @@ export default function Page() {
                                 style={{ backgroundColor: section.bg }}
                             >
                                 <h3
-                                    className={`text-2xl md:text-3xl font-semibold mb-6 flex justify-center ${
-                                        section.textWhite ? "text-white" : "text-gray-800"
-                                    }`}
+                                    className={`text-2xl md:text-3xl font-semibold mb-6 flex justify-center text-gray-800`}
                                 >
                                     {section.title}
                                 </h3>
@@ -172,9 +170,7 @@ export default function Page() {
                                     {section.items.map((item) => (
                                         <div
                                             key={item}
-                                            className={`p-4 bg-white rounded-xl shadow transition duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer ${
-                                                section.textWhite ? "text-black" : ""
-                                            }`}
+                                            className={`p-4 bg-white rounded-xl shadow transition duration-300 ease-in-out transform hover:scale-105 hover:cursor-pointer text-black`}
                                         >
                                             {item}
                                         </div>
@@ -256,7 +252,8 @@ export default function Page() {
                                             "Saturdays (Flexible across sessions, Jolly Phonics, Epic! & Book Borrowing)",
                                         fee: "GHC 1000 / year",
                                     },
-                                ].map(({ programme, schedule, fee }) => (
+
+                                ].map(({ programme, schedule, fee, }) => (
                                     <div
                                         key={programme}
                                         className="p-5 bg-white rounded-xl shadow hover:scale-105 transition text-left"
