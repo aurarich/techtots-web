@@ -244,7 +244,7 @@ export default function Page() {
                                     {
                                         programme: "Taekwondo",
                                         schedule: "Saturdays (1:00 PM – 5:00 PM)",
-                                        fee: "GHC 1,700 / term",
+                                        fee: "GHC 1,800 / term",
                                     },
                                     {
                                         programme: "Library & Literacy Club",
