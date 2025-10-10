@@ -250,7 +250,7 @@ export default function Page() {
                                         programme: "Library & Literacy Club",
                                         schedule:
                                             "Saturdays (Flexible across sessions, Jolly Phonics, Epic! & Book Borrowing)",
-                                        fee: "GHC 1000 / year",
+                                        fee: "GHC 1000 / term",
                                     },
 
                                 ].map(({ programme, schedule, fee, }) => (
