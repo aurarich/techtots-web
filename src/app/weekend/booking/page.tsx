@@ -178,7 +178,7 @@ export default function WeekendBookingPage() {
           </CardContent>
         </Card>
       ) : (
-        <Card className="h-screen overflow-hidden border-none relative w-full max-w-4xl z-10 shadow-xl bg-white/90 backdrop-blur-xl py-5 space-y-8">
+        <Card style={{ height: "230vh" }} className="h-screen overflow-hidden border-none relative w-full max-w-4xl z-10 shadow-xl bg-white/90 backdrop-blur-xl py-5 space-y-8">
           {/* 
           <iframe
             src="https://app.schoolrobot.net/tech-tots/"
@@ -186,15 +186,15 @@ export default function WeekendBookingPage() {
           /> */}
 
             {/* loader */}
-            <div id="iframeLoader" className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-white">
+            {/* <div id="iframeLoader1" className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-white">
               Loading...
-            </div>
+            </div> */}
 
             <iframe
               src="https://app.schoolrobot.net/tech-tots/"
-              className="w-full h-full border-none"
+              className="w-full h-full border-none" 
               onLoad={() => {
-                const loader = document.getElementById("iframeLoader");
+                const loader = document.getElementById("iframeLoader1");
                 if (loader) loader.style.display = "none";
               }}
             />
