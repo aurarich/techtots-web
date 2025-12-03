@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
-// const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  // trailingSlash: true,
-  // output: isProd ? 'export' : undefined,
-  // distDir: isProd ? 'techtots.edu.gh' : '.next',
+
+  // Disable Google Fonts optimization to prevent server build failures
+  experimental: {
+    optimizeFonts: false,
+  },
+
   images: {
     remotePatterns: [
       { hostname: "images.pexels.com" },
