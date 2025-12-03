@@ -1,0 +1,55 @@
+name: Deploy to Contabo Server
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Deploy to Contabo Server
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.CONTABO_HOST }}
+        username: ${{ secrets.CONTABO_USERNAME }}
+        password: ${{ secrets.CONTABO_PASSWORD }}
+        port: 22
+        script: |
+          # Navigate to project directory
+          cd workspace/techtots-web
+          
+          # Show current status
+          echo "Current git status:"
+          git status
+          
+          # Fetch all remote changes
+          echo "Fetching remote changes..."
+          git fetch origin
+          
+          # Force reset to match remote main exactly (discards all local changes)
+          echo "Force resetting to remote main branch (discarding local changes)..."
+          git reset --hard origin/main
+          
+          # Verify we're on the correct commit
+          echo "Current commit:"
+          git log -1 --oneline
+          
+          # Install/update dependencies
+          echo "Installing dependencies..."
+          bun install
+          
+          # Build the application
+          echo "Building application..."
+          bun run build
+          
+          # Restart PM2 service (more reliable than start + restart)
+          echo "Restarting PM2 service..."
+          pm2 restart techtots-web
+          
+          echo "Deployment completed successfully!"
