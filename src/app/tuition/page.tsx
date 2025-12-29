@@ -82,7 +82,7 @@ export default function Page() {
                 <div className="relative bg-[#fbf5ef] py-12">
                     <div className="max-w-6xl mx-auto px-4">
                         <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-center">
-                            📘 Books
+                            📘 Learning Materials
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                             {[
