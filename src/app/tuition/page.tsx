@@ -34,7 +34,7 @@ export default function Page() {
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[
-                                "Crèche / Preparatory Year – $637 / GHC 6,500 per term | $1,911 / GHC 19,500 annually",
+                                "Crèche / Preparatory Year – $735 / GHC 7,500 per term | $2,200 / GHC 22,500 annually",
                                 "Cambridge Early Years (EY) – $735 / GHC 7,500 per term | $2,205 / GHC 22,500 annually",
                                 "Cambridge Primary 1-3 (Lower Primary) – $833 / GHC 8,500 per term | $2,499 / GHC 25,500 annually",
                                 "Cambridge Primary 4-6 (Upper Primary) - $1030 / GHC 10,500 per term | $3090 / GHC 31,500"

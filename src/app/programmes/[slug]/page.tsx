@@ -148,7 +148,7 @@ export default function ProgrammeDetails({ params, searchParams }: Props) {
         <section className="space-y-20 bg-gray-100 p-8 rounded-xl shadow-lg">
           {/* Header */}
           <div className="relative mb-6">
-            <h1 className="text-xl font-bold text-sky-700">Primary 1 – Pathfinders</h1>
+            <h1 className="text-xl font-bold text-sky-700">Primary 1 – Pioneers</h1>
             <span className="block h-1 w-20 bg-sky-500 mt-1 rounded"></span>
           </div>
 
