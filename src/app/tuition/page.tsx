@@ -19,7 +19,7 @@ export default function Page() {
                             <span className="text-white">Our Tuition & Fees</span>
                         </div>
                         <h1 className="text-4xl font-bold leading-tight text-white font-heading md:text-5xl">
-                            Fee Structure – 2025/2026 Academic Year
+                            Fee Structure – 2026/2027 Academic Year
                         </h1>
                     </div>
                 </div>
@@ -106,25 +106,25 @@ export default function Page() {
                 <div className="relative bg-[#f1f8fd] py-12">
                     <div className="max-w-6xl mx-auto px-4">
                         <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-center">
-                            🍽️ Feeding (Optional)
+                            🍽️ Feeding
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 text-center">
                             {[
                                 {
                                     label: "Lunch & Snack (EYS and below)",
-                                    fee: "GHC 35 Daily | GHC 2,100 (Termly)",
+                                    fee: "GHC 40 Daily | GHC 2,800 (Termly)",
                                 },
                                 {
                                     label: "Lunch & Snack (Primary)",
-                                    fee: "GHC 40 Daily | GHC 2,400 (Termly)",
+                                    fee: "GHC 45 Daily | GHC 3,150 (Termly)",
                                 },
                                 {
                                     label: "Breakfast (EYS)",
-                                    fee: "GHC 25 Daily | GHC 1,500 (Termly)",
+                                    fee: "GHC 25 Daily | GHC 1,750 (Termly)",
                                 },
                                 {
                                     label: "Breakfast (Primary)",
-                                    fee: "GHC 30 Daily | GHC 1,800 (Termly)",
+                                    fee: "GHC 30 Daily | GHC 2,100 (Termly)",
                                 },
                             ].map(({ label, fee }) => (
                                 <div
