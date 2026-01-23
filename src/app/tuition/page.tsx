@@ -87,8 +87,9 @@ export default function Page() {
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                             {[
                                 { label: "Pre EYS", fee: "GHC 2,000 (Annual)" },
-                                { label: "EYS", fee: "GHC 3,000 (Annual)" },
-                                { label: "Primary", fee: "GHC 3,800 (Annual)" },
+                                { label: "EYS", fee: "GHC 3,800 (Annual)" },
+                                { label: "Primary", fee: "GHC 4,600 (Annual)" },
+                                   { label: "Lower Primary", fee: "GHC 5,000 (Annual)" },
                             ].map(({ label, fee }) => (
                                 <div
                                     key={label}
@@ -152,11 +153,11 @@ export default function Page() {
                         </h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
                             {[
-                                "Uniform (Monday and Wednesday): GHC 200",
-                                "Apron: GHC 120",
-                                "Cardigan: GHC 120",
-                                "P.E. Kit (Fridays): GHC 150",
-                                "⁠School-Themed Print (Tuesdays and Thursdays): GHC 200",
+                                "Uniform (Standard): GHC 300",
+                                "Apron: GHC 220",
+                                "Cardigan: GHC 250",
+                                "P.E. Kit (Fridays): GHC 250",
+                                "⁠School-Themed Print (Tuesdays and Thursdays): GHC 300",
                             ].map((item) => (
                                 <div
                                     key={item}
@@ -172,11 +173,11 @@ export default function Page() {
                         </h4>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
                             {[
-                                "Uniform (Monday and Wednesday): GHC 250",
-                                "Apron: GHC 120",
-                                "Cardigan: GHC 120",
-                                "P.E. Kit (Fridays): GHC 150",
-                                "⁠School-Themed Print (Tuesdays and Thursdays): GHC 200",
+                                "Uniform (Standard): GHC 350",
+                                "Apron: GHC 220",
+                                "Cardigan: GHC 250",
+                                "P.E. Kit (Fridays): GHC 250",
+                                "⁠School-Themed Print (Tuesdays and Thursdays): GHC 300",
                             ].map((item) => (
                                 <div
                                     key={item}
