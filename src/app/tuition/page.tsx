@@ -88,8 +88,8 @@ export default function Page() {
                             {[
                                 { label: "Pre EYS", fee: "GHC 2,000 (Annual)" },
                                 { label: "EYS", fee: "GHC 3,800 (Annual)" },
-                                { label: "Primary", fee: "GHC 4,600 (Annual)" },
-                                   { label: "Lower Primary", fee: "GHC 5,000 (Annual)" },
+                                { label: "Lower Primary", fee: "GHC 4,600 (Annual)" },
+                                   { label: "Upper Primary", fee: "GHC 5,000 (Annual)" },
                             ].map(({ label, fee }) => (
                                 <div
                                     key={label}
