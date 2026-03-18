@@ -25,7 +25,25 @@ export default function Page() {
                 </div>
             </section>
 
+
             <section className="bg-white">
+
+                {/* Admission Fee */}
+                <div className="relative bg-[#f1f8fd] py-12">
+                    <div className="max-w-4xl mx-auto px-4 text-center">
+                        <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+                            📝 Admission Fee
+                        </h3>
+                        <div className="p-6 bg-white rounded-xl shadow inline-block">
+                            <h4 className="text-xl font-bold mb-2">$500 | GHC 5,000</h4>
+                            <p className="text-gray-700">
+                                This is a one-time non-refundable admission fee payable upon
+                                confirmation of enrolment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Tuition Fees */}
                 <div className="relative bg-[#fbf5ef] py-12">
                     <div className="max-w-6xl mx-auto px-4 space-y-4">
@@ -63,14 +81,15 @@ export default function Page() {
                                     <li>Second child: 5% discount on tuition</li>
                                     <li>Third child (and subsequent children): 10% discount on tuition</li>
                                 </ul>
-                                <h4 style={{ marginTop: "20px", fontWeight: 600, fontSize:"14px"}}>NB: The discount applies to tuition fees only and is calculated per child, per term.</h4>
+                                <h4 style={{ marginTop: "20px", fontWeight: 600, fontSize: "14px" }}>
+                                    NB: The discount applies to tuition fees only and is calculated per child, per term.
+                                </h4>
                             </div>
                             <div className="p-6 bg-white rounded-xl shadow hover:scale-105 hover:shadow-lg transition">
                                 <h4 className="font-bold mb-3">Annual Payment Discount</h4>
                                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
                                     <li>
-                                        Additional 8% discount when the full annual fee is paid
-                                        upfront
+                                        Additional 8% discount when the full annual fee is paid upfront
                                     </li>
                                 </ul>
                             </div>
@@ -89,7 +108,7 @@ export default function Page() {
                                 { label: "Pre EYS", fee: "GHC 2,000 (Annual)" },
                                 { label: "EYS", fee: "GHC 3,800 (Annual)" },
                                 { label: "Lower Primary", fee: "GHC 4,600 (Annual)" },
-                                   { label: "Upper Primary", fee: "GHC 5,000 (Annual)" },
+                                { label: "Upper Primary", fee: "GHC 5,000 (Annual)" },
                             ].map(({ label, fee }) => (
                                 <div
                                     key={label}
@@ -140,56 +159,6 @@ export default function Page() {
                     </div>
                 </div>
 
-                {/* Uniform */}
-                <div className="relative bg-[#fbf5ef] py-12">
-                    <div className="max-w-6xl mx-auto px-4">
-                        <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-center">
-                            👕 Uniform & Outfits
-                        </h3>
-
-
-                        <h4 className="text-1xl md:text-1xl font-semibold mb-6 text-center">
-                            Pre-Early Years & Early Years (Little Seeds, Explorers, EY1–EY3)
-                        </h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
-                            {[
-                                "Uniform (Standard): GHC 300",
-                                "Apron: GHC 220",
-                                "Cardigan: GHC 250",
-                                "P.E. Kit (Fridays): GHC 250",
-                                "⁠School-Themed Print (Tuesdays and Thursdays): GHC 300",
-                            ].map((item) => (
-                                <div
-                                    key={item}
-                                    className="p-5 bg-white rounded-xl shadow transition hover:scale-105 hover:shadow-lg"
-                                >
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
-
-                        <h4 className="text-1xl md:text-1xl font-semibold mb-6 mt-5 text-center">
-                           Primary (Years 1–6)
-                        </h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
-                            {[
-                                "Uniform (Standard): GHC 350",
-                                "Apron: GHC 220",
-                                "Cardigan: GHC 250",
-                                "P.E. Kit (Fridays): GHC 250",
-                                "⁠School-Themed Print (Tuesdays and Thursdays): GHC 300",
-                            ].map((item) => (
-                                <div
-                                    key={item}
-                                    className="p-5 bg-white rounded-xl shadow transition hover:scale-105 hover:shadow-lg"
-                                >
-                                    {item}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
                 {/* Enrichment Programmes */}
                 <div className="relative bg-[#f1f8fd] py-12">
                     <div className="max-w-6xl mx-auto px-4 text-center">
@@ -227,6 +196,25 @@ export default function Page() {
                     </div>
                 </div>
 
+                {/* Important Notes */}
+                <div className="max-w-6xl mx-auto px-4 pb-12 text-center">
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+                        ⚠️ Important Notes
+                    </h3>
+                    <div className="bg-[#fff8e6] p-6 rounded-xl shadow text-left max-w-3xl mx-auto">
+                        <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>Fees may be paid in Ghana Cedis (GHC) or US Dollars ($).</li>
+                            <li>
+                                Tuition fees are payable before the beginning of each term unless the annual payment option is selected.
+                            </li>
+                            <li>Learning materials and feeding fees are separate from tuition.</li>
+                            <li>
+                                The school reserves the right to review fees periodically.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
                 {/* Contact Info */}
                 <div className="max-w-6xl mx-auto px-4 py-12 text-center">
                     <h3 className="text-2xl md:text-3xl font-semibold mb-6">
@@ -239,6 +227,9 @@ export default function Page() {
                         📱 Social Media: @techtotsgh (Instagram, TikTok, Facebook)
                     </p>
                 </div>
+
+
+                
             </section>
 
 
