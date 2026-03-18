@@ -11,7 +11,7 @@ const navigation = [
   { name: 'Tuition & Fees', href: '/tuition' },
   { name: 'Admissions', href: '/admissions' },
   { name: 'Wonder Lab', href: '/wonderlab' },
-  // { name: 'About', href: '/about' },
+  { name: 'Join Our Talent Community', href: '/community' },
   { name: 'Gallery', href: '/gallery' },
   // { name: 'Contact', href: '/contact' },
 ];
