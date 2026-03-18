@@ -72,24 +72,25 @@ export default function Page() {
                 <div className="relative bg-[#f1f8fd] py-12">
                     <div className="max-w-6xl mx-auto px-4">
                         <h3 className="text-2xl md:text-3xl font-semibold mb-10 text-center">
-                            💡 Discounts & Incentives
+                            💡 Family Tuition Benefits
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="p-6 bg-white rounded-xl shadow hover:scale-105 hover:shadow-lg transition">
-                                <h4 className="font-bold mb-3">Sibling Discount</h4>
+                                <h4 className="font-bold mb-3">Sibling Tuition Benefit</h4>
+                                <p>Families with more than one child enrolled at TechTots may enjoy the following tuition benefits:</p>
                                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
                                     <li>Second child: 5% discount on tuition</li>
                                     <li>Third child (and subsequent children): 10% discount on tuition</li>
                                 </ul>
                                 <h4 style={{ marginTop: "20px", fontWeight: 600, fontSize: "14px" }}>
-                                    NB: The discount applies to tuition fees only and is calculated per child, per term.
+                                    NOTE: This benefit applies to tuition fees only and is calculated per child, per term.
                                 </h4>
                             </div>
                             <div className="p-6 bg-white rounded-xl shadow hover:scale-105 hover:shadow-lg transition">
-                                <h4 className="font-bold mb-3">Annual Payment Discount</h4>
+                                <h4 className="font-bold mb-3">Annual Payment Benefit</h4>
                                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
                                     <li>
-                                        Additional 8% discount when the full annual fee is paid upfront
+                                        Families who choose to pay the full academic year tuition upfront receive an additional 8% tuition benefit.
                                     </li>
                                 </ul>
                             </div>
