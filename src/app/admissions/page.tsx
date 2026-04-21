@@ -21,8 +21,7 @@ export default function AdmissionsPage() {
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative flex items-center justify-center py-20 min-h-96 h-full overflow-hidden bg-[url('/images/campus.png')] bg-cover bg-center">
-        <div className="absolute inset-0 bg-black/70" />
+      <section className="relative flex items-center justify-center py-20 min-h-96 h-full overflow-hidden bg-[url('/images/techtots-admission.jpeg')] bg-cover bg-[position:100%_60%]">
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto space-y-8 text-center">
             <div className="inline-flex bg-white/30 items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-full hover:bg-white/40">
