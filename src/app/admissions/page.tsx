@@ -113,7 +113,7 @@ export default function AdmissionsPage() {
                 {[
                   {
                     program: "Crèche",
-                    ageRange: "6 months - 2 years",
+                    ageRange: "1 year - 2 years",
                     icon: UserGroupIcon,
                   },
                   {

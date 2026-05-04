@@ -223,7 +223,7 @@ const LandingHeroSection: React.FC<HeroProps> = ({ variant = "default" }) => {
         >
           <div className="flex items-center gap-2 px-4 py-2 mx-auto text-sm font-medium transition-colors rounded-full bg-primary/10 text-primary hover:bg-primary/20 w-fit">
             <SparklesIcon className="w-4 h-4" />
-            <span>Now Enrolling for January 2026</span>
+            <span>Now Enrolling for September 2026</span>
           </div>
 
           <div className="relative container my-auto mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12 z-10">

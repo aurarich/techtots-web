@@ -98,7 +98,7 @@ export const ourProgrammes = [
     slug: "Cambridge Primary",
     icon: BookOpenIcon,
     title: "Crèche",
-    short_description: "⁠Primary 1 – Primary 6",
+    short_description: "A gentle introduction to security, sensory discovery, rhythm, movement, and responsive care in a safe and stimulating environment.",
     caption: "Infants & Toddlers",
     ageGroup: "Age Group: 1 – 2 years",
     description:
@@ -324,7 +324,7 @@ export const roadmapData = [
     cambridge: "Not formally part of Cambridge",
     ghana: "Crèche",
     uk: "Baby Room",
-    age: "6 months – 1 year",
+    age: "1 year",
     focus: "Sensory play, bonding routines, early communication",
   },
   {

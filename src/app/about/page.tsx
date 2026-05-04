@@ -52,7 +52,7 @@ export default function AboutPage() {
                 Reggio Emilia philosophy
               </strong>
               , thoughtfully designed to nurture children from{" "}
-              <strong className="font-semibold">6 months.</strong>, We provide a
+              <strong className="font-semibold">1 year.</strong> We provide a
               warm, safe, and intellectually stimulating environment where every
               child is encouraged to explore, imagine, and grow. Through a
               balanced mix of{" "}
@@ -73,25 +73,22 @@ export default function AboutPage() {
       <section className="section relative overflow-hidden  bg-center bg-cover bg-fixed bg-no-repeat bg-slate-100">
         <div className="container">
           <div className="grid gap-12 md:grid-cols-2">
+  
             <div className="p-8 transition-transform border rounded-lg bg-white backdrop-blur-sm border-slate-300 hover:scale-105">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
-                Our Mission
+               1.1 Vision
               </h2>
               <p className="text-gray-600">
-                To nurture young minds through a world-class, technology-infused
-                education that blends the Cambridge Early Years Curriculum and
-                Reggio Emilia principles, preparing every child for a future of
-                infinite possibilities.
+               To nurture confident, creative, and future-ready learners equipped to thrive in a rapidly evolving global world.
               </p>
             </div>
+
             <div className="p-8 transition-transform border rounded-lg bg-white backdrop-blur-sm border-slate-300 hover:scale-105">
               <h2 className="mb-4 text-2xl font-bold text-gray-900">
-                Our Vision
+                1.2 Mission
               </h2>
               <p className="text-gray-600">
-                To become Africa&apos;s most forward-thinking early childhood
-                institution where innovation, creativity, and global citizenship
-                begin in the earliest years.
+                To deliver a premium, child-centred education grounded in globally respected International framework, enriched with technology, innovation, and strong values, within a safe and inspiring learning environment.
               </p>
             </div>
           </div>
@@ -320,7 +317,7 @@ export default function AboutPage() {
               >
                 <p className="">
                   <strong>Ensure</strong> a smooth, developmentally appropriate
-                  journey from 6 months to Primary 1, preparing your child for
+                  journey from age 1 to Primary 1, preparing your child for
                   lifelong learning.
                 </p>
               </div>
