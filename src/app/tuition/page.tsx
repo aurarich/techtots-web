@@ -132,11 +132,11 @@ export default function Page() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 text-center">
                             {[
                                 {
-                                    label: "Lunch & Snack (EYS and below)",
+                                    label: "Lunch (EYS and below)",
                                     fee: "GHC 40 Daily | GHC 2,800 (Termly)",
                                 },
                                 {
-                                    label: "Lunch & Snack (Primary)",
+                                    label: "Lunch (Primary)",
                                     fee: "GHC 45 Daily | GHC 3,150 (Termly)",
                                 },
                                 {
