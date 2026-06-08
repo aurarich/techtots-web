@@ -106,7 +106,7 @@ export default function Page() {
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                             {[
-                                { label: "Pre EYS", fee: "GHC 2,000 (Annual)" },
+                                { label: "Pre EYS", fee: "GHC 3,000 (Annual)" },
                                 { label: "EYS", fee: "GHC 3,800 (Annual)" },
                                 { label: "Lower Primary", fee: "GHC 4,600 (Annual)" },
                                 { label: "Upper Primary", fee: "GHC 5,000 (Annual)" },
