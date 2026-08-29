@@ -52,7 +52,7 @@ export default function Page() {
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {[
-                                "Crèche / Preparatory Year – $735 per term | $2,200 annually",
+                                "Crèche / Preparatory Year – $735 per term | $2,205 annually",
                                 "Cambridge Early Years (EY) – $735 per term | $2,205 annually",
                                 "Cambridge Primary 1-3 (Lower Primary) – $833 per term | $2,499 annually",
                                 "Cambridge Primary 4-6 (Upper Primary) - $1030 per term | $3090 annually"
