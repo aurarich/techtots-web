@@ -133,19 +133,19 @@ export default function Page() {
                             {[
                                 {
                                     label: "Lunch (EYS and below)",
-                                    fee: "GHC 40 Daily | GHC 2,800 (Termly)",
+                                    fee: "GHC 2,800 (Termly)",
                                 },
                                 {
                                     label: "Lunch (Primary)",
-                                    fee: "GHC 45 Daily | GHC 3,150 (Termly)",
+                                    fee: "GHC 3,150 (Termly)",
                                 },
                                 {
                                     label: "Breakfast (EYS)",
-                                    fee: "GHC 25 Daily | GHC 1,750 (Termly)",
+                                    fee: "GHC 1,750 (Termly)",
                                 },
                                 {
                                     label: "Breakfast (Primary)",
-                                    fee: "GHC 30 Daily | GHC 2,100 (Termly)",
+                                    fee: "GHC 2,100 (Termly)",
                                 },
                             ].map(({ label, fee }) => (
                                 <div

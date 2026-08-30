@@ -7,7 +7,8 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Our Programmes', href: '/enrichment' },
-  { name: 'Summer School', href: '/summer-school' },
+  // { name: 'Summer School', href: '/summer-school' },
+   { name: 'Wonder Reads', href: '/wonder-reads' },
   { name: 'Tuition & Fees', href: '/tuition' },
   { name: 'Admissions', href: '/admissions' },
   { name: 'Wonder Lab', href: '/wonderlab' },

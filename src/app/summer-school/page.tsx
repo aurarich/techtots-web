@@ -12,58 +12,55 @@ import {
 } from '@heroicons/react/24/outline';
 
 export const metadata: Metadata = {
-  title: 'WonderReads 2026–2027',
+  title: 'Summer School 2026',
   description:
-    'WonderReads is TechTots’ structured reading comprehension and literacy development programme for learners aged 4–15, powered by Scholastic Early Bird and Literacy Pro.',
+    'TechTots Summer School 2026 is a transformational holiday programme for ages 3–11, combining strong academics, creativity, confidence-building, and future-ready skills.',
 };
 
 const highlights = [
-  'Initial reading assessment and reading-level profiling',
-  'Personalised reading targets and facilitator guidance',
-  'Access to over 4,000 eBooks and reading resources',
-  'Monthly physical and live online support sessions',
-  'Ongoing progress monitoring and periodic reassessment',
+  'Cambridge-aligned learning approach',
+  'Small class sizes with personalised attention',
+  'Hands-on, practical learning experiences',
+  'Safe, premium, technology-enabled environment',
+  'Experienced and caring facilitators',
 ];
 
-const assessmentAreas = [
-  'Initial reading assessment',
-  'Reading-level profiling',
-  'Lexile® measurement where applicable',
-  'Identification of comprehension skills requiring development',
-  'Personalised reading recommendations',
+const earlyYearsAreas = [
+  'Phonics Development',
+  'Early Numeracy Skills',
+  'Reading Readiness',
+  'Early Science Exploration',
+  'Creative Expression (Art, Music & Movement)',
 ];
 
-const assessmentGains = [
-  'A clear understanding of the learner’s current reading level',
-  'Appropriately challenging books and reading materials',
-  'Targeted development of specific comprehension skills',
-  'A personalised pathway for measurable reading growth',
+const earlyYearsGains = [
+  'Strong language and communication skills',
+  'Early reading and numeracy confidence',
+  'Curiosity and a love for learning',
+  'Social and emotional development',
 ];
 
-const supportAreas = [
-  'Monthly physical reading development sessions',
-  'Monthly live online reading support sessions',
-  'Guided reading and comprehension activities',
-  'Vocabulary development and book conversations',
-  'Individual reading targets and progress check-ins',
-  'Recognition, certificates and reading achievement rewards',
+const primaryAreas = [
+  'Robotics, Coding & Artificial Intelligence',
+  'Mathematics Mastery',
+  'Entrepreneurship & Money Skills',
+  'Public Speaking & Leadership',
+  'Reading & Writing Series',
+  'Applied Science',
 ];
 
-const supportGains = [
-  'Stronger reading comprehension',
-  'Greater vocabulary and reading confidence',
-  'Improved reading independence and consistency',
-  'Clear, measurable progress throughout the programme',
+const primaryGains = [
+  'Stronger academic confidence',
+  'Advanced problem-solving and critical thinking skills',
+  'Early exposure to AI and digital technologies',
+  'Confident communication and leadership abilities',
 ];
 
 const enrolSteps = [
-  'Complete the WonderReads registration form',
-  'Attend the physical onboarding and initial assessment',
-  'Activate the learner account and begin the personalised reading journey',
+  'Contact us via WhatsApp or phone',
+  'Receive programme details and registration support',
+  'Confirm enrolment',
 ];
-
-const whatsapp =
-  'https://wa.me/233256124133?text=Hello%20TechTots%2C%20I%20would%20like%20to%20register%20my%20child%20for%20WonderReads.';
 
 export default function Page() {
   return (
@@ -77,60 +74,51 @@ export default function Page() {
           <div className="mx-auto max-w-5xl text-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
               <SparklesIcon className="size-4" />
-              <span>Now Enrolling for 2026–2027</span>
+              <span>Now Enrolling for Summer 2026</span>
             </div>
 
             <h1 className="mt-6 text-4xl font-bold leading-tight text-white font-heading md:text-6xl">
-              WonderReads 2026–2027
+              Summer School 2026
             </h1>
 
             <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-white/85 md:text-xl">
-              TechTots Reading Comprehension & Literacy Development Programme
-            </p>
-
-            <div className="mx-auto mt-5 inline-flex items-center gap-2 rounded-full border border-amber-300/40 bg-amber-300/15 px-5 py-2.5 text-sm font-semibold text-amber-100 backdrop-blur-sm">
-              <AcademicCapIcon className="h-5 w-5" />
-              <span>Powered by Scholastic Early Bird & Literacy Pro</span>
-            </div>
-
-            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.24em] text-blue-200">
-              Read. Understand. Grow.
+              A transformational summer experience for future-ready learners.
             </p>
 
             <div className="mx-auto mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
               <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15">
                 <div className="mb-2 flex items-center justify-center gap-2 text-blue-200">
                   <CalendarDaysIcon className="h-5 w-5" />
-                  <span className="text-sm font-semibold">Programme Period</span>
+                  <span className="text-sm font-semibold">Dates</span>
                 </div>
                 <p className="text-sm leading-6 text-white">
-                  20th September 2026
+                  13th July – 17th August 2026
                   <br />
-                  to 19th June 2027
+                  Monday – Friday
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15">
                 <div className="mb-2 flex items-center justify-center gap-2 text-blue-200">
                   <AcademicCapIcon className="h-5 w-5" />
-                  <span className="text-sm font-semibold">Age Group</span>
+                  <span className="text-sm font-semibold">Age Groups</span>
                 </div>
                 <p className="text-sm leading-6 text-white">
-                  Learners aged 4–15
+                  Early Years: 3–5
                   <br />
-                  Personalised by reading level
+                  Primary: 5–11
                 </p>
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/10 p-4 backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/15">
                 <div className="mb-2 flex items-center justify-center gap-2 text-blue-200">
                   <CurrencyDollarIcon className="h-5 w-5" />
-                  <span className="text-sm font-semibold">Programme Fee</span>
+                  <span className="text-sm font-semibold">Fees</span>
                 </div>
                 <p className="text-sm leading-6 text-white">
-                  GHS 6,000
+                  GHS 6,000 / GHS 7,000
                   <br />
-                  Full programme access
+                  Lunch included
                 </p>
               </div>
             </div>
@@ -145,28 +133,29 @@ export default function Page() {
             <div className="space-y-8">
               <div className="space-y-5">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-                  TechTots Reading Comprehension & Literacy Development Programme
+                  A Summer That Changes Everything
                 </p>
 
                 <h2 className="text-4xl font-bold text-gray-900 font-heading md:text-5xl">
-                  Personalised Reading. Deeper Understanding. Measurable Growth.
+                  Two Specialised Tracks. One Premium Learning Experience.
                 </h2>
 
                 <p className="text-lg leading-8 text-gray-600">
-                  WonderReads is TechTots’ structured reading comprehension and literacy development programme,
-                  designed to help learners become stronger, more confident and more independent readers.
+                  At TechTots, summer is not just a break from school. It is a strategic learning window designed to
+                  accelerate your child’s growth, confidence, and future skills through engaging, high-quality
+                  learning experiences.
                 </p>
 
                 <p className="text-lg leading-8 text-gray-600">
-                  Powered by Scholastic Early Bird and Literacy Pro, the programme combines digital reading,
-                  assessment, personalised book recommendations, guided comprehension support, progress monitoring
-                  and facilitator-led sessions to give every learner a clear pathway for growth.
+                  We offer two carefully designed tracks tailored to each age group: an Early Years programme that
+                  builds strong foundations through structured, engaging learning, and a Primary programme that
+                  develops academic confidence, innovation, leadership, and future-ready thinking.
                 </p>
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row">
                 <Link
-                  href={whatsapp}
+                  href="https://wa.me/233256124133"
                   className="btn btn-primary px-8 py-4 text-center transition hover:-translate-y-0.5"
                   target="_blank"
                 >
@@ -183,11 +172,11 @@ export default function Page() {
 
               <div className="rounded-2xl border border-amber-200 bg-amber-50 p-5 shadow-sm transition hover:shadow-md">
                 <p className="text-sm font-semibold uppercase tracking-wide text-amber-700">
-                  Remote-First, Supported Throughout
+                  Limited Enrolment
                 </p>
                 <p className="mt-2 text-sm leading-7 text-slate-700">
-                  Learners read from home using the Scholastic platforms and receive monthly physical and live online
-                  support, personalised targets, progress monitoring and regular recognition.
+                  To maintain our boutique, high-quality learning experience, spaces are strictly limited. Once we are
+                  full, enrolment closes.
                 </p>
               </div>
             </div>
@@ -198,8 +187,8 @@ export default function Page() {
 
               <div className="relative overflow-hidden rounded-[2rem] border border-slate-100 bg-white p-3 shadow-2xl transition duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_rgba(15,23,42,0.16)]">
                 <img
-                  src="/images/summer2027.jpeg"
-                  alt="TechTots WonderReads 2026–2027 programme flyer"
+                  src="/images/summer-school-flyer.jpeg"
+                  alt="TechTots Summer School 2026 flyer"
                   className="w-full rounded-[1.5rem] object-cover"
                 />
               </div>
@@ -208,15 +197,15 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Programme Components */}
+      {/* Tracks */}
       <section className="bg-slate-50 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              The WonderReads Experience
+              Our Summer Tracks
             </p>
             <h2 className="mt-3 text-4xl font-bold text-gray-900 font-heading md:text-5xl">
-              Assessment, Access, Guidance and Support
+              Carefully Designed for Each Stage of Growth
             </h2>
           </div>
 
@@ -224,26 +213,26 @@ export default function Page() {
             <article className="flex h-full flex-col rounded-[2rem] border border-sky-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="space-y-5">
                 <div className="inline-flex items-center rounded-full bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-700">
-                  Assessment • Profiling • Digital Library
+                  Ages 3–5 • Early Years
                 </div>
 
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 font-heading">
-                    Know Your Child’s Reading Level and What Comes Next
+                    Building Strong Foundations for Lifelong Learning
                   </h3>
                   <p className="mt-4 text-base leading-8 text-gray-600">
-                    Every learner begins with onboarding and an initial reading assessment. The results identify the
-                    learner’s current level, the comprehension skills requiring development and the right books and
-                    level of challenge for continued growth.
+                    Our Early Years Summer Programme focuses on foundational development through engaging, play-based,
+                    and structured learning experiences that help young learners grow in confidence, communication,
+                    curiosity, and readiness for the next stage.
                   </p>
                 </div>
 
                 <div className="rounded-2xl bg-sky-50/70 p-6">
                   <h4 className="mb-4 text-sm font-bold uppercase tracking-wide text-gray-900">
-                    Assessment & Personalisation
+                    Programme Areas
                   </h4>
                   <ul className="space-y-3">
-                    {assessmentAreas.map((item) => (
+                    {earlyYearsAreas.map((item) => (
                       <li key={item} className="flex items-start gap-3 text-sm leading-6 text-gray-700">
                         <CheckCircleIcon className="mt-0.5 h-5 w-5 shrink-0 text-sky-600" />
                         <span>{item}</span>
@@ -257,7 +246,7 @@ export default function Page() {
                     What Your Child Gains
                   </h4>
                   <ul className="space-y-3">
-                    {assessmentGains.map((item) => (
+                    {earlyYearsGains.map((item) => (
                       <li key={item} className="flex items-start gap-3 text-sm leading-6 text-gray-700">
                         <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-primary" />
                         <span>{item}</span>
@@ -268,10 +257,10 @@ export default function Page() {
 
                 <div className="mt-auto rounded-2xl bg-slate-900 p-6 text-white">
                   <p className="text-sm font-semibold uppercase tracking-wide text-blue-200">
-                    Digital Reading Access
+                    Programme Fee
                   </p>
-                  <p className="mt-2 text-3xl font-bold">4,000+ eBooks</p>
-                  <p className="mt-2 text-sm text-white/80">Powered by Scholastic Early Bird and Literacy Pro.</p>
+                  <p className="mt-2 text-3xl font-bold">GHS 6,000</p>
+                  <p className="mt-2 text-sm text-white/80">Lunch included.</p>
                 </div>
               </div>
             </article>
@@ -279,26 +268,26 @@ export default function Page() {
             <article className="flex h-full flex-col rounded-[2rem] border border-amber-100 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="space-y-5">
                 <div className="inline-flex items-center rounded-full bg-amber-50 px-4 py-2 text-sm font-semibold text-amber-700">
-                  Physical • Online • At-Home Reading
+                  Ages 5–11 • Primary
                 </div>
 
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 font-heading">
-                    Guided Support for Consistent, Measurable Growth
+                    For Curious Minds Ready to Build, Think, and Lead
                   </h3>
                   <p className="mt-4 text-base leading-8 text-gray-600">
-                    WonderReads combines regular at-home reading with monthly physical and live online support.
-                    Facilitators use assessment information and platform data to guide reading, strengthen
-                    comprehension and help every learner progress with confidence.
+                    Our Primary Summer Programme blends academic mastery with future-focused innovation, giving
+                    learners a strong advantage ahead of the new academic year through a rigorous and inspiring mix of
+                    academics, technology, leadership, and real-world thinking.
                   </p>
                 </div>
 
                 <div className="rounded-2xl bg-amber-50/70 p-6">
                   <h4 className="mb-4 text-sm font-bold uppercase tracking-wide text-gray-900">
-                    Guided Support
+                    Programme Areas
                   </h4>
                   <ul className="space-y-3">
-                    {supportAreas.map((item) => (
+                    {primaryAreas.map((item) => (
                       <li key={item} className="flex items-start gap-3 text-sm leading-6 text-gray-700">
                         <RocketLaunchIcon className="mt-0.5 h-5 w-5 shrink-0 text-amber-600" />
                         <span>{item}</span>
@@ -312,7 +301,7 @@ export default function Page() {
                     What Your Child Gains
                   </h4>
                   <ul className="space-y-3">
-                    {supportGains.map((item) => (
+                    {primaryGains.map((item) => (
                       <li key={item} className="flex items-start gap-3 text-sm leading-6 text-gray-700">
                         <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-secondary" />
                         <span>{item}</span>
@@ -323,10 +312,10 @@ export default function Page() {
 
                 <div className="mt-auto rounded-2xl bg-slate-900 p-6 text-white">
                   <p className="text-sm font-semibold uppercase tracking-wide text-blue-200">
-                    Full Programme Fee
+                    Programme Fee
                   </p>
-                  <p className="mt-2 text-3xl font-bold">GHS 6,000</p>
-                  <p className="mt-2 text-sm text-white/80">Assessment, platform access and support included.</p>
+                  <p className="mt-2 text-3xl font-bold">GHS 7,000</p>
+                  <p className="mt-2 text-sm text-white/80">Lunch included.</p>
                 </div>
               </div>
             </article>
@@ -339,17 +328,17 @@ export default function Page() {
         <div className="container mx-auto grid items-start gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              Why Enrol in WonderReads?
+              Why Families Choose TechTots Summer School
             </p>
 
             <h2 className="text-4xl font-bold text-gray-900 font-heading md:text-5xl">
-              A Clear, Structured Pathway for Reading Growth
+              Premium Learning. Real Growth. Lasting Confidence.
             </h2>
 
             <p className="text-lg leading-8 text-gray-600">
-              WonderReads is designed for families who want more than access to books. It gives learners a structured
-              system for reading, understanding, practising and progressing, supported by expert facilitators and
-              measurable assessment information.
+              TechTots Summer School is designed for families who want more than supervision during the holidays. It
+              is for parents who want their children to strengthen key academic skills, build confidence, explore
+              innovation, and return to school more prepared, more capable, and more inspired.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -371,21 +360,19 @@ export default function Page() {
               <div className="flex items-start gap-4">
                 <CalendarDaysIcon className="mt-1 h-6 w-6 text-blue-200" />
                 <div>
-                  <p className="font-semibold">Programme Calendar</p>
-                  <p className="text-white/85">
-                    20th September 2026 – 19th June 2027 (monthly support sessions from September to June)
-                  </p>
+                  <p className="font-semibold">Duration</p>
+                  <p className="text-white/85">13th July – 17th August 2026 (Monday – Friday)</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <MapPinIcon className="mt-1 h-6 w-6 text-blue-200" />
                 <div>
-                  <p className="font-semibold">Delivery Model</p>
+                  <p className="font-semibold">Location</p>
                   <p className="text-white/85">
-                    Remote-first at-home reading
+                    TechTots International School
                     <br />
-                    Monthly physical and live online support
+                    Near ACP Estate, Pokuase, Accra, Ghana
                   </p>
                 </div>
               </div>
@@ -393,22 +380,21 @@ export default function Page() {
               <div className="flex items-start gap-4">
                 <CurrencyDollarIcon className="mt-1 h-6 w-6 text-blue-200" />
                 <div>
-                  <p className="font-semibold">Programme Fee</p>
-                  <p className="text-white/85">GHS 6,000 per learner</p>
-                  <p className="text-white/85">For learners aged 4–15</p>
-                  <p className="text-white/85">Full programme access and support included</p>
+                  <p className="font-semibold">Fees</p>
+                  <p className="text-white/85">Early Years: GHS 6,000</p>
+                  <p className="text-white/85">Primary: GHS 7,000</p>
+                  <p className="text-white/85">Lunch included</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-10 rounded-2xl border border-white/10 bg-white/10 p-5">
               <p className="text-sm font-semibold uppercase tracking-wide text-blue-100">
-                Progress Monitoring & Recognition
+                Limited Slots Available
               </p>
               <p className="mt-2 text-sm leading-7 text-white/90">
-                Progress is monitored through assessment results, books completed, comprehension performance,
-                reading frequency, facilitator observations and periodic reassessment. Learners are recognised for
-                consistency, improvement, independence, achievement and outstanding effort.
+                To preserve our boutique and high-quality learning environment, enrolment is intentionally limited.
+                Early registration is strongly advised.
               </p>
             </div>
           </div>
@@ -422,11 +408,11 @@ export default function Page() {
             How to Enrol
           </p>
           <h2 className="mt-3 text-4xl font-bold text-gray-900 font-heading md:text-5xl">
-            Begin Your Child’s WonderReads Journey in 3 Simple Steps
+            Secure Your Child’s Place in 3 Simple Steps
           </h2>
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-600">
-            Registration, onboarding and initial assessment ensure that every learner begins with the right account,
-            reading level, books, targets and guidance.
+            We have made the enrolment process simple and parent-friendly so you can move quickly while spaces are
+            still available.
           </p>
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -444,7 +430,11 @@ export default function Page() {
           </div>
 
           <div className="mt-12 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href={whatsapp} className="btn btn-primary px-8 py-4" target="_blank">
+            <Link
+              href="https://wa.me/233256124133"
+              className="btn btn-primary px-8 py-4"
+              target="_blank"
+            >
               Chat on WhatsApp
             </Link>
             <Link href="tel:+233256124133" className="btn border border-slate-300 px-8 py-4 text-slate-800">
@@ -462,16 +452,20 @@ export default function Page() {
           </p>
 
           <h2 className="mt-4 text-4xl font-bold text-white font-heading md:text-5xl">
-            Stronger Readers. Deeper Understanding. Measurable Growth.
+            A Summer That Builds Thinkers, Creators, and Confident Learners
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-white/85">
-            WonderReads gives every learner access to personalised reading, thousands of digital books, expert
-            facilitator guidance and a clear pathway to greater confidence and independence.
+            At TechTots, we do not just keep children busy during the holiday. We create meaningful learning
+            experiences that help them grow academically, socially, creatively, and confidently.
           </p>
 
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <Link href={whatsapp} className="btn btn-primary px-8 py-4" target="_blank">
+            <Link
+              href="https://wa.me/233256124133"
+              className="btn btn-primary px-8 py-4"
+              target="_blank"
+            >
               Register Now
             </Link>
             <Link
@@ -486,9 +480,8 @@ export default function Page() {
 
       {/* Floating WhatsApp CTA */}
       <a
-        href={whatsapp}
+        href="https://wa.me/233256124133"
         target="_blank"
-        rel="noreferrer"
         className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-3 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-xl transition hover:scale-105"
       >
         <span className="flex h-2.5 w-2.5 rounded-full bg-white animate-pulse" />
